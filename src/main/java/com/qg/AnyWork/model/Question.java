@@ -8,7 +8,7 @@ package com.qg.AnyWork.model;
 public class Question {
 
     private int questionId;     //问题id
-    private int type;           //题目类型
+    private int type;           //题目类型  1-选择题 2-判断题 3-填空题 4-问答题 5-编程题 6-综合题
     private String A;
     private String B;
     private String C;

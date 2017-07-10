@@ -9,7 +9,7 @@ public class StudentAnswerAnalysis {
     private Question question;        //试题
     private String studentAnswer;   //学生答案
     private int isTrue;         //是否正确
-    private double socre;       //得分情况
+    private double socre ;       //得分情况
 
     public StudentAnswerAnalysis() {
     }

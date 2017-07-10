@@ -12,7 +12,7 @@ public class User {
     private String email;       //邮箱
     private String password;    //密码
     private String phone;       //手机
-    private int mark;           //标志，区分是学生还是教师
+    private int mark;           //标志，区分是学生还是教师, 0学生，1老师
 
     public User(){
 

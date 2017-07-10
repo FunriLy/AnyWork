@@ -53,7 +53,7 @@ public class UserService {
      */
     public RequestResult<User> login(String email, String password){
         if (email == null || password == null){
-            throw new FormatterFaultException("空用户对象");
+            throw new FormatterFaultException("空对象");
         }
 
         User user = userDao.selectByEmail(email);

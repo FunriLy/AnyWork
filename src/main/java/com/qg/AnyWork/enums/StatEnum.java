@@ -12,6 +12,7 @@ public enum StatEnum {
     VALCODE_WRONG(0,"验证码错误"),
     DEFAULT_WRONG(-1,"其他错误"),
     CAUSE_TROUBLE(-2,"你不要搞事"),
+    ERROR_PARAM(-3, "输入参数有误"),
 
     /**
      * 注册板块
@@ -25,11 +26,21 @@ public enum StatEnum {
      * 登录板块
      */
     LOGIN_SUCCESS(2001, "用户登录成功"),
+    LOGIN_NOT_EXIT_USER(2002,"不存在的用户"),
+    LOGIN_USER_MISMATCH(2003,"用户名或密码错误"),
 
     /**
      * 更新用户信息板块
      */
     INFORMATION_CHANGE_SUCCESS(3001, "用户更改信息成功"),
+
+
+    /**
+     * 文件上传类型板块
+     */
+    FILE_UPLOAD_SUCCESS(4001, "文件上传成功"),
+    FILE_UPLOAD_FAIL(4002, "文件上传失败"),
+    FILE_FORMAT_ERROR(4003, "文件格式错误"),
 
 
     ;

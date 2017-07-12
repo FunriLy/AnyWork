@@ -28,11 +28,13 @@ public enum StatEnum {
     LOGIN_SUCCESS(2001, "用户登录成功"),
     LOGIN_NOT_EXIT_USER(2002,"不存在的用户"),
     LOGIN_USER_MISMATCH(2003,"用户名或密码错误"),
+    USER_NOT_LOGIN(2004, "用户还未登录"),
 
     /**
      * 更新用户信息板块
      */
     INFORMATION_CHANGE_SUCCESS(3001, "用户更改信息成功"),
+    FROMATTER_WARNING(3002, "格式有误"),
 
 
     /**
@@ -41,6 +43,7 @@ public enum StatEnum {
     FILE_UPLOAD_SUCCESS(4001, "文件上传成功"),
     FILE_UPLOAD_FAIL(4002, "文件上传失败"),
     FILE_FORMAT_ERROR(4003, "文件格式错误"),
+    PICTURE_UPLOAD_SUCCESS(4004, "头像上传成功"),
 
 
     ;

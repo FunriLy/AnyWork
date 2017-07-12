@@ -20,7 +20,7 @@ public interface UserDao {
      * @param user
      * @return
      */
-    int insertUser(@Param("user") User user);
+    void insertUser(@Param("user") User user);
 
     /**
      * 更新用户消息
@@ -28,14 +28,6 @@ public interface UserDao {
      * @return
      */
     int updateUser(@Param("user") User user);
-
-    /**
-     * 更新用户密码
-     * @param userId
-     * @param password
-     * @return
-     */
-    int updatePassword(@Param("userId") int userId, @Param("password") String password);
 
     /**
      * 根据用户id来获得用户消息

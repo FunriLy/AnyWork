@@ -16,6 +16,7 @@ public class Textpaper {
     private Date createTime;                //开始时间
     private Date endingTime;                //结束时间
     private int chapter;                    //章节，为练习卷添加章节
+
     private int textpaperScore;             //试卷分数
     private int textpaperType;              //试卷类型，0为练习、1为考试，若将来扩展可在这个字段上实现
 

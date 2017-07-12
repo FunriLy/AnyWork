@@ -1876,3 +1876,7 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have a
 [DEBUG] 2017-07-12 20:23:20,703 com.qg.AnyWork.dao.UserDao.selectByEmail - ==>  Preparing: SELECT * FROM user WHERE email = ? 
 [DEBUG] 2017-07-12 20:23:25,315 com.qg.AnyWork.dao.UserDao.selectByEmail - ==> Parameters: 123456@qq.com(String)
 [DEBUG] 2017-07-12 20:23:26,176 com.qg.AnyWork.dao.UserDao.selectByEmail - <==      Total: 1
+[INFO ] 2017-07-12 21:34:31,652 com.qg.AnyWork.AnyWorkApplicationTests - Starting AnyWorkApplicationTests on DESKTOP-U9OSLH3 with PID 6976 (started by zggdczfr in F:\Git workspace\AnyWork)
+[DEBUG] 2017-07-12 21:34:31,722 com.qg.AnyWork.AnyWorkApplicationTests - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:34:31,722 com.qg.AnyWork.AnyWorkApplicationTests - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:34:42,196 com.qg.AnyWork.AnyWorkApplicationTests - Started AnyWorkApplicationTests in 11.176 seconds (JVM running for 13.484)

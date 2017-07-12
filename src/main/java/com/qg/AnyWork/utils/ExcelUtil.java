@@ -1,7 +1,7 @@
 package com.qg.AnyWork.utils;
 
 import com.qg.AnyWork.model.Question;
-import com.qg.AnyWork.model.Textpaper;
+import com.qg.AnyWork.model.Testpaper;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.ss.usermodel.*;
 
@@ -60,7 +60,7 @@ public class ExcelUtil {
         return util.readQuest(input, Question.class, map1, map2, map3, map2, map2, map2);
     }
 
-    private <T> Textpaper readText(InputStream input, Map<Integer, String> map) throws Exception {
+    private <T> Testpaper readText(InputStream input, Map<Integer, String> map) throws Exception {
         return null;
     }
 

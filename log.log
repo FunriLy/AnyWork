@@ -531,3 +531,13 @@
 [INFO ] 2017-07-12 22:02:12,724 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4496 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
 [DEBUG] 2017-07-12 22:02:12,724 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
 [INFO ] 2017-07-12 22:02:12,724 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 23:18:22,074 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 13348 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 23:18:22,084 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 23:18:22,085 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 23:22:23,553 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 3440 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 23:22:23,563 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 23:22:23,564 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 23:22:33,137 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 10.053 seconds (JVM running for 12.766)
+[DEBUG] 2017-07-12 23:22:46,819 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 23:22:47,106 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 23:22:47,380 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3

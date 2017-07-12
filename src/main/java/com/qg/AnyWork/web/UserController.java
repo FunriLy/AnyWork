@@ -19,10 +19,10 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.Map;
 
 /**
  * Created by FunriLy on 2017/7/10.
@@ -43,18 +43,18 @@ public class UserController {
      * @param map
      * @return 用户id
      */
-    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    @RequestMapping(value = "/register", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
     @ResponseBody
     public RequestResult<Integer> register(HttpServletRequest request,
-                                           @RequestBody MultiValueMap<String, String> map){
+                                           @RequestBody Map<String, String> map){
         User user = new User();
-        user.setEmail(map.get("email").get(0));
-        user.setPassword(map.get("password").get(0));
-        user.setUserName(map.get("userName").get(0));
-        user.setPhone(map.get("phone").get(0));
-        user.setMark(Integer.valueOf(map.get("mark").get(0)));
+        user.setEmail(map.get("email"));
+        user.setPassword(map.get("password"));
+        user.setUserName(map.get("userName"));
+        user.setPhone(map.get("phone"));
+        user.setMark(Integer.valueOf(map.get("mark")));
         try {
-            user.setMark(Integer.valueOf(map.get("mark").get(0)));
+            user.setMark(Integer.valueOf(map.get("mark")));
         } catch (Exception e){
             user.setMark(0);
         }
@@ -82,12 +82,12 @@ public class UserController {
      * @param map
      * @return
      */
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
     @ResponseBody
-    public RequestResult<User> login(HttpServletRequest request, @RequestBody MultiValueMap<String, String> map) {
-        String email = map.get("email").get(0);
-        String password = map.get("password").get(0);
-        String valcode = map.get("valcode").get(0);
+    public RequestResult<User> login(HttpServletRequest request, @RequestBody Map<String, String> map) {
+        String email = map.get("email");
+        String password = map.get("password");
+        String valcode = map.get("valcode");
         //检查字段
         if (email == null || password == null || valcode == null)
             return new RequestResult<User>(StatEnum.ERROR_PARAM, null);
@@ -117,18 +117,18 @@ public class UserController {
         }
     }
 
-    @RequestMapping(value = "/change", method = RequestMethod.POST)
+    @RequestMapping(value = "/change", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
     @ResponseBody
-    public RequestResult<User> passwordChange(HttpServletRequest request, @RequestBody MultiValueMap<String, String> map){
+    public RequestResult<User> passwordChange(HttpServletRequest request, @RequestBody Map<String, String> map){
         try {
             User user = (User) request.getSession().getAttribute("user");
             if (user == null)
-                throw new UserNotLogin("用户还未登录");
-            String newPassword = map.get("password").get(0);
+                throw new UserNotLoginException("用户还未登录");
+            String newPassword = map.get("password");
             user.setPassword(newPassword);
             RequestResult<User> result = userService.passwordChange(user);
             return result;
-        } catch (UserNotLogin e){
+        } catch (UserNotLoginException e){
             logger.warn("用户还未登录");
             return new RequestResult<User>(StatEnum.USER_NOT_LOGIN, null);
         } catch (FormatterFaultException e){
@@ -141,23 +141,23 @@ public class UserController {
 
     }
 
-    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    @RequestMapping(value = "/update", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
     @ResponseBody
-    public RequestResult<User> updateUser(HttpServletRequest request, @RequestBody MultiValueMap<String, String> map){
+    public RequestResult<User> updateUser(HttpServletRequest request, @RequestBody Map<String, String> map){
         try {
             User user = (User)request.getSession().getAttribute("user");
-            user.setPhone(map.get("phone").get(0));
-            if (map.get("userName").get(0) != null && !map.get("userName").get(0).equals("")) {
-                user.setUserName(map.get("userName").get(0));
+            user.setPhone(map.get("phone"));
+            if (map.get("userName") != null && !map.get("userName").equals("")) {
+                user.setUserName(map.get("userName"));
             }
-            if (map.get("email").get(0) != null && !map.get("email").get(0).equals("")) {
-                user.setEmail(map.get("email").get(0));
+            if (map.get("email") != null && !map.get("email").equals("")) {
+                user.setEmail(map.get("email"));
             }
 
             RequestResult<User> result = userService.updateUser(user);
             request.getSession().setAttribute("user", (User)result.getData());
             return result;
-        } catch (UserNotLogin e){
+        } catch (UserNotLoginException e){
             logger.warn("用户还未登录");
             return new RequestResult<User>(StatEnum.USER_NOT_LOGIN, null);
         } catch (FormatterFaultException e){
@@ -191,7 +191,7 @@ public class UserController {
         } catch (IOException e) {
             logger.error("用户上传图片发送异常！", e);
             return new RequestResult<Object>(StatEnum.FILE_UPLOAD_FAIL, null);
-        } catch (UserNotLogin e){
+        } catch (UserNotLoginException e){
             logger.warn("用户还未登录");
             return new RequestResult<User>(StatEnum.USER_NOT_LOGIN, null);
         } catch (Exception e){

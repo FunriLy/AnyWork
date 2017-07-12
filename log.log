@@ -1854,3 +1854,25 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have a
 [DEBUG] 2017-07-11 20:25:20,764 com.qg.AnyWork.dao.UserDao.selectByEmail - ==>  Preparing: SELECT * FROM user WHERE email = ? 
 [DEBUG] 2017-07-11 20:25:20,799 com.qg.AnyWork.dao.UserDao.selectByEmail - ==> Parameters: 123456@qq.com(String)
 [DEBUG] 2017-07-11 20:25:20,818 com.qg.AnyWork.dao.UserDao.selectByEmail - <==      Total: 1
+[INFO ] 2017-07-12 15:34:19,848 com.qg.AnyWork.AnyWorkApplicationTests - Starting AnyWorkApplicationTests on DESKTOP-U9OSLH3 with PID 18056 (started by zggdczfr in F:\Git workspace\AnyWork)
+[DEBUG] 2017-07-12 15:34:19,942 com.qg.AnyWork.AnyWorkApplicationTests - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 15:34:19,944 com.qg.AnyWork.AnyWorkApplicationTests - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 15:34:34,322 com.qg.AnyWork.AnyWorkApplicationTests - Started AnyWorkApplicationTests in 15.886 seconds (JVM running for 21.283)
+[INFO ] 2017-07-12 15:35:48,624 com.qg.AnyWork.AnyWorkApplicationTests - Starting AnyWorkApplicationTests on DESKTOP-U9OSLH3 with PID 17580 (started by zggdczfr in F:\Git workspace\AnyWork)
+[DEBUG] 2017-07-12 15:35:48,642 com.qg.AnyWork.AnyWorkApplicationTests - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 15:35:48,642 com.qg.AnyWork.AnyWorkApplicationTests - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 15:35:58,848 com.qg.AnyWork.AnyWorkApplicationTests - Started AnyWorkApplicationTests in 10.831 seconds (JVM running for 14.043)
+[INFO ] 2017-07-12 15:44:11,574 com.qg.AnyWork.AnyWorkApplicationTests - Starting AnyWorkApplicationTests on DESKTOP-U9OSLH3 with PID 15572 (started by zggdczfr in F:\Git workspace\AnyWork)
+[DEBUG] 2017-07-12 15:44:11,659 com.qg.AnyWork.AnyWorkApplicationTests - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 15:44:11,659 com.qg.AnyWork.AnyWorkApplicationTests - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 15:47:40,345 com.qg.AnyWork.AnyWorkApplicationTests - Starting AnyWorkApplicationTests on DESKTOP-U9OSLH3 with PID 7140 (started by zggdczfr in F:\Git workspace\AnyWork)
+[DEBUG] 2017-07-12 15:47:40,416 com.qg.AnyWork.AnyWorkApplicationTests - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 15:47:40,416 com.qg.AnyWork.AnyWorkApplicationTests - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 15:47:48,723 com.qg.AnyWork.AnyWorkApplicationTests - Started AnyWorkApplicationTests in 8.806 seconds (JVM running for 10.937)
+[INFO ] 2017-07-12 20:21:34,859 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-U9OSLH3 with PID 12996 (started by zggdczfr in F:\Git workspace\AnyWork)
+[DEBUG] 2017-07-12 20:21:35,034 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 20:21:35,034 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 20:23:02,618 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 92.231 seconds (JVM running for 124.042)
+[DEBUG] 2017-07-12 20:23:20,703 com.qg.AnyWork.dao.UserDao.selectByEmail - ==>  Preparing: SELECT * FROM user WHERE email = ? 
+[DEBUG] 2017-07-12 20:23:25,315 com.qg.AnyWork.dao.UserDao.selectByEmail - ==> Parameters: 123456@qq.com(String)
+[DEBUG] 2017-07-12 20:23:26,176 com.qg.AnyWork.dao.UserDao.selectByEmail - <==      Total: 1

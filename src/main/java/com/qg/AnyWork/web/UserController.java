@@ -22,6 +22,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.Map;
 
 /**
  * Created by FunriLy on 2017/7/10.
@@ -37,54 +38,38 @@ public class UserController {
     private UserService userService;
 
     /**
-     *
+     * 
      * @param request
      * @param map
-     * @param file
      * @return 用户id
      */
-    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    @RequestMapping(value = "/register", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
     @ResponseBody
     public RequestResult<Integer> register(HttpServletRequest request,
-                                           @RequestBody MultiValueMap<String, String> map,
-                                           @RequestParam("file") MultipartFile file){
+                                           @RequestBody Map<String, String> map){
         User user = new User();
-        user.setEmail(map.get("email").get(0));
-        user.setPassword(map.get("password").get(0));
-        user.setUserName(map.get("userName").get(0));
-        user.setPhone(map.get("phone").get(0));
+        user.setEmail(map.get("email"));
+        user.setPassword(map.get("password"));
+        user.setUserName(map.get("userName"));
+        user.setPhone(map.get("phone"));
+        user.setMark(Integer.valueOf(map.get("mark")));
         try {
-            user.setMark(Integer.valueOf(map.get("mark").get(0)));
+            user.setMark(Integer.valueOf(map.get("mark")));
         } catch (Exception e){
             user.setMark(0);
         }
         //注册用户
         try {
             RequestResult<Integer> result = userService.register(user);
-            //上传图片
-            if (null != file && !file.isEmpty()){
-                String filename = file.getOriginalFilename();
-                if (filename.endsWith(".jpg") || filename.endsWith(".JPG") || filename.endsWith(".png") || filename.endsWith(".PNG")) {
-                    logger.info("用户上传头像：" + result.getData());
-                    //文件上传
-                    FileUtils.copyInputStreamToFile(file.getInputStream(),
-                            new File(request.getServletContext().getRealPath("/picture"), result.getData()+".jpg"));
-                } else {
-                    return new RequestResult<Integer>(StatEnum.FILE_FORMAT_ERROR, 0);
-                }
-                return result;
-            } else {
-                return null;
-            }
+//            FileUtils.copyInputStreamToFile(new FileInputStream(new File("classpath:/resources/static/picture/picture.jpg")),
+//                    new File(request.getServletContext().getRealPath("/picture"), result.getData() +".jpg"));
+            return result;
         } catch (FormatterFaultException e){
             logger.warn(e.getMessage(), e);
             return new RequestResult<Integer>(StatEnum.REGISTER_FAMMTER_FAULT, 0);
         } catch (EmptyUserException e){
             logger.warn(e.getMessage(), e);
             return new RequestResult<Integer>(StatEnum.REGISTER_EMPTY_USER, 0);
-        } catch (IOException e) {
-            logger.error("用户上传图片发送异常！", e);
-            return new RequestResult<Integer>(StatEnum.FILE_UPLOAD_FAIL, 0);
         } catch (Exception e){
             logger.warn("未知异常：", e);
             return new RequestResult<Integer>(StatEnum.DEFAULT_WRONG, 0);
@@ -97,12 +82,12 @@ public class UserController {
      * @param map
      * @return
      */
-    @RequestMapping(value = "'/login", method = RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
     @ResponseBody
-    public RequestResult<User> login(HttpServletRequest request, @RequestBody MultiValueMap<String, String> map) {
-        String email = map.get("email").get(0);
-        String password = map.get("password").get(0);
-        String valcode = map.get("valcode").get(0);
+    public RequestResult<User> login(HttpServletRequest request, @RequestBody Map<String, String> map) {
+        String email = map.get("email");
+        String password = map.get("password");
+        String valcode = map.get("valcode");
         //检查字段
         if (email == null || password == null || valcode == null)
             return new RequestResult<User>(StatEnum.ERROR_PARAM, null);
@@ -132,24 +117,23 @@ public class UserController {
         }
     }
 
-    public RequestResult<User> passwordChange(HttpServletRequest request, @RequestBody MultiValueMap<String, String> map){
+    @RequestMapping(value = "/change", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
+    @ResponseBody
+    public RequestResult<User> passwordChange(HttpServletRequest request, @RequestBody Map<String, String> map){
         try {
             User user = (User) request.getSession().getAttribute("user");
             if (user == null)
-                throw new UserNotLogin("用户还未登录");
-            String newPassword = map.get("password").get(0);
-            User rUser = new User();
-            rUser.setUserId(user.getUserId());
-            rUser.setPassword(newPassword);
-
-            RequestResult<User> result = userService.updateUser(rUser);
+                throw new UserNotLoginException("用户还未登录");
+            String newPassword = map.get("password");
+            user.setPassword(newPassword);
+            RequestResult<User> result = userService.passwordChange(user);
             return result;
-        } catch (UserNotLogin e){
+        } catch (UserNotLoginException e){
             logger.warn("用户还未登录");
-            return new RequestResult<User>(null);
+            return new RequestResult<User>(StatEnum.USER_NOT_LOGIN, null);
         } catch (FormatterFaultException e){
             logger.warn("修改信息格式错误");
-            return new RequestResult<User>(null);
+            return new RequestResult<User>(StatEnum.FROMATTER_WARNING, null);
         } catch (Exception e){
             logger.warn("未知异常: ", e);
             return new RequestResult<User>(StatEnum.DEFAULT_WRONG, null);
@@ -157,6 +141,64 @@ public class UserController {
 
     }
 
+    @RequestMapping(value = "/update", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
+    @ResponseBody
+    public RequestResult<User> updateUser(HttpServletRequest request, @RequestBody Map<String, String> map){
+        try {
+            User user = (User)request.getSession().getAttribute("user");
+            user.setPhone(map.get("phone"));
+            if (map.get("userName") != null && !map.get("userName").equals("")) {
+                user.setUserName(map.get("userName"));
+            }
+            if (map.get("email") != null && !map.get("email").equals("")) {
+                user.setEmail(map.get("email"));
+            }
+
+            RequestResult<User> result = userService.updateUser(user);
+            request.getSession().setAttribute("user", (User)result.getData());
+            return result;
+        } catch (UserNotLoginException e){
+            logger.warn("用户还未登录");
+            return new RequestResult<User>(StatEnum.USER_NOT_LOGIN, null);
+        } catch (FormatterFaultException e){
+            logger.warn("修改信息格式错误");
+            return new RequestResult<User>(StatEnum.FROMATTER_WARNING, null);
+        } catch (Exception e){
+            logger.warn("未知异常: ", e);
+            return new RequestResult<User>(StatEnum.DEFAULT_WRONG, null);
+        }
+    }
+
+    @RequestMapping(value = "/upload", method = RequestMethod.POST)
+    @ResponseBody
+    public RequestResult<?> uploadPicture(HttpServletRequest request, @RequestParam("file") MultipartFile file){
+        try {
+            User user = (User) request.getSession().getAttribute("user");
+            //上传图片
+            if (null != file && !file.isEmpty()){
+                String filename = file.getOriginalFilename();
+                if (filename.endsWith(".jpg") || filename.endsWith(".JPG") || filename.endsWith(".png") || filename.endsWith(".PNG")) {
+                    //文件上传
+                    FileUtils.copyInputStreamToFile(file.getInputStream(),
+                            new File(request.getServletContext().getRealPath("/picture"), user.getUserId() +".jpg"));
+                } else {
+                    return new RequestResult<Object>(StatEnum.FILE_FORMAT_ERROR, null);
+                }
+                return new RequestResult<Object>(StatEnum.PICTURE_UPLOAD_SUCCESS, null);
+            } else {
+                return null;
+            }
+        } catch (IOException e) {
+            logger.error("用户上传图片发送异常！", e);
+            return new RequestResult<Object>(StatEnum.FILE_UPLOAD_FAIL, null);
+        } catch (UserNotLoginException e){
+            logger.warn("用户还未登录");
+            return new RequestResult<User>(StatEnum.USER_NOT_LOGIN, null);
+        } catch (Exception e){
+            logger.warn("未知异常: ", e);
+            return new RequestResult<User>(StatEnum.DEFAULT_WRONG, null);
+        }
+    }
 
     /**
      * 验证码验证

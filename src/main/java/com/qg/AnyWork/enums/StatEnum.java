@@ -43,6 +43,14 @@ public enum StatEnum {
     FILE_FORMAT_ERROR(4003, "文件格式错误"),
 
 
+    /**
+     * 组织板块
+     */
+    ORGAN_SEARCH_SUCCESS(10001, "搜索组织成功"),
+    ORGAN_SEARCH_FAIL(10002, "搜索组织失败"),
+    ORGAN_JOIN_SUCCESS(10003, "加入组织成功"),
+    ORGAN_JOIN_FAIL(10004, "加入组织失败"),
+
     ;
 
     private  int state;

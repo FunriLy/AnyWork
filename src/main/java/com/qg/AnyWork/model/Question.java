@@ -16,7 +16,7 @@ public class Question {
     private String key;         //答案
     private String content;     //题目内容
     private int socre;          //分数
-    private int textpaperId;    //试卷id
+    private int testpaperId;    //试卷id
     private int other;          //填空题个数
 
     public Question(){}
@@ -95,12 +95,12 @@ public class Question {
         this.socre = socre;
     }
 
-    public int getTextpaperId() {
-        return textpaperId;
+    public int gettestpaperId() {
+        return testpaperId;
     }
 
-    public void setTextpaperId(int textpaperId) {
-        this.textpaperId = textpaperId;
+    public void settestpaperId(int testpaperId) {
+        this.testpaperId = testpaperId;
     }
 
     public int getOther() {
@@ -125,7 +125,7 @@ public class Question {
                 ", key='" + key + '\'' +
                 ", content='" + content + '\'' +
                 ", socre=" + socre +
-                ", textpaperId=" + textpaperId +
+                ", testpaperId=" + testpaperId +
                 ", other=" + other +
                 '}';
     }

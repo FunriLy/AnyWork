@@ -11,7 +11,7 @@ public class StudentTestResult {
 
     private int studentTestResultId;        // 考试结果ID
     private int studentId;                  // 学生ID
-    private int textpaperId;                // 考试ID
+    private int testpaperId;                // 考试ID
     private double socre;                   //分数
     private List<StudentAnswerAnalysis> studentAnswerAnalysis;  //具体题目分析
 
@@ -23,7 +23,7 @@ public class StudentTestResult {
         return "StudentTestResult{" +
                 "studentTestResultId=" + studentTestResultId +
                 ", studentId=" + studentId +
-                ", textpaperId=" + textpaperId +
+                ", testpaperId=" + testpaperId +
                 ", socre=" + socre +
                 ", studentAnswerAnalysis=" + studentAnswerAnalysis +
                 '}';
@@ -45,12 +45,12 @@ public class StudentTestResult {
         this.studentId = studentId;
     }
 
-    public int getTextpaperId() {
-        return textpaperId;
+    public int getTestpaperId() {
+        return testpaperId;
     }
 
-    public void setTextpaperId(int textpaperId) {
-        this.textpaperId = textpaperId;
+    public void setTestpaperId(int testpaperId) {
+        this.testpaperId = testpaperId;
     }
 
     public double getSocre() {

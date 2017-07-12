@@ -7,11 +7,12 @@ package com.qg.AnyWork.model;
 public class Relation {
 
     private int relationId;     //ID
-    private int organId;        //组织ID
+    private int organizationId;        //组织ID
     private int userId;         //用户ID
     private int role;           //角色，预留字段
 
-    //get & set
+    public Relation() {
+    }
 
     public int getRelationId() {
         return relationId;
@@ -21,12 +22,12 @@ public class Relation {
         this.relationId = relationId;
     }
 
-    public int getOrganId() {
-        return organId;
+    public int getOrganizationId() {
+        return organizationId;
     }
 
-    public void setOrganId(int organId) {
-        this.organId = organId;
+    public void setOrganizationId(int organizationId) {
+        this.organizationId = organizationId;
     }
 
     public int getUserId() {
@@ -43,17 +44,5 @@ public class Relation {
 
     public void setRole(int role) {
         this.role = role;
-    }
-
-    //toString
-
-    @Override
-    public String toString() {
-        return "Relation{" +
-                "relationId=" + relationId +
-                ", organId=" + organId +
-                ", userId=" + userId +
-                ", role=" + role +
-                '}';
     }
 }

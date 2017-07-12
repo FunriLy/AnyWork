@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qg.AnyWork.dao.TestDao">
+    <!--目的：为Dao接口方法提供SQL语句-->
+    <select id="getTestByOrganizationId" resultType="Testpaper">
+        SELECT *
+        FROM testpaper
+        WHERE organization_id = #{organizationId} AND testpaper_type = 1
+    </select>
+
+    <select id="getPracticeByOrganizationId" resultType="Testpaper">
+        SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chaper_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id
+        FROM testpaper t, chapter c
+        WHERE organization_id = #{organizationId} AND testpaper_type = 1 AND c.chapter_id = t.chapter_id
+    </select>
+
+    <select id="getPracticeByOCId" resultType="Testpaper">
+        SELECT *
+        FROM testpaper
+        WHERE organization_id = #{organizationId} AND chapter_id = #{chapterId} AND testpaper_type = 0;
+    </select>
+
+    <select id="getQuestionByTestpaperId" resultType="Question">
+        SELECT *
+        FROM question
+        WHERE testpaper_id = #{testpaperId}
+    </select>
+
+    <select id="getQuestionById" resultType="Question">
+        SELECT *
+        FROM question
+        WHERE question_id = #{questionId}
+    </select>
+
+    <insert id="addTestResult" parameterType="StudentTestResult" keyProperty="studentTestResultId">
+        INSERT ignore INTO test_result (student_id,test_paper_id,socre)
+        VALUE (#{testResult.studentId},#{testResult.testpaperId},#{testResult.socre})
+    </insert>
+
+    <insert id="addStudentAnswer" parameterType="StudentAnswerAnalysis" keyProperty="studentAnswerAnalysisId">
+        INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre)
+        VALUE (#{studentAnswerAnalysis.studentId},#{studentAnswerAnalysis.question.questionId},#{studentAnswerAnalysis.studentAnswer},#{studentAnswerAnalysis.isTrue},#{studentAnswerAnalysis.socre})
+    </insert>
+</mapper>

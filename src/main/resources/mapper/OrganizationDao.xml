@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qg.AnyWork.dao.OrganizationDao">
+
+    <resultMap type="com.qg.AnyWork.model.Organization" id="organizationResultMap">
+        <id  property="organizationId"        column="organization_id" />
+        <result property="teacherId"       column="teacher_id" />
+        <result property="teacherName"        column="user_name"  />
+        <result property="organizationName"   column="organization_name"  />
+        <result property="description"   column="description"  />
+        <result property="token"  column="token"  />
+    </resultMap>
+
+    <!--目的：为Dao接口方法提供SQL语句-->
+
+    <select id="getByKeyWords" resultMap="organizationResultMap">
+        SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token
+        FROM organization o,user u WHERE u.user_id=o.teacher_id AND o.organization_name LIKE #{organizationName}
+    </select>
+
+    <select id="getByUserId" resultMap="organizationResultMap">
+        SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token
+        FROM organization o,user u
+         WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = #{userId})
+         AND u.user_id=o.teacher_id
+    </select>
+
+    <select id="getById" resultType="Organization">
+        SELECT *
+        FROM organization WHERE organization_id = #{organizationId}
+    </select>
+
+    <insert id="joinOrganization">
+        INSERT ignore INTO relation (organization_id , user_id)
+        VALUE (#{organizationId} , #{userId})
+    </insert>
+
+
+    <select id="isJoin" resultType="int">
+        SELECT COUNT(*)
+        FROM relation WHERE organization_id = #{organizationId} AND user_id = #{userId}
+    </select>
+</mapper>

@@ -11,9 +11,9 @@ public class StudentPaper {
     private List<StudentAnswer> studentAnswer; //学生做的答案
     private String userName;            //答题者名字
     private int studentId;            //答题者Id
-    private int textpaperId;            //试卷id
-    private Date startTime;             //开始答题的时间
-    private Date endTime;               //答题结束的时间
+    private int testpaperId;            //试卷id
+    private Long startTime;             //开始答题的时间
+    private Long endTime;               //答题结束的时间
 
     public StudentPaper() {
     }
@@ -25,7 +25,7 @@ public class StudentPaper {
                 ", studentAnswer=" + studentAnswer +
                 ", userName='" + userName + '\'' +
                 ", studentId=" + studentId +
-                ", textpaperId=" + textpaperId +
+                ", testpaperId=" + testpaperId +
                 ", startTime=" + startTime +
                 ", endTime=" + endTime +
                 '}';
@@ -63,27 +63,27 @@ public class StudentPaper {
         this.studentId = studentId;
     }
 
-    public int getTextpaperId() {
-        return textpaperId;
+    public int getTestpaperId() {
+        return testpaperId;
     }
 
-    public void setTextpaperId(int textpaperId) {
-        this.textpaperId = textpaperId;
+    public void setTestpaperId(int testpaperId) {
+        this.testpaperId = testpaperId;
     }
 
-    public Date getStartTime() {
+    public Long getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Date startTime) {
+    public void setStartTime(Long startTime) {
         this.startTime = startTime;
     }
 
-    public Date getEndTime() {
+    public Long getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Date endTime) {
+    public void setEndTime(Long endTime) {
         this.endTime = endTime;
     }
 }

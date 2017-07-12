@@ -6,10 +6,11 @@ package com.qg.AnyWork.model;
 public class StudentAnswerAnalysis {
 
     private int studentAnswerAnalysisId;       //分析id
+    private int studentId;              //学生id
     private Question question;        //试题
     private String studentAnswer;   //学生答案
     private int isTrue;         //是否正确
-    private double socre ;       //得分情况
+    private double socre;       //得分情况
 
     public StudentAnswerAnalysis() {
     }
@@ -23,6 +24,14 @@ public class StudentAnswerAnalysis {
                 ", isTrue=" + isTrue +
                 ", socre=" + socre +
                 '}';
+    }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
     }
 
     public int getStudentAnswerAnalysisId() {

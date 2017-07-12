@@ -1,0 +1,533 @@
+[INFO ] 2017-07-11 16:13:43,238 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 6380 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 16:13:43,530 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 16:13:43,530 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 16:13:58,275 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 18.512 seconds (JVM running for 23.067)
+[INFO ] 2017-07-11 16:17:16,214 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 7688 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 16:17:16,225 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 16:17:16,225 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 16:17:23,004 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 7.435 seconds (JVM running for 9.842)
+[INFO ] 2017-07-11 17:10:47,446 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 5592 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 17:10:47,455 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 17:10:47,459 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 17:10:53,014 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 6.002 seconds (JVM running for 8.513)
+[DEBUG] 2017-07-11 17:10:53,187 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 17:10:53,217 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 17:10:53,248 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 17:11:21,512 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 7548 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 17:11:21,521 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 17:11:21,522 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 17:11:27,080 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 5.909 seconds (JVM running for 8.337)
+[DEBUG] 2017-07-11 17:11:27,163 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 17:11:27,186 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 17:11:27,201 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 17:12:24,615 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 7512 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 17:12:24,634 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 17:12:24,642 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 17:12:30,260 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 6.057 seconds (JVM running for 8.591)
+[DEBUG] 2017-07-11 17:12:30,343 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 17:12:30,364 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 17:12:30,377 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 17:15:12,013 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 6688 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 17:15:12,062 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 17:15:12,063 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 17:15:17,947 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 6.28 seconds (JVM running for 8.903)
+[DEBUG] 2017-07-11 17:15:18,027 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 17:15:18,050 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 17:15:18,069 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 17:16:10,557 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 4104 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 17:16:10,564 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 17:16:10,570 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 17:16:16,306 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 6.364 seconds (JVM running for 8.834)
+[DEBUG] 2017-07-11 17:16:16,385 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 17:16:16,417 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 17:16:16,431 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 17:19:31,158 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 4072 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 17:19:31,168 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 17:19:31,168 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 17:19:37,180 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 6.412 seconds (JVM running for 9.157)
+[DEBUG] 2017-07-11 17:19:37,282 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 17:19:37,311 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 17:19:37,322 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 17:25:07,634 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 5832 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 17:25:07,642 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 17:25:07,645 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 17:25:13,472 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 6.219 seconds (JVM running for 8.68)
+[DEBUG] 2017-07-11 17:25:13,562 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 17:25:13,596 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 17:25:13,612 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 17:25:48,092 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 940 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 17:25:48,096 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 17:25:48,096 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 17:25:53,537 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 5.836 seconds (JVM running for 8.314)
+[DEBUG] 2017-07-11 17:25:53,641 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 17:25:53,677 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 17:25:53,694 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 17:38:19,190 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 8164 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 17:38:19,199 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 17:38:19,200 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 17:38:24,908 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 6.352 seconds (JVM running for 8.519)
+[DEBUG] 2017-07-11 17:38:25,007 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 17:38:25,042 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 17:38:25,055 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 17:38:47,440 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 6640 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 17:38:47,447 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 17:38:47,447 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 17:38:53,142 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 6.182 seconds (JVM running for 8.593)
+[DEBUG] 2017-07-11 17:38:53,234 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 17:38:53,269 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 17:38:53,283 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 17:39:41,802 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 7916 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 17:39:41,808 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 17:39:41,808 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 17:39:47,802 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 6.343 seconds (JVM running for 8.884)
+[DEBUG] 2017-07-11 17:39:47,897 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 17:39:47,932 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 17:39:47,950 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 17:40:46,748 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 7680 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 17:40:46,752 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 17:40:46,753 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 17:40:52,338 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 6.077 seconds (JVM running for 8.449)
+[DEBUG] 2017-07-11 17:40:52,416 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 17:40:52,440 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 17:40:52,459 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 17:41:06,300 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 6888 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 17:41:06,306 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 17:41:06,306 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 17:41:12,149 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 6.24 seconds (JVM running for 8.693)
+[DEBUG] 2017-07-11 17:41:12,231 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 17:41:12,261 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 17:41:12,278 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 19:04:08,713 com.qg.AnyWork.dao.OrganizationDaoTest - Starting OrganizationDaoTest on DESKTOP-UJ96RS7 with PID 4056 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:04:08,718 com.qg.AnyWork.dao.OrganizationDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:04:08,718 com.qg.AnyWork.dao.OrganizationDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:04:14,619 com.qg.AnyWork.dao.OrganizationDaoTest - Started OrganizationDaoTest in 6.454 seconds (JVM running for 9.076)
+[DEBUG] 2017-07-11 19:04:14,695 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE ? 
+[DEBUG] 2017-07-11 19:04:14,720 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: 软件(String)
+[DEBUG] 2017-07-11 19:04:14,730 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 0
+[INFO ] 2017-07-11 19:06:59,347 com.qg.AnyWork.dao.OrganizationDaoTest - Starting OrganizationDaoTest on DESKTOP-UJ96RS7 with PID 8920 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:06:59,353 com.qg.AnyWork.dao.OrganizationDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:06:59,354 com.qg.AnyWork.dao.OrganizationDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:07:05,947 com.qg.AnyWork.dao.OrganizationDaoTest - Started OrganizationDaoTest in 7.117 seconds (JVM running for 9.667)
+[DEBUG] 2017-07-11 19:07:06,075 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE %?% 
+[DEBUG] 2017-07-11 19:07:06,114 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: 软件(String)
+[INFO ] 2017-07-11 19:08:47,488 com.qg.AnyWork.dao.OrganizationDaoTest - Starting OrganizationDaoTest on DESKTOP-UJ96RS7 with PID 1708 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:08:47,496 com.qg.AnyWork.dao.OrganizationDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:08:47,497 com.qg.AnyWork.dao.OrganizationDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:08:54,081 com.qg.AnyWork.dao.OrganizationDaoTest - Started OrganizationDaoTest in 7.202 seconds (JVM running for 9.619)
+[DEBUG] 2017-07-11 19:08:54,224 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE '%'+ ? + '%' 
+[DEBUG] 2017-07-11 19:08:54,260 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: 软件(String)
+[INFO ] 2017-07-11 19:10:15,947 com.qg.AnyWork.dao.ChapterDaoTest - Starting ChapterDaoTest on DESKTOP-UJ96RS7 with PID 9180 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:10:15,953 com.qg.AnyWork.dao.ChapterDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:10:15,954 com.qg.AnyWork.dao.ChapterDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:10:22,833 com.qg.AnyWork.dao.ChapterDaoTest - Started ChapterDaoTest in 7.39 seconds (JVM running for 9.643)
+[DEBUG] 2017-07-11 19:10:22,940 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==>  Preparing: SELECT * FROM chapter WHERE organization_id = ? 
+[DEBUG] 2017-07-11 19:10:22,975 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 19:10:22,994 com.qg.AnyWork.dao.ChapterDao.getByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-11 19:10:40,808 com.qg.AnyWork.dao.OrganizationDaoTest - Starting OrganizationDaoTest on DESKTOP-UJ96RS7 with PID 8280 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:10:40,815 com.qg.AnyWork.dao.OrganizationDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:10:40,817 com.qg.AnyWork.dao.OrganizationDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:10:47,547 com.qg.AnyWork.dao.OrganizationDaoTest - Started OrganizationDaoTest in 7.15 seconds (JVM running for 9.8)
+[DEBUG] 2017-07-11 19:10:47,644 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE '%'?'%' 
+[DEBUG] 2017-07-11 19:10:47,681 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: 软件(String)
+[DEBUG] 2017-07-11 19:10:47,696 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 0
+[INFO ] 2017-07-11 19:12:46,093 com.qg.AnyWork.dao.OrganizationDaoTest - Starting OrganizationDaoTest on DESKTOP-UJ96RS7 with PID 6964 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:12:46,100 com.qg.AnyWork.dao.OrganizationDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:12:46,113 com.qg.AnyWork.dao.OrganizationDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:12:53,286 com.qg.AnyWork.dao.OrganizationDaoTest - Started OrganizationDaoTest in 7.61 seconds (JVM running for 10.269)
+[DEBUG] 2017-07-11 19:12:53,392 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE ? 
+[DEBUG] 2017-07-11 19:12:53,429 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %软件%(String)
+[DEBUG] 2017-07-11 19:12:53,447 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 2
+[INFO ] 2017-07-11 19:15:45,989 com.qg.AnyWork.dao.OrganizationDaoTest - Starting OrganizationDaoTest on DESKTOP-UJ96RS7 with PID 8692 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:15:45,995 com.qg.AnyWork.dao.OrganizationDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:15:45,995 com.qg.AnyWork.dao.OrganizationDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:15:52,070 com.qg.AnyWork.dao.OrganizationDaoTest - Started OrganizationDaoTest in 6.509 seconds (JVM running for 8.965)
+[DEBUG] 2017-07-11 19:15:52,271 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE ? 
+[DEBUG] 2017-07-11 19:15:52,353 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %软件%(String)
+[DEBUG] 2017-07-11 19:15:52,386 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 2
+[INFO ] 2017-07-11 19:20:01,807 com.qg.AnyWork.dao.OrganizationDaoTest - Starting OrganizationDaoTest on DESKTOP-UJ96RS7 with PID 3140 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:20:01,816 com.qg.AnyWork.dao.OrganizationDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:20:01,817 com.qg.AnyWork.dao.OrganizationDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:20:08,911 com.qg.AnyWork.dao.OrganizationDaoTest - Started OrganizationDaoTest in 7.507 seconds (JVM running for 9.982)
+[DEBUG] 2017-07-11 19:20:09,054 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE ? 
+[DEBUG] 2017-07-11 19:20:09,106 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %软件%(String)
+[DEBUG] 2017-07-11 19:20:09,125 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 2
+[INFO ] 2017-07-11 19:21:17,742 com.qg.AnyWork.dao.OrganizationDaoTest - Starting OrganizationDaoTest on DESKTOP-UJ96RS7 with PID 1112 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:21:17,750 com.qg.AnyWork.dao.OrganizationDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:21:17,751 com.qg.AnyWork.dao.OrganizationDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:21:23,523 com.qg.AnyWork.dao.OrganizationDaoTest - Started OrganizationDaoTest in 6.283 seconds (JVM running for 8.657)
+[DEBUG] 2017-07-11 19:21:23,601 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE ? 
+[DEBUG] 2017-07-11 19:21:23,639 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %软件%(String)
+[DEBUG] 2017-07-11 19:21:23,657 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 2
+[INFO ] 2017-07-11 19:22:44,043 com.qg.AnyWork.dao.OrganizationDaoTest - Starting OrganizationDaoTest on DESKTOP-UJ96RS7 with PID 4332 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:22:44,050 com.qg.AnyWork.dao.OrganizationDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:22:44,066 com.qg.AnyWork.dao.OrganizationDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:22:49,941 com.qg.AnyWork.dao.OrganizationDaoTest - Started OrganizationDaoTest in 6.281 seconds (JVM running for 8.818)
+[DEBUG] 2017-07-11 19:22:50,036 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT * FROM organization WHERE organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) 
+[DEBUG] 2017-07-11 19:22:50,062 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 19:22:50,115 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 2
+[INFO ] 2017-07-11 19:23:06,388 com.qg.AnyWork.dao.OrganizationDaoTest - Starting OrganizationDaoTest on DESKTOP-UJ96RS7 with PID 6168 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:23:06,392 com.qg.AnyWork.dao.OrganizationDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:23:06,392 com.qg.AnyWork.dao.OrganizationDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:23:12,094 com.qg.AnyWork.dao.OrganizationDaoTest - Started OrganizationDaoTest in 6.101 seconds (JVM running for 8.556)
+[DEBUG] 2017-07-11 19:23:12,193 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-11 19:23:12,247 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 19:23:12,265 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[INFO ] 2017-07-11 19:23:41,074 com.qg.AnyWork.dao.OrganizationDaoTest - Starting OrganizationDaoTest on DESKTOP-UJ96RS7 with PID 7604 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:23:41,122 com.qg.AnyWork.dao.OrganizationDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:23:41,125 com.qg.AnyWork.dao.OrganizationDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:23:48,035 com.qg.AnyWork.dao.OrganizationDaoTest - Started OrganizationDaoTest in 7.3 seconds (JVM running for 10.352)
+[DEBUG] 2017-07-11 19:23:48,155 com.qg.AnyWork.dao.OrganizationDao.joinOrganization - ==>  Preparing: INSERT ignore INTO relation (organization_id , user_id) VALUE (? , ?)) 
+[DEBUG] 2017-07-11 19:23:48,199 com.qg.AnyWork.dao.OrganizationDao.joinOrganization - ==> Parameters: 1(Integer), 5(Integer)
+[INFO ] 2017-07-11 19:24:34,477 com.qg.AnyWork.dao.OrganizationDaoTest - Starting OrganizationDaoTest on DESKTOP-UJ96RS7 with PID 9000 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:24:34,501 com.qg.AnyWork.dao.OrganizationDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:24:34,505 com.qg.AnyWork.dao.OrganizationDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:24:41,231 com.qg.AnyWork.dao.OrganizationDaoTest - Started OrganizationDaoTest in 7.157 seconds (JVM running for 10.354)
+[DEBUG] 2017-07-11 19:24:41,315 com.qg.AnyWork.dao.OrganizationDao.joinOrganization - ==>  Preparing: INSERT ignore INTO relation (organization_id , user_id) VALUE (? , ?) 
+[DEBUG] 2017-07-11 19:24:41,340 com.qg.AnyWork.dao.OrganizationDao.joinOrganization - ==> Parameters: 1(Integer), 5(Integer)
+[DEBUG] 2017-07-11 19:24:41,450 com.qg.AnyWork.dao.OrganizationDao.joinOrganization - <==    Updates: 1
+[INFO ] 2017-07-11 19:45:45,248 com.qg.AnyWork.dao.TestDaoTest - Starting TestDaoTest on DESKTOP-UJ96RS7 with PID 8744 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:45:45,253 com.qg.AnyWork.dao.TestDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:45:45,253 com.qg.AnyWork.dao.TestDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:45:51,575 com.qg.AnyWork.dao.TestDaoTest - Started TestDaoTest in 6.745 seconds (JVM running for 9.567)
+[DEBUG] 2017-07-11 19:45:51,659 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?,) 
+[DEBUG] 2017-07-11 19:45:51,720 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-11 19:45:51,720 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 19:45:51,733 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[DEBUG] 2017-07-11 19:45:51,739 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==>  Preparing: SELECT * FROM question WHERE testpaper_id = ? 
+[DEBUG] 2017-07-11 19:45:51,740 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 19:45:51,742 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - <==      Total: 2
+[DEBUG] 2017-07-11 19:45:51,748 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-11 19:45:51,748 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 19:45:51,751 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-11 19:45:51,756 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-11 19:45:51,771 com.qg.AnyWork.dao.TestDao.getPracticeByOCId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND chapter_id = ? AND testpaper_type = 0; 
+[DEBUG] 2017-07-11 19:45:51,771 com.qg.AnyWork.dao.TestDao.getPracticeByOCId - ==> Parameters: 1(Integer), 2(Integer)
+[DEBUG] 2017-07-11 19:45:51,772 com.qg.AnyWork.dao.TestDao.getPracticeByOCId - <==      Total: 2
+[INFO ] 2017-07-11 19:58:20,066 com.qg.AnyWork.dao.TestDaoTest - Starting TestDaoTest on DESKTOP-UJ96RS7 with PID 4452 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 19:58:20,072 com.qg.AnyWork.dao.TestDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 19:58:20,073 com.qg.AnyWork.dao.TestDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 19:58:26,781 com.qg.AnyWork.dao.TestDaoTest - Started TestDaoTest in 7.32 seconds (JVM running for 10.08)
+[DEBUG] 2017-07-11 19:58:26,877 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?,) 
+[DEBUG] 2017-07-11 19:58:26,968 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-11 19:58:26,969 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 19:58:27,012 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[DEBUG] 2017-07-11 19:58:27,021 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==>  Preparing: SELECT * FROM question WHERE testpaper_id = ? 
+[DEBUG] 2017-07-11 19:58:27,021 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 19:58:27,053 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - <==      Total: 2
+[DEBUG] 2017-07-11 19:58:27,065 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-11 19:58:27,065 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-11 19:58:27,069 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-11 19:58:27,077 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-11 19:58:27,102 com.qg.AnyWork.dao.TestDao.getPracticeByOCId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND chapter_id = ? AND testpaper_type = 0; 
+[DEBUG] 2017-07-11 19:58:27,102 com.qg.AnyWork.dao.TestDao.getPracticeByOCId - ==> Parameters: 1(Integer), 2(Integer)
+[DEBUG] 2017-07-11 19:58:27,104 com.qg.AnyWork.dao.TestDao.getPracticeByOCId - <==      Total: 2
+[INFO ] 2017-07-11 20:01:03,569 com.qg.AnyWork.dao.TestDaoTest - Starting TestDaoTest on DESKTOP-UJ96RS7 with PID 6252 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 20:01:03,574 com.qg.AnyWork.dao.TestDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 20:01:03,576 com.qg.AnyWork.dao.TestDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 20:01:09,858 com.qg.AnyWork.dao.TestDaoTest - Started TestDaoTest in 6.684 seconds (JVM running for 9.31)
+[DEBUG] 2017-07-11 20:01:09,972 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-11 20:01:10,014 com.qg.AnyWork.dao.TestDao.addTestResult - ==> Parameters: 5584(Integer), 1(Integer), 100.0(Double)
+[DEBUG] 2017-07-11 20:01:10,114 com.qg.AnyWork.dao.TestDao.addTestResult - <==    Updates: 1
+[INFO ] 2017-07-11 20:02:15,742 com.qg.AnyWork.dao.TestDaoTest - Starting TestDaoTest on DESKTOP-UJ96RS7 with PID 7268 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 20:02:15,801 com.qg.AnyWork.dao.TestDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 20:02:15,802 com.qg.AnyWork.dao.TestDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 20:02:21,847 com.qg.AnyWork.dao.TestDaoTest - Started TestDaoTest in 6.498 seconds (JVM running for 9.127)
+[DEBUG] 2017-07-11 20:02:21,940 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?,) 
+[DEBUG] 2017-07-11 20:02:21,972 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 5584(Integer), null, 啊啊啊啊(String), 1(Integer), 5.0(Double)
+[INFO ] 2017-07-11 20:03:58,124 com.qg.AnyWork.dao.TestDaoTest - Starting TestDaoTest on DESKTOP-UJ96RS7 with PID 8516 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 20:03:58,129 com.qg.AnyWork.dao.TestDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 20:03:58,130 com.qg.AnyWork.dao.TestDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 20:04:04,594 com.qg.AnyWork.dao.TestDaoTest - Started TestDaoTest in 6.847 seconds (JVM running for 9.632)
+[DEBUG] 2017-07-11 20:04:04,688 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-11 20:04:04,717 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 5584(Integer), null, 啊啊啊啊(String), 1(Integer), 5.0(Double)
+[DEBUG] 2017-07-11 20:04:05,133 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[INFO ] 2017-07-11 20:05:22,813 com.qg.AnyWork.dao.TestDaoTest - Starting TestDaoTest on DESKTOP-UJ96RS7 with PID 5012 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-11 20:05:22,820 com.qg.AnyWork.dao.TestDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-11 20:05:22,823 com.qg.AnyWork.dao.TestDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-11 20:05:28,864 com.qg.AnyWork.dao.TestDaoTest - Started TestDaoTest in 6.456 seconds (JVM running for 9.001)
+[DEBUG] 2017-07-11 20:05:28,955 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-11 20:05:28,992 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 5584(Integer), 1(Integer), 啊啊啊啊(String), 1(Integer), 5.0(Double)
+[DEBUG] 2017-07-11 20:05:29,086 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[INFO ] 2017-07-12 15:41:18,738 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 6788 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 15:41:18,805 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 15:41:18,805 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 15:41:31,800 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 14.416 seconds (JVM running for 18.374)
+[DEBUG] 2017-07-12 15:41:49,213 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE ? 
+[DEBUG] 2017-07-12 15:41:49,241 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %软件%(String)
+[DEBUG] 2017-07-12 15:41:49,277 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 3
+[DEBUG] 2017-07-12 15:41:49,279 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT * FROM organization WHERE organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) 
+[DEBUG] 2017-07-12 15:41:49,280 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 15:41:49,281 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 2
+[INFO ] 2017-07-12 15:45:28,549 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 11892 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 15:45:28,560 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 15:45:28,561 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 15:45:37,912 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 9.947 seconds (JVM running for 13.726)
+[DEBUG] 2017-07-12 15:46:04,981 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE ? 
+[DEBUG] 2017-07-12 15:46:05,009 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %%(String)
+[DEBUG] 2017-07-12 15:46:05,028 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 3
+[DEBUG] 2017-07-12 15:46:05,030 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT * FROM organization WHERE organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) 
+[DEBUG] 2017-07-12 15:46:05,031 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 15:46:05,033 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 2
+[DEBUG] 2017-07-12 15:46:55,443 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE ? 
+[DEBUG] 2017-07-12 15:46:55,443 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %%(String)
+[DEBUG] 2017-07-12 15:46:55,446 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 4
+[DEBUG] 2017-07-12 15:46:55,447 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT * FROM organization WHERE organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) 
+[DEBUG] 2017-07-12 15:46:55,447 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 15:46:55,448 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 2
+[DEBUG] 2017-07-12 15:47:36,484 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE ? 
+[DEBUG] 2017-07-12 15:47:36,485 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %%(String)
+[DEBUG] 2017-07-12 15:47:36,498 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 4
+[DEBUG] 2017-07-12 15:47:56,814 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT * FROM organization WHERE organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) 
+[DEBUG] 2017-07-12 15:47:56,815 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 15:47:56,836 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 2
+[DEBUG] 2017-07-12 15:49:45,680 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE ? 
+[DEBUG] 2017-07-12 15:49:45,680 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %%(String)
+[DEBUG] 2017-07-12 15:49:45,681 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 4
+[DEBUG] 2017-07-12 15:49:45,682 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT * FROM organization WHERE organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) 
+[DEBUG] 2017-07-12 15:49:45,683 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 15:49:45,684 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 2
+[INFO ] 2017-07-12 15:50:17,565 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 11800 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 15:50:17,571 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 15:50:17,572 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 15:50:27,995 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 11.276 seconds (JVM running for 14.212)
+[DEBUG] 2017-07-12 15:50:34,589 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT * FROM organization WHERE organization_name LIKE ? 
+[DEBUG] 2017-07-12 15:50:34,618 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %%(String)
+[DEBUG] 2017-07-12 15:50:34,636 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 4
+[DEBUG] 2017-07-12 15:50:34,638 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT * FROM organization WHERE organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) 
+[DEBUG] 2017-07-12 15:50:34,639 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 15:50:34,640 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 2
+[INFO ] 2017-07-12 16:15:37,565 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 14324 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 16:15:37,573 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 16:15:37,573 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 16:16:14,613 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 13672 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 16:16:14,661 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 16:16:14,661 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 16:17:04,119 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 10620 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 16:17:04,127 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 16:17:04,127 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 16:18:07,724 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 12484 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 16:18:07,731 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 16:18:07,732 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 16:18:16,961 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 9.86 seconds (JVM running for 12.578)
+[INFO ] 2017-07-12 16:19:07,243 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 14204 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 16:19:07,250 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 16:19:07,251 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 16:19:17,063 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 10.397 seconds (JVM running for 13.646)
+[DEBUG] 2017-07-12 16:19:22,260 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE u.user_id=o.teacher_id AND o.organization_name LIKE ? 
+[DEBUG] 2017-07-12 16:19:22,297 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %%(String)
+[DEBUG] 2017-07-12 16:19:22,317 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 4
+[DEBUG] 2017-07-12 16:19:22,319 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT * FROM organization WHERE organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) 
+[DEBUG] 2017-07-12 16:19:22,320 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 16:19:22,322 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 2
+[DEBUG] 2017-07-12 16:19:52,208 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE u.user_id=o.teacher_id AND o.organization_name LIKE ? 
+[DEBUG] 2017-07-12 16:19:52,208 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %软件%(String)
+[DEBUG] 2017-07-12 16:19:52,210 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 2
+[DEBUG] 2017-07-12 16:19:52,211 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT * FROM organization WHERE organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) 
+[DEBUG] 2017-07-12 16:19:52,212 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 16:19:52,213 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 2
+[DEBUG] 2017-07-12 16:21:27,536 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==>  Preparing: SELECT COUNT(*) FROM relation WHERE organization_id = ? AND user_id = ? 
+[DEBUG] 2017-07-12 16:21:27,536 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==> Parameters: 2(Integer), 1(Integer)
+[DEBUG] 2017-07-12 16:21:27,540 com.qg.AnyWork.dao.OrganizationDao.isJoin - <==      Total: 1
+[DEBUG] 2017-07-12 16:21:27,542 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-12 16:21:27,543 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-12 16:21:27,544 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[WARN ] 2017-07-12 16:21:27,544 com.qg.AnyWork.web.OrganizationController - 口令错误
+[DEBUG] 2017-07-12 16:21:33,201 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==>  Preparing: SELECT COUNT(*) FROM relation WHERE organization_id = ? AND user_id = ? 
+[DEBUG] 2017-07-12 16:21:33,201 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==> Parameters: 23(Integer), 1(Integer)
+[DEBUG] 2017-07-12 16:21:33,202 com.qg.AnyWork.dao.OrganizationDao.isJoin - <==      Total: 1
+[DEBUG] 2017-07-12 16:21:33,203 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-12 16:21:33,204 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 23(Integer)
+[DEBUG] 2017-07-12 16:21:33,205 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 0
+[WARN ] 2017-07-12 16:21:33,205 com.qg.AnyWork.web.OrganizationController - null
+[INFO ] 2017-07-12 16:22:51,281 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 12556 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 16:22:51,289 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 16:22:51,289 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 16:23:01,900 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 11.391 seconds (JVM running for 13.939)
+[DEBUG] 2017-07-12 16:23:04,988 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==>  Preparing: SELECT COUNT(*) FROM relation WHERE organization_id = ? AND user_id = ? 
+[DEBUG] 2017-07-12 16:23:05,024 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==> Parameters: 23(Integer), 1(Integer)
+[DEBUG] 2017-07-12 16:23:05,048 com.qg.AnyWork.dao.OrganizationDao.isJoin - <==      Total: 1
+[DEBUG] 2017-07-12 16:23:05,050 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-12 16:23:05,051 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 23(Integer)
+[DEBUG] 2017-07-12 16:23:05,052 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 0
+[WARN ] 2017-07-12 16:23:05,052 com.qg.AnyWork.web.OrganizationController - 组织不存在
+[DEBUG] 2017-07-12 16:23:39,799 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==>  Preparing: SELECT COUNT(*) FROM relation WHERE organization_id = ? AND user_id = ? 
+[DEBUG] 2017-07-12 16:23:39,801 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==> Parameters: 3(Integer), 1(Integer)
+[DEBUG] 2017-07-12 16:23:39,802 com.qg.AnyWork.dao.OrganizationDao.isJoin - <==      Total: 1
+[WARN ] 2017-07-12 16:23:39,803 com.qg.AnyWork.web.OrganizationController - 用户已加入该组织
+[WARN ] 2017-07-12 16:24:07,781 com.qg.AnyWork.web.OrganizationController - For input string: ""
+[DEBUG] 2017-07-12 16:24:13,979 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==>  Preparing: SELECT COUNT(*) FROM relation WHERE organization_id = ? AND user_id = ? 
+[DEBUG] 2017-07-12 16:24:13,979 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==> Parameters: 3(Integer), 1(Integer)
+[DEBUG] 2017-07-12 16:24:13,980 com.qg.AnyWork.dao.OrganizationDao.isJoin - <==      Total: 1
+[WARN ] 2017-07-12 16:24:13,981 com.qg.AnyWork.web.OrganizationController - 用户已加入该组织
+[WARN ] 2017-07-12 16:24:17,838 com.qg.AnyWork.web.OrganizationController - For input string: ""
+[WARN ] 2017-07-12 16:24:41,961 com.qg.AnyWork.web.OrganizationController - For input string: ""
+[WARN ] 2017-07-12 16:25:14,876 com.qg.AnyWork.web.OrganizationController - For input string: ""
+[DEBUG] 2017-07-12 16:25:19,469 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==>  Preparing: SELECT COUNT(*) FROM relation WHERE organization_id = ? AND user_id = ? 
+[DEBUG] 2017-07-12 16:25:19,470 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==> Parameters: 1(Integer), 1(Integer)
+[DEBUG] 2017-07-12 16:25:19,471 com.qg.AnyWork.dao.OrganizationDao.isJoin - <==      Total: 1
+[WARN ] 2017-07-12 16:25:19,472 com.qg.AnyWork.web.OrganizationController - 用户已加入该组织
+[WARN ] 2017-07-12 16:25:33,026 com.qg.AnyWork.web.OrganizationController - For input string: ""
+[WARN ] 2017-07-12 16:25:44,704 com.qg.AnyWork.web.OrganizationController - null
+[DEBUG] 2017-07-12 16:26:21,231 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==>  Preparing: SELECT COUNT(*) FROM relation WHERE organization_id = ? AND user_id = ? 
+[DEBUG] 2017-07-12 16:26:21,232 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==> Parameters: 3(Integer), 1(Integer)
+[DEBUG] 2017-07-12 16:26:21,233 com.qg.AnyWork.dao.OrganizationDao.isJoin - <==      Total: 1
+[WARN ] 2017-07-12 16:26:21,233 com.qg.AnyWork.web.OrganizationController - 用户已加入该组织
+[DEBUG] 2017-07-12 16:26:27,517 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==>  Preparing: SELECT COUNT(*) FROM relation WHERE organization_id = ? AND user_id = ? 
+[DEBUG] 2017-07-12 16:26:27,517 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==> Parameters: 2(Integer), 1(Integer)
+[DEBUG] 2017-07-12 16:26:27,518 com.qg.AnyWork.dao.OrganizationDao.isJoin - <==      Total: 1
+[DEBUG] 2017-07-12 16:26:27,519 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-12 16:26:27,519 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-12 16:26:27,525 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[WARN ] 2017-07-12 16:26:27,525 com.qg.AnyWork.web.OrganizationController - 口令错误
+[DEBUG] 2017-07-12 16:26:59,260 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==>  Preparing: SELECT COUNT(*) FROM relation WHERE organization_id = ? AND user_id = ? 
+[DEBUG] 2017-07-12 16:26:59,261 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==> Parameters: 2(Integer), 1(Integer)
+[DEBUG] 2017-07-12 16:26:59,263 com.qg.AnyWork.dao.OrganizationDao.isJoin - <==      Total: 1
+[DEBUG] 2017-07-12 16:26:59,264 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-12 16:26:59,264 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-12 16:26:59,265 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-12 16:26:59,267 com.qg.AnyWork.dao.OrganizationDao.joinOrganization - ==>  Preparing: INSERT ignore INTO relation (organization_id , user_id) VALUE (? , ?) 
+[DEBUG] 2017-07-12 16:26:59,268 com.qg.AnyWork.dao.OrganizationDao.joinOrganization - ==> Parameters: 2(Integer), 1(Integer)
+[DEBUG] 2017-07-12 16:26:59,414 com.qg.AnyWork.dao.OrganizationDao.joinOrganization - <==    Updates: 1
+[DEBUG] 2017-07-12 16:27:41,208 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT * FROM organization WHERE organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) 
+[DEBUG] 2017-07-12 16:27:41,209 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 16:27:41,211 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-12 16:30:21,486 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 14232 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 16:30:21,495 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 16:30:21,495 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 16:30:30,649 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 9.949 seconds (JVM running for 12.712)
+[DEBUG] 2017-07-12 16:30:40,669 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 16:30:40,708 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 16:30:40,729 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[WARN ] 2017-07-12 16:33:44,721 com.qg.AnyWork.web.OrganizationController - null
+[DEBUG] 2017-07-12 16:33:49,596 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==>  Preparing: SELECT COUNT(*) FROM relation WHERE organization_id = ? AND user_id = ? 
+[DEBUG] 2017-07-12 16:33:49,597 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==> Parameters: 2(Integer), 1(Integer)
+[DEBUG] 2017-07-12 16:33:49,600 com.qg.AnyWork.dao.OrganizationDao.isJoin - <==      Total: 1
+[WARN ] 2017-07-12 16:33:49,601 com.qg.AnyWork.web.OrganizationController - 用户已加入该组织
+[INFO ] 2017-07-12 21:25:39,952 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 7432 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:25:39,993 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:25:39,993 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:25:52,331 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 13.769 seconds (JVM running for 16.83)
+[DEBUG] 2017-07-12 21:26:57,842 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:26:57,875 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:26:57,953 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[DEBUG] 2017-07-12 21:27:23,784 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:27:23,785 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:27:23,787 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-12 21:27:54,787 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 7432 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:27:54,788 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:27:54,788 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:27:58,103 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 3.489 seconds (JVM running for 142.603)
+[DEBUG] 2017-07-12 21:28:19,732 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:28:19,732 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:28:19,788 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[DEBUG] 2017-07-12 21:28:51,890 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:28:51,890 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:28:51,892 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-12 21:30:32,970 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 17172 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:30:32,976 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:30:32,977 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:30:39,989 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 7.404 seconds (JVM running for 8.771)
+[DEBUG] 2017-07-12 21:30:48,115 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:30:48,144 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:30:48,158 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[DEBUG] 2017-07-12 21:31:11,758 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:31:11,759 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:31:11,761 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[DEBUG] 2017-07-12 21:31:28,116 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:31:28,117 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:31:28,119 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-12 21:32:39,780 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 17172 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:32:39,780 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:32:39,780 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:32:41,499 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 1.876 seconds (JVM running for 130.28)
+[DEBUG] 2017-07-12 21:33:46,584 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:33:46,584 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:33:46,587 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[DEBUG] 2017-07-12 21:34:18,540 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:34:18,541 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:34:18,542 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-12 21:34:28,354 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 17172 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:34:28,354 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:34:28,354 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:34:31,991 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 4.057 seconds (JVM running for 240.771)
+[DEBUG] 2017-07-12 21:34:39,555 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:34:39,555 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:34:39,557 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-12 21:36:06,697 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4864 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:36:06,714 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:36:06,715 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:36:16,168 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 9.895 seconds (JVM running for 12.805)
+[DEBUG] 2017-07-12 21:36:34,406 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:36:34,456 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:36:34,477 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[DEBUG] 2017-07-12 21:36:37,795 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:36:37,795 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:36:37,797 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-12 21:36:45,800 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4864 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:36:45,801 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:36:45,801 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:36:49,555 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 3.833 seconds (JVM running for 46.192)
+[DEBUG] 2017-07-12 21:36:58,823 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:36:58,824 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:36:58,827 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[DEBUG] 2017-07-12 21:37:07,781 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:37:07,782 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:37:07,784 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-12 21:37:28,109 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4864 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:37:28,109 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:37:28,109 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:37:30,202 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 2.417 seconds (JVM running for 86.839)
+[DEBUG] 2017-07-12 21:37:39,026 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:37:39,026 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:37:39,085 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-12 21:37:57,469 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4864 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:37:57,469 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:37:57,469 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:37:59,517 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 2.286 seconds (JVM running for 116.154)
+[INFO ] 2017-07-12 21:38:07,778 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4864 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:38:07,779 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:38:07,779 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:38:11,400 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 3.757 seconds (JVM running for 128.037)
+[INFO ] 2017-07-12 21:38:24,166 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4864 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:38:24,166 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:38:24,166 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:38:25,694 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 1.685 seconds (JVM running for 142.331)
+[INFO ] 2017-07-12 21:45:36,802 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4496 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:45:36,812 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:45:36,812 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:45:48,026 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 12.498 seconds (JVM running for 15.636)
+[DEBUG] 2017-07-12 21:46:17,458 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==>  Preparing: SELECT COUNT(*) FROM relation WHERE organization_id = ? AND user_id = ? 
+[DEBUG] 2017-07-12 21:46:17,491 com.qg.AnyWork.dao.OrganizationDao.isJoin - ==> Parameters: 2(Integer), 1(Integer)
+[DEBUG] 2017-07-12 21:46:17,504 com.qg.AnyWork.dao.OrganizationDao.isJoin - <==      Total: 1
+[WARN ] 2017-07-12 21:46:17,505 com.qg.AnyWork.web.OrganizationController - 用户已加入该组织
+[DEBUG] 2017-07-12 21:46:25,505 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:46:25,506 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:46:25,510 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-12 21:46:33,273 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4496 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:46:33,273 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:46:33,273 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:46:38,569 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 5.415 seconds (JVM running for 66.179)
+[DEBUG] 2017-07-12 21:46:39,796 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:46:39,796 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:46:39,799 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-12 21:46:48,431 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4496 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:46:48,431 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:46:48,431 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:46:51,127 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 2.787 seconds (JVM running for 78.737)
+[DEBUG] 2017-07-12 21:46:55,378 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:46:55,379 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:46:55,383 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-12 21:46:56,260 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4496 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 21:46:56,264 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 21:46:56,264 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 21:46:59,447 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 3.371 seconds (JVM running for 87.057)
+[DEBUG] 2017-07-12 21:47:05,071 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-12 21:47:05,071 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-12 21:47:05,073 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-12 22:02:04,171 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4496 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 22:02:04,172 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 22:02:04,172 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-12 22:02:07,445 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 3.457 seconds (JVM running for 995.055)
+[INFO ] 2017-07-12 22:02:12,724 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4496 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-12 22:02:12,724 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-12 22:02:12,724 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default

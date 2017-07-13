@@ -111,6 +111,9 @@ public class Question {
         this.other = other;
     }
 
+
+    //toString
+
     @Override
     public String toString() {
         return "Question{" +

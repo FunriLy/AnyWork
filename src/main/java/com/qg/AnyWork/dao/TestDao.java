@@ -38,6 +38,14 @@ public interface TestDao {
     List<Testpaper> getPracticeByOCId(@Param("organizationId") int organizationId,@Param("chapterId") int chapterId);
 
     /***
+     * 根据试卷id获取试卷信息
+     * @param testpaperId
+     * @return
+     */
+    Testpaper getTestpaperByTestpaperId(@Param("testpaperId") int testpaperId);
+
+
+    /***
      * 根据试卷id获取试题集合
      * @param testpaperId
      * @return
@@ -50,6 +58,14 @@ public interface TestDao {
      * @return
      */
     Question getQuestionById(@Param("questionId") int questionId);
+
+    /***
+     * 查看用户是否提交过试卷了
+     * @param testpaperId
+     * @param userId
+     * @return
+     */
+    int isSubmit(@Param("testpaperId") int testpaperId,@Param("userId") int userId);
 
     /***
      * 添加考试结果

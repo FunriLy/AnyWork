@@ -67,7 +67,7 @@ public class OrganizationController {
             return organizationService.join(Integer.parseInt(organizationId),Long.parseLong(token),user.getUserId());
         }catch (OrganizationException e) {
             logger.warn(e.getMessage());
-            return new RequestResult(10000,e.getMessage());
+            return new RequestResult(0,e.getMessage());
         } catch (Exception e){
             logger.warn(e.getMessage());
             return new RequestResult(StatEnum.ORGAN_JOIN_FAIL);

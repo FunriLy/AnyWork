@@ -84,4 +84,21 @@ public class TestService {
         studentTestResult.setSocre(socre);
         return studentTestResult;
     }
+
+
+    /**
+     * 增加一张试卷/练习
+     * @param testpaper
+     */
+    public void addTestpaper(Testpaper testpaper){
+        testDao.addTestpaper(testpaper);
+    }
+
+    //更新一张试卷/练习的总分
+    public boolean updateTextpaper(int testpaperId, int socre){
+        if(testDao.updateSocreOfTestpaper(testpaperId, socre) == 1){
+            return true;
+        }
+        return false;
+    }
 }

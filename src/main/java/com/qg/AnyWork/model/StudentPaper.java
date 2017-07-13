@@ -12,8 +12,8 @@ public class StudentPaper {
     private String userName;            //答题者名字
     private int studentId;            //答题者Id
     private int testpaperId;            //试卷id
-    private Long startTime;             //开始答题的时间
-    private Long endTime;               //答题结束的时间
+    private Date startTime;             //开始答题的时间
+    private Date endTime;               //答题结束的时间
 
     public StudentPaper() {
     }
@@ -71,19 +71,19 @@ public class StudentPaper {
         this.testpaperId = testpaperId;
     }
 
-    public Long getStartTime() {
+    public Date getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Long startTime) {
+    public void setStartTime(Date startTime) {
         this.startTime = startTime;
     }
 
-    public Long getEndTime() {
+    public Date getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(Long endTime) {
+    public void setEndTime(Date endTime) {
         this.endTime = endTime;
     }
 }

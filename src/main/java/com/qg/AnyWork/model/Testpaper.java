@@ -14,8 +14,8 @@ public class Testpaper {
     private String testpaperTitle;          //试卷标题
     private int authorId;                   //教师ID
     private int organizationId;             //组织ID        
-    private Long createTime;                //开始时间
-    private Long endingTime;                //结束时间
+    private Date createTime;                //开始时间
+    private Date endingTime;                //结束时间
     private int chapterId;                    //章节id，为练习卷添加章节
     private String chapterName;               //章节名称，为练习卷添加章节
     private int testpaperScore;             //试卷分数
@@ -74,19 +74,19 @@ public class Testpaper {
         this.organizationId = organizationId;
     }
 
-    public Long getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Long createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
 
-    public Long getEndingTime() {
+    public Date getEndingTime() {
         return endingTime;
     }
 
-    public void setEndingTime(Long endingTime) {
+    public void setEndingTime(Date endingTime) {
         this.endingTime = endingTime;
     }
 

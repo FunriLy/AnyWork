@@ -3,7 +3,12 @@ package com.qg.AnyWork.utils;
 import com.qg.AnyWork.model.Question;
 import com.qg.AnyWork.model.Testpaper;
 import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DateUtil;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -57,7 +62,7 @@ public class ExcelUtil {
         map3.put(3, "other");
         map3.put(4, "socre");
 
-        return util.readQuest(input, Question.class, map1, map2, map3, map2, map2, map2);
+        return new ExcelUtil().readQuest(input, Question.class, map1, map2, map3, map2, map2, map2);
     }
 
     private <T> Testpaper readText(InputStream input, Map<Integer, String> map) throws Exception {
@@ -97,7 +102,7 @@ public class ExcelUtil {
             //从第二行开始读取
             for (int i=2; i<sheet.getLastRowNum(); i++){
                 Row row = sheet.getRow(i);
-                if (null != row){
+                if (null == row){
                     //空行不处理
                     continue;
                 }

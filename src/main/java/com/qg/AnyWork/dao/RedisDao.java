@@ -33,6 +33,14 @@ public class RedisDao {
         }
     }
 
+    public void removeQuestionList(int userId){
+        String userStr = String.valueOf(userId);
+        while (redisTemplate.opsForList().size(userStr) > 0){
+            // TODO: 2017/7/13 清除不彻底
+            redisTemplate.opsForList().rightPop(userStr);
+        }
+    }
+
     public List getQuestionList(int userId){
         return redisTemplate.opsForList().range(String.valueOf(userId), 0, -1);
     }

@@ -13,7 +13,7 @@ public enum StatEnum {
     DEFAULT_WRONG(-1,"其他错误"),
     CAUSE_TROUBLE(-2,"你不要搞事"),
     ERROR_PARAM(-3, "输入参数有误"),
-
+    REQUEST_ERROR(0,"请求信息异常"),
     /**
      * 注册板块
      */
@@ -49,11 +49,18 @@ public enum StatEnum {
     /**
      * 组织板块
      */
-    ORGAN_SEARCH_SUCCESS(10001, "搜索组织成功"),
-    ORGAN_SEARCH_FAIL(10002, "搜索组织失败"),
-    ORGAN_JOIN_SUCCESS(10003, "加入组织成功"),
-    ORGAN_JOIN_FAIL(10004, "加入组织失败"),
+    ORGAN_SEARCH_SUCCESS(1, "搜索组织成功"),
+    ORGAN_SEARCH_FAIL(0, "搜索组织失败"),
+    ORGAN_JOIN_SUCCESS(1, "加入组织成功"),
+    ORGAN_JOIN_FAIL(0, "加入组织失败"),
 
+    /***
+     * 做题模块
+     */
+    GET_TEST_SUCCESS(1, "获取成功"),
+    GET_TEST_FAIL(0, "获取失败" ),
+    SUBMIT_TEST_SUCCESS(1, "提交成功" ),
+    SUBMIT_TEST_FAIL(0, "提交失败" ),
     ;
 
     private  int state;

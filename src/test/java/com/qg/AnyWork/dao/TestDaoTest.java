@@ -35,6 +35,16 @@ public class TestDaoTest {
     }
 
     @Test
+    public void getPracticeByOrganizationId() throws Exception {
+        List<Testpaper> testpapers = testDao.getPracticeByOrganizationId(1);
+        int i = testpapers.size();
+        while (i!=0){
+            System.out.println(testpapers.get(--i));
+        }
+    }
+
+
+    @Test
     public void getPracticeByOCId() throws Exception {
         List<Testpaper> testpapers = testDao.getPracticeByOCId(1,2);
         int i = testpapers.size();

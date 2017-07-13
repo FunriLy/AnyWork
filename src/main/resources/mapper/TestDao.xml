@@ -11,15 +11,27 @@
     </select>
 
     <select id="getPracticeByOrganizationId" resultType="Testpaper">
-        SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chaper_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id
+        SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id
         FROM testpaper t, chapter c
-        WHERE organization_id = #{organizationId} AND testpaper_type = 1 AND c.chapter_id = t.chapter_id
+        WHERE t.organization_id = #{organizationId} AND t.testpaper_type = 0 AND c.chapter_id = t.chapter_id
+    </select>
+
+    <select id="isSubmit" resultType="int">
+        SELECT count(*)
+        FROM test_result
+        WHERE test_paper_id = #{testpaperId} AND student_id = #{userId} ;
     </select>
 
     <select id="getPracticeByOCId" resultType="Testpaper">
         SELECT *
         FROM testpaper
         WHERE organization_id = #{organizationId} AND chapter_id = #{chapterId} AND testpaper_type = 0;
+    </select>
+
+    <select id="getTestpaperByTestpaperId" resultType="Testpaper">
+        SELECT *
+        FROM testpaper
+        WHERE testpaper_id = #{testpaperId};
     </select>
 
     <select id="getQuestionByTestpaperId" resultType="Question">

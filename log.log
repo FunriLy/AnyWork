@@ -541,3 +541,1373 @@
 [DEBUG] 2017-07-12 23:22:46,819 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
 [DEBUG] 2017-07-12 23:22:47,106 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
 [DEBUG] 2017-07-12 23:22:47,380 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[INFO ] 2017-07-13 15:24:52,801 com.qg.AnyWork.dao.TestDaoTest - Starting TestDaoTest on DESKTOP-UJ96RS7 with PID 8788 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 15:24:52,932 com.qg.AnyWork.dao.TestDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 15:24:52,933 com.qg.AnyWork.dao.TestDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 15:25:06,780 com.qg.AnyWork.dao.TestDaoTest - Started TestDaoTest in 14.947 seconds (JVM running for 20.111)
+[DEBUG] 2017-07-13 15:25:07,064 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==>  Preparing: SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chaper_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id FROM testpaper t, chapter c WHERE organization_id = ? AND testpaper_type = 1 AND c.chapter_id = t.chapter_id 
+[DEBUG] 2017-07-13 15:25:07,590 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==> Parameters: 1(Integer)
+[INFO ] 2017-07-13 15:31:04,947 com.qg.AnyWork.dao.TestDaoTest - Starting TestDaoTest on DESKTOP-UJ96RS7 with PID 9028 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 15:31:04,954 com.qg.AnyWork.dao.TestDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 15:31:04,955 com.qg.AnyWork.dao.TestDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 15:31:12,706 com.qg.AnyWork.dao.TestDaoTest - Started TestDaoTest in 8.284 seconds (JVM running for 11.163)
+[DEBUG] 2017-07-13 15:31:12,823 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==>  Preparing: SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id FROM testpaper t, chapter c WHERE t.organization_id = ? AND t.testpaper_type = 0 AND c.chapter_id = t.chapter_id 
+[DEBUG] 2017-07-13 15:31:13,145 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 15:31:13,187 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - <==      Total: 3
+[INFO ] 2017-07-13 16:34:27,232 com.qg.AnyWork.dao.TestDaoTest - Starting TestDaoTest on DESKTOP-UJ96RS7 with PID 5840 (started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 16:34:27,245 com.qg.AnyWork.dao.TestDaoTest - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 16:34:27,245 com.qg.AnyWork.dao.TestDaoTest - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 16:34:41,320 com.qg.AnyWork.dao.TestDaoTest - Started TestDaoTest in 14.797 seconds (JVM running for 22.198)
+[DEBUG] 2017-07-13 16:34:41,423 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==>  Preparing: SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id FROM testpaper t, chapter c WHERE t.organization_id = ? AND t.testpaper_type = 0 AND c.chapter_id = t.chapter_id 
+[DEBUG] 2017-07-13 16:34:41,900 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 16:34:42,235 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - <==      Total: 3
+[INFO ] 2017-07-13 16:34:53,693 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 3352 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 16:34:53,702 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 16:34:53,703 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 16:35:04,300 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 11.194 seconds (JVM running for 14.362)
+[INFO ] 2017-07-13 16:37:47,966 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 3352 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 16:37:47,966 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 16:37:47,966 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 17:19:35,726 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4536 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 17:19:35,738 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 17:19:35,738 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 17:19:45,671 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 10.387 seconds (JVM running for 12.818)
+[DEBUG] 2017-07-13 17:20:49,261 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 17:20:49,468 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:20:49,840 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 17:20:49,844 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 17:20:49,874 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:20:49,875 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 0
+[DEBUG] 2017-07-13 17:21:35,349 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 17:21:35,350 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:21:35,352 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 17:21:35,353 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 17:21:35,353 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:21:35,358 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[DEBUG] 2017-07-13 17:22:18,404 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 17:22:18,405 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:22:18,407 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 17:22:18,408 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 17:22:18,408 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:22:18,412 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[DEBUG] 2017-07-13 17:22:42,948 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 17:22:42,948 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:22:42,950 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 17:22:42,951 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 17:22:42,951 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:22:42,955 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[DEBUG] 2017-07-13 17:28:10,910 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 17:28:10,910 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:28:10,913 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 17:28:10,914 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 17:28:10,914 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:28:10,917 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[DEBUG] 2017-07-13 17:28:11,951 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 17:28:11,952 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:28:11,954 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 17:28:11,955 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 17:28:11,955 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:28:11,958 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[DEBUG] 2017-07-13 17:28:12,530 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 17:28:12,531 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:28:12,532 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 17:28:12,533 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 17:28:12,533 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:28:12,536 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[DEBUG] 2017-07-13 17:28:20,231 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 17:28:20,231 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:28:20,232 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 17:28:20,233 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 17:28:20,235 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:28:20,239 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[DEBUG] 2017-07-13 17:31:35,515 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 17:31:35,515 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:31:35,517 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 17:31:35,518 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 17:31:35,518 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:31:35,524 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-13 17:38:37,537 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4536 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 17:38:37,537 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 17:38:37,538 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 17:38:57,566 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4536 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 17:38:57,567 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 17:38:57,567 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 17:39:11,850 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 4536 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 17:39:11,851 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 17:39:11,851 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 17:39:14,529 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 3.003 seconds (JVM running for 1181.676)
+[DEBUG] 2017-07-13 17:39:25,951 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 17:39:25,952 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:39:25,954 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 17:39:25,957 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 17:39:25,958 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 17:39:25,961 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-13 19:08:11,931 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 7784 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 19:08:11,937 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 19:08:11,938 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 19:08:22,043 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 10.598 seconds (JVM running for 13.429)
+[DEBUG] 2017-07-13 19:08:26,036 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:08:26,375 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:08:26,410 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 19:08:26,415 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 19:08:26,748 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:08:26,753 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[INFO ] 2017-07-13 19:12:56,334 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 7784 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 19:12:56,335 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 19:12:56,335 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 19:38:50,737 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 8484 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 19:38:50,750 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 19:38:50,751 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 19:39:02,649 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 12.581 seconds (JVM running for 15.903)
+[DEBUG] 2017-07-13 19:39:33,554 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:39:33,804 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:39:34,039 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 19:39:34,042 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 19:39:34,070 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:39:34,075 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[DEBUG] 2017-07-13 19:39:59,052 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:39:59,052 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:39:59,055 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 19:39:59,056 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 19:39:59,056 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:39:59,060 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 2
+[DEBUG] 2017-07-13 19:40:09,160 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:40:09,160 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 0(Integer)
+[DEBUG] 2017-07-13 19:40:09,161 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 0
+[WARN ] 2017-07-13 19:40:09,163 com.qg.AnyWork.web.TestController - 无效的组织
+[INFO ] 2017-07-13 19:40:46,230 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 8484 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 19:40:46,231 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 19:40:46,231 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 19:40:50,404 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 4.377 seconds (JVM running for 123.659)
+[DEBUG] 2017-07-13 19:40:55,103 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:40:55,104 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 0(Integer)
+[DEBUG] 2017-07-13 19:40:55,106 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 0
+[WARN ] 2017-07-13 19:40:55,106 com.qg.AnyWork.web.TestController - 无效的组织
+[DEBUG] 2017-07-13 19:41:07,700 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:41:07,700 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 123(Integer)
+[DEBUG] 2017-07-13 19:41:07,701 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 0
+[WARN ] 2017-07-13 19:41:07,702 com.qg.AnyWork.web.TestController - 无效的组织
+[DEBUG] 2017-07-13 19:41:11,662 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:41:11,662 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 19:41:11,665 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 19:41:11,667 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 19:41:11,668 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 19:41:11,671 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 1
+[DEBUG] 2017-07-13 19:41:33,321 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:41:33,321 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 19:41:33,322 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 19:41:33,323 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 19:41:33,323 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 19:41:33,325 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 1
+[DEBUG] 2017-07-13 19:42:59,422 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:42:59,422 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:42:59,424 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 19:42:59,425 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==>  Preparing: SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id FROM testpaper t, chapter c WHERE t.organization_id = ? AND t.testpaper_type = 0 AND c.chapter_id = t.chapter_id 
+[DEBUG] 2017-07-13 19:42:59,430 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:42:59,434 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - <==      Total: 1
+[DEBUG] 2017-07-13 19:43:28,444 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:43:28,444 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 19:43:28,446 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 19:43:28,447 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==>  Preparing: SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id FROM testpaper t, chapter c WHERE t.organization_id = ? AND t.testpaper_type = 0 AND c.chapter_id = t.chapter_id 
+[DEBUG] 2017-07-13 19:43:28,448 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 19:43:28,449 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - <==      Total: 0
+[DEBUG] 2017-07-13 19:43:33,713 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:43:33,715 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 19:43:33,720 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 19:43:33,723 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==>  Preparing: SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id FROM testpaper t, chapter c WHERE t.organization_id = ? AND t.testpaper_type = 0 AND c.chapter_id = t.chapter_id 
+[DEBUG] 2017-07-13 19:43:33,723 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 19:43:33,724 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - <==      Total: 0
+[DEBUG] 2017-07-13 19:43:41,140 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:43:41,141 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 19:43:41,142 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 0
+[WARN ] 2017-07-13 19:43:41,142 com.qg.AnyWork.web.TestController - 无效的组织
+[DEBUG] 2017-07-13 19:43:44,470 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:43:44,471 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 111(Integer)
+[DEBUG] 2017-07-13 19:43:44,472 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 0
+[WARN ] 2017-07-13 19:43:44,472 com.qg.AnyWork.web.TestController - 无效的组织
+[INFO ] 2017-07-13 19:44:17,376 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 8484 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 19:44:17,376 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 19:44:17,376 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 19:44:21,259 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 4.028 seconds (JVM running for 334.514)
+[DEBUG] 2017-07-13 19:44:26,448 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:44:26,449 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 111(Integer)
+[DEBUG] 2017-07-13 19:44:26,451 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 0
+[WARN ] 2017-07-13 19:44:26,452 com.qg.AnyWork.web.TestController - 无效的组织
+[DEBUG] 2017-07-13 19:44:44,843 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:44:44,844 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:44:44,845 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 19:44:44,848 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==>  Preparing: SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id FROM testpaper t, chapter c WHERE t.organization_id = ? AND t.testpaper_type = 0 AND c.chapter_id = t.chapter_id 
+[DEBUG] 2017-07-13 19:44:44,850 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:44:44,856 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - <==      Total: 2
+[DEBUG] 2017-07-13 19:44:56,949 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:44:56,950 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:44:56,951 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 19:44:56,952 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==>  Preparing: SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id FROM testpaper t, chapter c WHERE t.organization_id = ? AND t.testpaper_type = 0 AND c.chapter_id = t.chapter_id 
+[DEBUG] 2017-07-13 19:44:56,952 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:44:56,954 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - <==      Total: 0
+[DEBUG] 2017-07-13 19:45:04,451 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 19:45:04,451 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 19:45:04,453 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 19:45:04,454 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==>  Preparing: SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id FROM testpaper t, chapter c WHERE t.organization_id = ? AND t.testpaper_type = 0 AND c.chapter_id = t.chapter_id 
+[DEBUG] 2017-07-13 19:45:04,454 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 19:45:04,457 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - <==      Total: 1
+[DEBUG] 2017-07-13 19:49:52,916 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==>  Preparing: SELECT * FROM question WHERE testpaper_id = ? 
+[DEBUG] 2017-07-13 19:49:52,917 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:49:52,923 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - <==      Total: 7
+[DEBUG] 2017-07-13 19:50:41,304 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==>  Preparing: SELECT * FROM question WHERE testpaper_id = ? 
+[DEBUG] 2017-07-13 19:50:41,304 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:50:41,307 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - <==      Total: 7
+[DEBUG] 2017-07-13 19:51:06,055 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==>  Preparing: SELECT * FROM question WHERE testpaper_id = ? 
+[DEBUG] 2017-07-13 19:51:06,056 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:51:06,062 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - <==      Total: 6
+[DEBUG] 2017-07-13 19:51:22,123 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==>  Preparing: SELECT * FROM question WHERE testpaper_id = ? 
+[DEBUG] 2017-07-13 19:51:22,123 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 19:51:22,126 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - <==      Total: 7
+[DEBUG] 2017-07-13 19:51:27,217 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==>  Preparing: SELECT * FROM question WHERE testpaper_id = ? 
+[DEBUG] 2017-07-13 19:51:27,217 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 19:51:27,218 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - <==      Total: 0
+[DEBUG] 2017-07-13 19:51:34,506 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==>  Preparing: SELECT * FROM question WHERE testpaper_id = ? 
+[DEBUG] 2017-07-13 19:51:34,506 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 19:51:34,507 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - <==      Total: 0
+[INFO ] 2017-07-13 19:52:30,191 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 8484 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 19:52:30,191 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 19:52:30,191 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 19:52:33,228 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 3.153 seconds (JVM running for 826.483)
+[INFO ] 2017-07-13 19:52:58,737 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 8484 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 19:52:58,738 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 19:52:58,738 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 19:53:00,042 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 1.448 seconds (JVM running for 853.296)
+[INFO ] 2017-07-13 20:00:51,515 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 7408 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 20:00:51,522 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 20:00:51,523 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 20:01:01,946 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 11.117 seconds (JVM running for 14.152)
+[DEBUG] 2017-07-13 20:01:41,169 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:01:41,358 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:01:41,682 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:01:41,684 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:01:41,686 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:01:41,691 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:01:41,692 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:01:41,693 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:01:41,695 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:01:41,696 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:01:41,696 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:01:41,699 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:01:41,701 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:01:41,701 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:01:41,703 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:01:41,704 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:01:41,704 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:01:41,711 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:01:41,712 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:01:41,713 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:01:41,715 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[WARN ] 2017-07-13 20:01:41,716 com.qg.AnyWork.web.TestController - 1
+[DEBUG] 2017-07-13 20:01:58,707 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:01:58,707 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:01:58,711 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:01:58,712 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:01:58,712 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:01:58,715 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:01:58,716 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:01:58,717 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:01:58,720 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:01:58,721 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:01:58,721 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:01:58,724 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:01:58,725 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:01:58,725 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:01:58,733 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:01:58,734 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:01:58,735 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:01:58,737 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:01:58,738 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:01:58,738 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:01:58,746 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[WARN ] 2017-07-13 20:01:58,746 com.qg.AnyWork.web.TestController - 1
+[INFO ] 2017-07-13 20:02:55,231 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 7408 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 20:02:55,231 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 20:02:55,231 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 20:02:59,284 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 4.29 seconds (JVM running for 131.49)
+[DEBUG] 2017-07-13 20:03:24,904 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:03:24,905 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:03:24,909 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:03:24,911 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:03:24,913 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:03:24,918 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:03:24,921 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:03:24,922 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:03:24,923 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:03:24,924 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:03:24,924 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:03:24,926 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:03:24,927 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:03:24,927 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:03:24,935 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:03:24,936 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:03:24,936 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:03:24,938 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:03:24,939 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:03:24,939 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:03:24,942 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[WARN ] 2017-07-13 20:03:24,947 com.qg.AnyWork.web.TestController - 1
+[DEBUG] 2017-07-13 20:04:48,938 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:04:48,939 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:04:48,940 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:04:48,941 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:04:48,941 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:04:48,943 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:05:59,301 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:05:59,301 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:05:59,310 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:06:07,442 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:06:07,443 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:06:07,452 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:06:10,563 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:06:10,565 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:06:10,574 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:06:13,490 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:06:13,491 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:06:13,500 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:06:24,030 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:06:24,031 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:06:24,042 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[WARN ] 2017-07-13 20:10:34,018 com.qg.AnyWork.web.TestController - 1
+[INFO ] 2017-07-13 20:20:45,041 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 9120 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 20:20:45,052 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 20:20:45,053 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 20:20:53,710 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 9.177 seconds (JVM running for 11.89)
+[DEBUG] 2017-07-13 20:21:10,736 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE u.user_id=o.teacher_id AND o.organization_name LIKE ? 
+[DEBUG] 2017-07-13 20:21:11,255 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %%(String)
+[DEBUG] 2017-07-13 20:21:11,288 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 4
+[DEBUG] 2017-07-13 20:21:11,291 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-13 20:21:11,296 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:21:11,332 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[DEBUG] 2017-07-13 20:21:22,200 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:21:22,202 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:21:22,208 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:21:22,210 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:21:22,211 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:21:22,215 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:21:22,217 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:21:22,217 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:21:22,220 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:21:22,221 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:21:22,221 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:21:22,224 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:21:22,226 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:21:22,226 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:21:22,229 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:21:22,230 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:21:22,230 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:21:22,232 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:21:22,233 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:21:22,233 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:21:22,236 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[WARN ] 2017-07-13 20:21:22,239 com.qg.AnyWork.web.TestController - 1
+[DEBUG] 2017-07-13 20:21:41,805 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:21:41,806 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:21:41,808 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:21:41,810 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:21:41,810 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:21:41,813 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:21:41,814 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:21:41,814 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:21:41,817 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:21:41,818 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:21:41,818 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:21:41,820 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:21:41,821 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:21:41,822 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:21:41,824 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:21:41,825 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:21:41,825 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:21:41,827 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:21:41,829 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:21:41,829 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:21:41,834 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[WARN ] 2017-07-13 20:22:33,092 com.qg.AnyWork.web.TestController - 1
+[DEBUG] 2017-07-13 20:22:39,858 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:22:39,858 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:22:39,861 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:22:39,862 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:22:39,863 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:22:39,865 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:22:39,867 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:22:39,867 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:22:39,868 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:22:39,869 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:22:39,869 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:22:39,871 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:22:39,872 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:22:39,873 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:22:39,876 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:22:39,877 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:22:39,878 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:22:39,880 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:22:39,880 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:22:39,881 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:22:39,882 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:22:49,459 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:22:49,460 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:22:49,465 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[WARN ] 2017-07-13 20:22:54,465 com.qg.AnyWork.web.TestController - null
+[DEBUG] 2017-07-13 20:23:03,590 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:23:03,590 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:23:03,592 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:03,593 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:03,593 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:23:03,595 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:03,598 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:03,598 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:23:03,600 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:03,601 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:03,601 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:23:03,602 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:03,605 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:03,605 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:23:03,606 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:03,607 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:03,607 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:23:03,609 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:03,610 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:03,610 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:23:03,612 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:03,613 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:03,613 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:23:03,615 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[WARN ] 2017-07-13 20:23:03,618 com.qg.AnyWork.web.TestController - null
+[DEBUG] 2017-07-13 20:23:12,401 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:23:12,401 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:23:12,403 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:12,403 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:12,403 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:23:12,404 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:12,405 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:12,405 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:23:12,407 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:12,407 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:12,408 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:23:12,409 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:12,410 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:12,411 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:23:12,412 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:12,413 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:12,413 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:23:12,415 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:12,415 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:12,415 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:23:12,417 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:23:12,418 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:23:12,418 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:23:12,420 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[WARN ] 2017-07-13 20:23:12,422 com.qg.AnyWork.web.TestController - null
+[INFO ] 2017-07-13 20:26:10,229 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 9120 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 20:26:10,229 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 20:26:10,229 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 20:26:19,869 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 9120 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 20:26:19,869 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 20:26:19,870 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 20:26:21,933 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 2.436 seconds (JVM running for 340.112)
+[INFO ] 2017-07-13 20:33:47,818 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 9176 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 20:33:47,823 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 20:33:47,824 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 20:33:56,693 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 9.399 seconds (JVM running for 12.245)
+[DEBUG] 2017-07-13 20:34:03,998 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:34:04,423 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:34:04,455 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:34:04,458 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:34:04,459 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:34:04,465 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:34:04,466 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:34:04,467 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:34:04,470 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:34:04,471 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:34:04,471 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:34:04,475 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:34:04,477 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:34:04,477 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:34:04,479 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:34:04,481 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:34:04,481 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:34:04,483 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:34:04,485 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:34:04,485 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:34:04,488 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:34:04,489 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:34:04,490 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:34:04,493 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:34:04,494 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-13 20:34:04,505 com.qg.AnyWork.dao.TestDao.addTestResult - ==> Parameters: 1(Integer), 1(Integer), 18.0(Double)
+[DEBUG] 2017-07-13 20:34:04,600 com.qg.AnyWork.dao.TestDao.addTestResult - <==    Updates: 1
+[DEBUG] 2017-07-13 20:34:04,602 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:34:04,609 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 1(Integer), B(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:34:04,668 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:34:04,669 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:34:04,670 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 2(Integer), D(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:34:04,714 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:34:04,715 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:34:04,716 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 3(Integer), C(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:34:04,757 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:34:04,758 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:34:04,758 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 4(Integer), 0(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:34:04,779 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:34:04,780 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:34:04,780 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 5(Integer), 1(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:34:04,801 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:34:04,802 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:34:04,802 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 6(Integer), 3#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:34:04,823 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:34:04,826 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:34:04,828 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 7(Integer), 6#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:34:04,855 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[INFO ] 2017-07-13 20:38:09,365 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 9176 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 20:38:09,365 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 20:38:09,365 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 20:38:11,890 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 2.807 seconds (JVM running for 267.442)
+[DEBUG] 2017-07-13 20:38:20,442 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:38:20,443 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:38:20,446 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:38:20,447 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:38:20,448 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:38:20,451 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:38:20,452 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:38:20,452 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:38:20,454 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:38:20,455 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:38:20,455 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:38:20,457 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:38:20,458 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:38:20,458 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:38:20,461 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:38:20,462 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:38:20,462 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:38:20,464 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:38:20,465 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:38:20,465 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:38:20,467 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:38:20,469 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:38:20,469 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:38:20,472 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:38:20,474 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-13 20:38:20,475 com.qg.AnyWork.dao.TestDao.addTestResult - ==> Parameters: 1(Integer), 1(Integer), 18.0(Double)
+[DEBUG] 2017-07-13 20:38:20,507 com.qg.AnyWork.dao.TestDao.addTestResult - <==    Updates: 1
+[DEBUG] 2017-07-13 20:38:20,508 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:38:20,509 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 1(Integer), B(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:38:20,529 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:38:20,529 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:38:20,530 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 2(Integer), D(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:38:20,551 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:38:20,551 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:38:20,552 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 3(Integer), C(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:38:20,573 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:38:20,574 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:38:20,574 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 4(Integer), 0(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:38:20,595 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:38:20,595 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:38:20,596 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 5(Integer), 1(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:38:20,617 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:38:20,618 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:38:20,619 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 6(Integer), 3#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:38:20,652 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:38:20,654 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:38:20,656 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 7(Integer), 6#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:38:20,693 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:40:02,772 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:40:02,772 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:40:02,774 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:40:02,775 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:40:02,775 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:40:02,777 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:40:02,778 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:40:02,778 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:40:02,780 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:40:02,781 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:40:02,781 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:40:02,783 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:40:02,784 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:40:02,784 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:40:02,786 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:40:02,787 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:40:02,787 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:40:02,789 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:40:02,790 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:40:02,790 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:40:02,792 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:41:02,557 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:41:02,558 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:41:02,567 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:15,468 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-13 20:42:15,469 com.qg.AnyWork.dao.TestDao.addTestResult - ==> Parameters: 1(Integer), 1(Integer), 18.0(Double)
+[DEBUG] 2017-07-13 20:42:15,510 com.qg.AnyWork.dao.TestDao.addTestResult - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:15,511 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:15,513 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 1(Integer), B(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:15,533 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:15,534 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:15,537 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 2(Integer), D(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:15,555 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:15,556 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:15,557 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 3(Integer), C(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:15,578 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:15,578 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:15,578 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 4(Integer), 0(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:15,600 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:15,600 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:15,600 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 5(Integer), 1(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:15,622 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:15,622 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:15,622 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 6(Integer), 3#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:42:15,644 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:15,644 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:15,644 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 7(Integer), 6#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:42:15,666 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[INFO ] 2017-07-13 20:42:17,374 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 9176 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 20:42:17,375 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 20:42:17,375 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 20:42:19,581 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 2.319 seconds (JVM running for 515.133)
+[DEBUG] 2017-07-13 20:42:22,741 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:42:22,742 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:42:22,745 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:22,746 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:22,747 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:42:22,751 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:22,752 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:22,752 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:42:22,754 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:22,755 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:22,755 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:42:22,757 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:22,758 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:22,758 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:42:22,760 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:22,761 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:22,761 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:42:22,764 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:22,765 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:22,765 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:42:22,767 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:28,322 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:28,322 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:42:28,323 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:31,185 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-13 20:42:31,186 com.qg.AnyWork.dao.TestDao.addTestResult - ==> Parameters: 1(Integer), 1(Integer), 19.0(Double)
+[DEBUG] 2017-07-13 20:42:31,263 com.qg.AnyWork.dao.TestDao.addTestResult - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:31,264 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:31,265 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 1(Integer), B(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:31,294 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:31,295 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:31,295 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 2(Integer), D(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:31,318 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:31,319 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:31,319 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 3(Integer), C(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:31,340 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:31,341 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:31,341 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 4(Integer), 0(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:31,362 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:31,363 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:31,363 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 5(Integer), 1(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:31,385 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:31,385 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:31,385 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 6(Integer), 3#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:42:31,407 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:31,408 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:31,408 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 7(Integer), 6#8(String), 1(Integer), 5.0(Double)
+[DEBUG] 2017-07-13 20:42:31,430 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:44,756 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:42:44,756 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:42:44,758 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:44,759 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:44,759 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:42:44,761 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:44,762 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:44,762 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:42:44,764 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:44,765 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:44,765 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:42:44,770 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:44,770 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:44,771 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:42:44,772 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:44,773 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:44,773 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:42:44,781 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:44,781 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:44,782 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:42:44,783 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:44,784 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:42:44,784 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:42:44,786 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:42:44,787 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-13 20:42:44,787 com.qg.AnyWork.dao.TestDao.addTestResult - ==> Parameters: 1(Integer), 1(Integer), 19.0(Double)
+[DEBUG] 2017-07-13 20:42:44,824 com.qg.AnyWork.dao.TestDao.addTestResult - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:44,824 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:44,824 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 1(Integer), B(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:44,868 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:44,868 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:44,870 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 2(Integer), D(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:44,935 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:44,935 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:44,936 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 3(Integer), C(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:44,999 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:44,999 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:44,999 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 4(Integer), 0(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:45,057 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:45,057 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:45,057 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 5(Integer), 1(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:42:45,090 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:45,090 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:45,090 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 6(Integer), 3#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:42:45,122 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:42:45,123 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:42:45,123 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 7(Integer), 6#8(String), 1(Integer), 5.0(Double)
+[DEBUG] 2017-07-13 20:42:45,145 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:21,744 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:43:21,745 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:43:21,746 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:21,746 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:21,747 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:43:21,748 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:21,750 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:21,750 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:43:21,754 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:21,755 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:21,755 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:43:21,757 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:21,758 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:21,758 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:43:21,760 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:21,761 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:21,761 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:43:21,763 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:21,764 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:21,764 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:43:21,766 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:21,766 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:21,767 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:43:21,768 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:21,769 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-13 20:43:21,769 com.qg.AnyWork.dao.TestDao.addTestResult - ==> Parameters: 1(Integer), 1(Integer), 17.0(Double)
+[DEBUG] 2017-07-13 20:43:21,850 com.qg.AnyWork.dao.TestDao.addTestResult - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:21,850 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:21,851 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 1(Integer), A(String), 0(Integer), 0.0(Double)
+[DEBUG] 2017-07-13 20:43:21,897 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:21,898 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:21,898 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 2(Integer), D(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:43:21,941 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:21,942 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:21,942 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 3(Integer), C(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:43:21,964 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:21,964 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:21,965 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 4(Integer), 0(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:43:21,986 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:21,986 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:21,986 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 5(Integer), 1(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:43:22,008 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:22,008 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:22,008 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 6(Integer), 3#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:43:22,030 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:22,031 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:22,031 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 7(Integer), 6#8(String), 1(Integer), 5.0(Double)
+[DEBUG] 2017-07-13 20:43:22,052 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:43,787 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:43:43,787 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:43:43,789 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:43,790 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:43,790 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:43:43,792 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:43,792 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:43,793 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:43:43,794 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:43,795 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:43,795 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:43:43,797 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:43,797 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:43,798 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:43:43,799 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:43,800 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:43,800 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:43:43,802 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:43,803 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:43,803 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:43:43,804 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:43,805 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:43,805 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:43:43,808 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:43,809 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-13 20:43:43,809 com.qg.AnyWork.dao.TestDao.addTestResult - ==> Parameters: 1(Integer), 1(Integer), 16.5(Double)
+[DEBUG] 2017-07-13 20:43:43,838 com.qg.AnyWork.dao.TestDao.addTestResult - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:43,838 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:43,838 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 1(Integer), B(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:43:43,891 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:43,891 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:43,892 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 2(Integer), D(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:43:43,946 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:43,946 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:43,947 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 3(Integer), C(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:43:43,971 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:43,971 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:43,971 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 4(Integer), 0(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:43:43,993 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:43,993 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:43,993 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 5(Integer), 1(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:43:44,015 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:44,015 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:44,016 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 6(Integer), 3#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:43:44,037 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:44,037 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:43:44,038 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 7(Integer), 6#1(String), 0(Integer), 2.5(Double)
+[DEBUG] 2017-07-13 20:43:44,059 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:43:59,706 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:43:59,706 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:43:59,708 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:59,709 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:59,709 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:43:59,711 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:59,712 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:59,712 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:43:59,715 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:59,716 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:59,716 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:43:59,718 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:59,719 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:59,719 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:43:59,721 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:59,722 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:59,722 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:43:59,723 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:59,724 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:59,724 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:43:59,725 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:43:59,726 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:43:59,726 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:43:59,728 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[WARN ] 2017-07-13 20:43:59,731 com.qg.AnyWork.web.TestController - 0
+[DEBUG] 2017-07-13 20:44:10,285 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:44:10,286 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:44:10,287 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:10,288 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:10,288 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:44:10,289 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:10,290 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:10,290 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:44:10,291 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:10,291 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:10,292 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:44:10,293 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:10,293 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:10,294 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:44:10,295 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:10,296 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:10,296 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:44:10,297 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:10,298 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:10,298 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:44:10,300 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:10,301 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:10,301 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:44:10,303 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:10,303 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-13 20:44:10,304 com.qg.AnyWork.dao.TestDao.addTestResult - ==> Parameters: 1(Integer), 1(Integer), 14.0(Double)
+[DEBUG] 2017-07-13 20:44:10,382 com.qg.AnyWork.dao.TestDao.addTestResult - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:10,382 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:10,382 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 1(Integer), B(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:10,439 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:10,439 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:10,440 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 2(Integer), D(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:10,494 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:10,495 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:10,495 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 3(Integer), C(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:10,516 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:10,517 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:10,517 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 4(Integer), 0(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:10,539 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:10,539 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:10,539 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 5(Integer), 1(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:10,561 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:10,561 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:10,561 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 6(Integer), 3#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:44:10,627 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:10,627 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:10,627 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 7(Integer),  # (String), 0(Integer), 0.0(Double)
+[DEBUG] 2017-07-13 20:44:10,650 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:41,449 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:44:41,449 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:44:41,451 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:41,452 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:41,452 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:44:41,453 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:41,454 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:41,454 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:44:41,455 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:41,456 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:41,456 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:44:41,458 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:41,458 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:41,459 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:44:41,460 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:41,461 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:41,461 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:44:41,463 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:41,463 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:41,464 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:44:41,465 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:41,466 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:41,466 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:44:41,472 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:41,472 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-13 20:44:41,473 com.qg.AnyWork.dao.TestDao.addTestResult - ==> Parameters: 1(Integer), 1(Integer), 14.0(Double)
+[DEBUG] 2017-07-13 20:44:41,501 com.qg.AnyWork.dao.TestDao.addTestResult - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:41,502 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:41,502 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 1(Integer), B(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:41,546 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:41,546 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:41,546 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 2(Integer), D(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:41,590 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:41,590 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:41,590 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 3(Integer), C(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:41,612 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:41,612 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:41,612 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 4(Integer), 0(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:41,634 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:41,634 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:41,634 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 5(Integer), 1(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:41,656 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:41,656 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:41,657 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 6(Integer), 3#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:44:41,679 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:41,679 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:41,679 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 7(Integer), 1#1(String), 0(Integer), 0.0(Double)
+[DEBUG] 2017-07-13 20:44:41,701 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:50,814 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:44:50,814 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:44:50,816 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:50,817 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:50,817 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:44:50,818 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:50,819 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:50,819 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:44:50,820 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:50,821 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:50,821 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:44:50,822 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:50,823 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:50,823 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:44:50,824 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:50,825 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:50,825 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:44:50,827 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:50,827 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:50,827 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:44:50,829 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:50,829 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:50,830 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:44:50,831 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:50,832 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-13 20:44:50,832 com.qg.AnyWork.dao.TestDao.addTestResult - ==> Parameters: 1(Integer), 1(Integer), 12.0(Double)
+[DEBUG] 2017-07-13 20:44:50,923 com.qg.AnyWork.dao.TestDao.addTestResult - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:50,924 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:50,924 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 1(Integer), B(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:50,977 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:50,978 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:50,978 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 2(Integer), D(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:51,022 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:51,022 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:51,022 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 3(Integer), C(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:51,044 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:51,044 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:51,044 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 4(Integer), 0(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:51,066 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:51,066 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:51,066 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 5(Integer), 2(String), 0(Integer), 0.0(Double)
+[DEBUG] 2017-07-13 20:44:51,088 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:51,088 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:51,089 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 6(Integer), 3#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:44:51,110 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:51,111 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:51,111 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 7(Integer), 1#1(String), 0(Integer), 0.0(Double)
+[DEBUG] 2017-07-13 20:44:51,132 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:58,319 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:44:58,319 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:44:58,321 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:58,322 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:58,322 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:44:58,323 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:58,338 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:58,338 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:44:58,339 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:58,340 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:58,340 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:44:58,341 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:58,342 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:58,342 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:44:58,343 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:58,343 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:58,343 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:44:58,345 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:58,345 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:58,345 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:44:58,347 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:58,348 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:44:58,348 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:44:58,349 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:44:58,350 com.qg.AnyWork.dao.TestDao.addTestResult - ==>  Preparing: INSERT ignore INTO test_result (student_id,test_paper_id,socre) VALUE (?,?,?) 
+[DEBUG] 2017-07-13 20:44:58,350 com.qg.AnyWork.dao.TestDao.addTestResult - ==> Parameters: 1(Integer), 1(Integer), 14.0(Double)
+[DEBUG] 2017-07-13 20:44:58,424 com.qg.AnyWork.dao.TestDao.addTestResult - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:58,425 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:58,425 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 1(Integer), B(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:58,472 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:58,472 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:58,472 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 2(Integer), D(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:58,516 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:58,516 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:58,516 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 3(Integer), C(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:58,538 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:58,538 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:58,538 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 4(Integer), 0(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:58,560 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:58,560 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:58,560 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 5(Integer), 1(String), 1(Integer), 2.0(Double)
+[DEBUG] 2017-07-13 20:44:58,582 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:58,583 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:58,583 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 6(Integer), 3#8(String), 1(Integer), 4.0(Double)
+[DEBUG] 2017-07-13 20:44:58,604 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[DEBUG] 2017-07-13 20:44:58,605 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==>  Preparing: INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre) VALUE (?,?,?,?,?) 
+[DEBUG] 2017-07-13 20:44:58,605 com.qg.AnyWork.dao.TestDao.addStudentAnswer - ==> Parameters: 0(Integer), 7(Integer), 1#1(String), 0(Integer), 0.0(Double)
+[DEBUG] 2017-07-13 20:44:58,627 com.qg.AnyWork.dao.TestDao.addStudentAnswer - <==    Updates: 1
+[INFO ] 2017-07-13 20:46:24,241 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 8932 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 20:46:24,259 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 20:46:24,260 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 20:46:33,592 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 9.762 seconds (JVM running for 12.501)
+[DEBUG] 2017-07-13 20:46:38,816 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:46:39,061 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:46:39,362 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:46:39,365 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:46:39,366 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:46:39,372 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:46:39,373 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:46:39,374 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:46:39,376 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:46:39,378 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:46:39,378 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:46:39,383 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:46:39,385 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:46:39,385 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:46:39,387 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:46:39,389 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:46:39,389 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:46:39,392 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:46:39,394 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:46:39,394 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:46:39,397 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:46:39,398 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:46:39,398 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:46:39,401 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[WARN ] 2017-07-13 20:46:39,402 com.qg.AnyWork.web.TestController - 考试已经结束
+[DEBUG] 2017-07-13 20:47:05,590 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 20:47:05,591 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:47:05,593 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 20:47:05,596 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==>  Preparing: SELECT * FROM testpaper WHERE organization_id = ? AND testpaper_type = 1 
+[DEBUG] 2017-07-13 20:47:05,628 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:47:05,629 com.qg.AnyWork.dao.TestDao.getTestByOrganizationId - <==      Total: 0
+[DEBUG] 2017-07-13 20:47:16,308 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:47:16,308 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:47:16,311 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[WARN ] 2017-07-13 20:47:16,312 com.qg.AnyWork.web.TestController - 考试未开始
+[INFO ] 2017-07-13 20:49:52,133 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 8932 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 20:49:52,133 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 20:49:52,133 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 20:58:42,176 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 7536 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 20:58:42,185 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 20:58:42,185 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 20:58:50,559 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 8.932 seconds (JVM running for 11.915)
+[DEBUG] 2017-07-13 20:58:57,315 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 20:58:57,451 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:58:57,682 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 20:58:57,685 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:58:57,686 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 20:58:57,692 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:58:57,693 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:58:57,694 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 20:58:57,697 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:58:57,698 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:58:57,699 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 20:58:57,703 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:58:57,705 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:58:57,705 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 20:58:57,708 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:58:57,709 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:58:57,709 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 20:58:57,714 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:58:57,715 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:58:57,715 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 20:58:57,719 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 20:58:57,721 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 20:58:57,721 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 20:58:57,723 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[WARN ] 2017-07-13 20:58:57,736 com.qg.AnyWork.web.TestController - nested exception is org.apache.ibatis.binding.BindingException: Parameter 'organizationId' not found. Available parameters are [userId, param1, testpaperId, param2]
+[INFO ] 2017-07-13 20:59:55,992 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 7536 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 20:59:55,992 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 20:59:55,992 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 20:59:58,548 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 2.805 seconds (JVM running for 79.904)
+[INFO ] 2017-07-13 21:00:04,522 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 7536 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 21:00:04,522 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 21:00:04,522 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 21:00:06,101 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 1.723 seconds (JVM running for 87.456)
+[INFO ] 2017-07-13 21:00:58,472 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 6280 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 21:00:58,478 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 21:00:58,479 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 21:01:07,288 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 9.279 seconds (JVM running for 11.784)
+[DEBUG] 2017-07-13 21:01:15,295 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 21:01:15,508 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:01:15,859 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:15,863 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:15,865 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:01:15,876 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:15,877 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:15,878 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 21:01:15,880 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:15,882 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:15,882 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 21:01:15,885 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:15,887 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:15,887 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:01:15,890 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:15,891 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:15,891 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 21:01:15,898 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:15,900 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:15,900 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 21:01:15,903 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:15,904 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:15,904 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 21:01:15,907 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:15,909 com.qg.AnyWork.dao.TestDao.isSubmit - ==>  Preparing: SELECT count(*) FROM testpaper WHERE testpaper_id = ? AND student_id = ? ; 
+[DEBUG] 2017-07-13 21:01:15,943 com.qg.AnyWork.dao.TestDao.isSubmit - ==> Parameters: 1(Integer), 1(Integer)
+[WARN ] 2017-07-13 21:01:16,210 com.qg.AnyWork.web.TestController - 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'student_id' in 'where clause'
+### The error may exist in file [D:\IdeaProjects\AnyWork\target\classes\mapper\TestDao.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT count(*)         FROM testpaper         WHERE testpaper_id = ? AND student_id = ? ;
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'student_id' in 'where clause'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'student_id' in 'where clause'
+[INFO ] 2017-07-13 21:01:48,174 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 6280 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 21:01:48,174 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 21:01:48,175 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 21:01:50,298 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 2.219 seconds (JVM running for 54.795)
+[DEBUG] 2017-07-13 21:01:54,673 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 21:01:54,674 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:01:54,677 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:54,678 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:54,679 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:01:54,682 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:54,683 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:54,683 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 21:01:54,685 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:54,686 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:54,686 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 21:01:54,688 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:54,689 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:54,689 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:01:54,693 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:54,694 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:54,695 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 21:01:54,697 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:54,699 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:54,700 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 21:01:54,703 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:54,704 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:01:54,704 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 21:01:54,708 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:01:54,711 com.qg.AnyWork.dao.TestDao.isSubmit - ==>  Preparing: SELECT count(*) FROM test_result WHERE testpaper_id = ? AND student_id = ? ; 
+[DEBUG] 2017-07-13 21:01:54,712 com.qg.AnyWork.dao.TestDao.isSubmit - ==> Parameters: 1(Integer), 1(Integer)
+[WARN ] 2017-07-13 21:01:54,729 com.qg.AnyWork.web.TestController - 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'testpaper_id' in 'where clause'
+### The error may exist in file [D:\IdeaProjects\AnyWork\target\classes\mapper\TestDao.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT count(*)         FROM test_result         WHERE testpaper_id = ? AND student_id = ? ;
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'testpaper_id' in 'where clause'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'testpaper_id' in 'where clause'
+[DEBUG] 2017-07-13 21:02:03,424 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 21:02:03,425 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:02:03,427 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:03,428 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:03,428 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:02:03,430 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:03,432 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:03,432 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 21:02:03,434 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:03,435 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:03,435 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 21:02:03,437 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:03,439 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:03,439 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:02:03,440 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:03,441 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:03,441 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 21:02:03,448 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:03,449 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:03,449 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 21:02:03,451 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:03,452 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:03,452 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 21:02:03,455 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:03,455 com.qg.AnyWork.dao.TestDao.isSubmit - ==>  Preparing: SELECT count(*) FROM test_result WHERE testpaper_id = ? AND student_id = ? ; 
+[DEBUG] 2017-07-13 21:02:03,455 com.qg.AnyWork.dao.TestDao.isSubmit - ==> Parameters: 1(Integer), 1(Integer)
+[WARN ] 2017-07-13 21:02:03,470 com.qg.AnyWork.web.TestController - 
+### Error querying database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'testpaper_id' in 'where clause'
+### The error may exist in file [D:\IdeaProjects\AnyWork\target\classes\mapper\TestDao.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT count(*)         FROM test_result         WHERE testpaper_id = ? AND student_id = ? ;
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'testpaper_id' in 'where clause'
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'testpaper_id' in 'where clause'
+[INFO ] 2017-07-13 21:02:23,100 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 6280 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 21:02:23,100 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 21:02:23,100 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 21:02:24,948 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 1.942 seconds (JVM running for 89.445)
+[DEBUG] 2017-07-13 21:02:32,301 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 21:02:32,302 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:02:32,305 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:32,306 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:32,307 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:02:32,310 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:32,311 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:32,311 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 21:02:32,312 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:32,313 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:32,313 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 21:02:32,315 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:32,316 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:32,316 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:02:32,321 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:32,322 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:32,322 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 21:02:32,324 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:32,325 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:32,325 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 21:02:32,327 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:32,328 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:02:32,328 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 21:02:32,331 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:02:32,332 com.qg.AnyWork.dao.TestDao.isSubmit - ==>  Preparing: SELECT count(*) FROM test_result WHERE test_paper_id = ? AND student_id = ? ; 
+[DEBUG] 2017-07-13 21:02:32,333 com.qg.AnyWork.dao.TestDao.isSubmit - ==> Parameters: 1(Integer), 1(Integer)
+[DEBUG] 2017-07-13 21:02:32,335 com.qg.AnyWork.dao.TestDao.isSubmit - <==      Total: 1
+[WARN ] 2017-07-13 21:02:32,336 com.qg.AnyWork.web.TestController - 已经提交过试卷了，无法再次提交
+[DEBUG] 2017-07-13 21:03:51,609 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 21:03:51,611 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 21:03:51,613 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 21:03:51,614 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==>  Preparing: SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id FROM testpaper t, chapter c WHERE t.organization_id = ? AND t.testpaper_type = 0 AND c.chapter_id = t.chapter_id 
+[DEBUG] 2017-07-13 21:03:51,623 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 21:03:51,624 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - <==      Total: 0
+[DEBUG] 2017-07-13 21:04:31,711 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 21:04:31,711 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:04:31,712 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 21:04:31,713 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==>  Preparing: SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id FROM testpaper t, chapter c WHERE t.organization_id = ? AND t.testpaper_type = 0 AND c.chapter_id = t.chapter_id 
+[DEBUG] 2017-07-13 21:04:31,713 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:04:31,716 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - <==      Total: 1
+[DEBUG] 2017-07-13 21:06:13,688 com.qg.AnyWork.dao.OrganizationDao.getById - ==>  Preparing: SELECT * FROM organization WHERE organization_id = ? 
+[DEBUG] 2017-07-13 21:06:13,688 com.qg.AnyWork.dao.OrganizationDao.getById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:06:13,690 com.qg.AnyWork.dao.OrganizationDao.getById - <==      Total: 1
+[DEBUG] 2017-07-13 21:06:13,691 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==>  Preparing: SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id FROM testpaper t, chapter c WHERE t.organization_id = ? AND t.testpaper_type = 0 AND c.chapter_id = t.chapter_id 
+[DEBUG] 2017-07-13 21:06:13,691 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:06:13,693 com.qg.AnyWork.dao.TestDao.getPracticeByOrganizationId - <==      Total: 1
+[DEBUG] 2017-07-13 21:06:19,100 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 21:06:19,100 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:06:19,102 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 21:06:19,103 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==>  Preparing: SELECT * FROM question WHERE testpaper_id = ? 
+[DEBUG] 2017-07-13 21:06:19,104 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:06:19,112 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - <==      Total: 4
+[DEBUG] 2017-07-13 21:07:17,444 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE u.user_id=o.teacher_id AND o.organization_name LIKE ? 
+[DEBUG] 2017-07-13 21:07:17,455 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - ==> Parameters: %%(String)
+[DEBUG] 2017-07-13 21:07:17,458 com.qg.AnyWork.dao.OrganizationDao.getByKeyWords - <==      Total: 4
+[DEBUG] 2017-07-13 21:07:17,459 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==>  Preparing: SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token FROM organization o,user u WHERE o.organization_id IN (SELECT organization_id FROM relation WHERE user_id = ?) AND u.user_id=o.teacher_id 
+[DEBUG] 2017-07-13 21:07:17,462 com.qg.AnyWork.dao.OrganizationDao.getByUserId - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:07:17,465 com.qg.AnyWork.dao.OrganizationDao.getByUserId - <==      Total: 3
+[DEBUG] 2017-07-13 21:08:10,682 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 21:08:10,683 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:08:10,687 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 21:08:10,688 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==>  Preparing: SELECT * FROM question WHERE testpaper_id = ? 
+[DEBUG] 2017-07-13 21:08:10,688 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:08:10,714 com.qg.AnyWork.dao.TestDao.getQuestionByTestpaperId - <==      Total: 4
+[DEBUG] 2017-07-13 21:09:10,304 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 21:09:10,304 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:09:10,305 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 21:09:10,306 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:09:10,306 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:09:10,311 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:09:10,312 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:09:10,312 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 21:09:10,315 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:09:10,316 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:09:10,316 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 21:09:10,319 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:09:10,320 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:09:10,320 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:09:10,321 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:09:10,322 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:09:10,322 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 21:09:10,324 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:09:10,325 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:09:10,325 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 21:09:10,327 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:09:10,328 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:09:10,328 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 21:09:10,330 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[INFO ] 2017-07-13 21:10:59,002 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 6280 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 21:10:59,002 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 21:10:59,002 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 21:11:02,447 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 3.609 seconds (JVM running for 606.943)
+[DEBUG] 2017-07-13 21:12:25,819 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 21:12:25,820 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:12:25,823 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 21:12:25,824 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:12:25,825 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:12:25,827 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:12:25,828 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:12:25,828 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 21:12:25,830 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:12:25,831 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:12:25,831 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 21:12:25,832 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:12:25,833 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:12:25,833 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:12:25,835 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:12:25,835 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:12:25,835 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 21:12:25,837 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:12:25,840 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:12:25,840 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 21:12:25,841 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:12:25,842 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:12:25,842 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 21:12:25,844 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[INFO ] 2017-07-13 21:13:54,940 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-UJ96RS7 with PID 7496 (D:\IdeaProjects\AnyWork\target\classes started by logan in D:\IdeaProjects\AnyWork)
+[DEBUG] 2017-07-13 21:13:54,947 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-07-13 21:13:54,947 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-07-13 21:14:03,750 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 9.244 seconds (JVM running for 12.03)
+[DEBUG] 2017-07-13 21:14:23,886 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==>  Preparing: SELECT * FROM testpaper WHERE testpaper_id = ?; 
+[DEBUG] 2017-07-13 21:14:24,129 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:14:24,435 com.qg.AnyWork.dao.TestDao.getTestpaperByTestpaperId - <==      Total: 1
+[DEBUG] 2017-07-13 21:14:24,439 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:14:24,441 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 1(Integer)
+[DEBUG] 2017-07-13 21:14:24,450 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:14:24,452 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:14:24,453 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 2(Integer)
+[DEBUG] 2017-07-13 21:14:24,456 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:14:24,457 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:14:24,457 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 3(Integer)
+[DEBUG] 2017-07-13 21:14:24,461 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:14:24,463 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:14:24,463 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 4(Integer)
+[DEBUG] 2017-07-13 21:14:24,467 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:14:24,468 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:14:24,468 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 5(Integer)
+[DEBUG] 2017-07-13 21:14:24,471 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:14:24,472 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:14:24,476 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 6(Integer)
+[DEBUG] 2017-07-13 21:14:24,478 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1
+[DEBUG] 2017-07-13 21:14:24,479 com.qg.AnyWork.dao.TestDao.getQuestionById - ==>  Preparing: SELECT * FROM question WHERE question_id = ? 
+[DEBUG] 2017-07-13 21:14:24,479 com.qg.AnyWork.dao.TestDao.getQuestionById - ==> Parameters: 7(Integer)
+[DEBUG] 2017-07-13 21:14:24,482 com.qg.AnyWork.dao.TestDao.getQuestionById - <==      Total: 1

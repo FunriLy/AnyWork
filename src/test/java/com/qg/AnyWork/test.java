@@ -9,8 +9,8 @@ import java.io.*;
  */
 public class test {
     public static void main(String[] args){
-        if (1==1) throw new OrganizationException("用户已加入该组织");
-        System.out.println(11111);
-
+        String SPLIT = "#";
+        String[] answer = "3#8".split("#");
+        System.out.println(answer.length);
     }
 }

@@ -49,6 +49,20 @@ public class UserController {
         }
     }
 
+    @RequestMapping(value = "/{userid}/info",  produces="application/json;charset=UTF-8")
+    @ResponseBody
+    public RequestResult<User> getInfo(HttpServletRequest request, @PathVariable int userid){
+        try {
+            return userService.findUserInfo(userid);
+        } catch (UserNotExitException e){
+            logger.warn("不存在的用户");
+            return new RequestResult<User>(StatEnum.LOGIN_NOT_EXIT_USER, null);
+        } catch (Exception e){
+            logger.warn("未知异常", e);
+            return new RequestResult<User>(StatEnum.DEFAULT_WRONG, null);
+        }
+    }
+
     @RequestMapping(value = "/exit")
     @ResponseBody
     public RequestResult<?> exit(HttpServletRequest request){
@@ -88,6 +102,9 @@ public class UserController {
 //            FileUtils.copyInputStreamToFile(new FileInputStream(new File("classpath:/resources/static/picture/picture.jpg")),
 //                    new File(request.getServletContext().getRealPath("/picture"), result.getData() +".jpg"));
             return result;
+        } catch (UserException e){
+            logger.warn("该用户已经存在");
+            return new RequestResult<Integer>(StatEnum.REGISTER_ALREADY_EXIST, 0);
         } catch (FormatterFaultException e){
             logger.warn(e.getMessage(), e);
             return new RequestResult<Integer>(StatEnum.REGISTER_FAMMTER_FAULT, 0);
@@ -210,7 +227,7 @@ public class UserController {
                 }
                 return new RequestResult<Object>(StatEnum.PICTURE_UPLOAD_SUCCESS, null);
             } else {
-                return null;
+                return new RequestResult<Object>(StatEnum.FILE_UPLOAD_FAIL, null);
             }
         } catch (IOException e) {
             logger.error("用户上传图片发送异常！", e);

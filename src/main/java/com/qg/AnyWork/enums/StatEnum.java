@@ -36,7 +36,7 @@ public enum StatEnum {
      */
     INFORMATION_CHANGE_SUCCESS(1, "用户更改信息成功"),
     FROMATTER_WARNING(0, "格式有误"),
-    INFORMATION_GET_MYSELF(0, "获取自己的个人信息"),
+    INFORMATION_GET_MYSELF(1, "获取个人信息"),
 
 
     /**
@@ -56,6 +56,7 @@ public enum StatEnum {
      */
     TEST_RELEASE_SUCESS(1, "发布试卷/练习成功"),
     TEST_RELEASE_FAIL(0, "发布试卷/练习失败"),
+    NOT_HAVE_POWER(0, "没有相应的权限"),
 
     /**
      * 组织板块

@@ -80,4 +80,19 @@ public interface TestDao {
      * @return
      */
     int addStudentAnswer(@Param("studentAnswerAnalysis") StudentAnswerAnalysis studentAnswerAnalysis);
+
+    /**
+     * 插入一张试卷，返回主键
+     * @param testpaper
+     * @return
+     */
+    int addTestpaper(@Param("testpaper") Testpaper testpaper);
+
+    /**
+     * 更新一张试卷/练习的分数
+     * @param testpaperId
+     * @param score
+     * @return
+     */
+    int updateSocreOfTestpaper(@Param("testpaperId") int testpaperId, @Param("score") int score);
 }

@@ -37,6 +37,30 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @RequestMapping(value = "/myinfo")
+    @ResponseBody
+    public RequestResult<User> getUser(HttpServletRequest request){
+        try {
+            User user = (User) request.getSession().getAttribute("user");
+            return new RequestResult<User>(StatEnum.INFORMATION_GET_MYSELF, user);
+        } catch (Exception e){
+            logger.warn("未知异常", e);
+            return new RequestResult<User>(StatEnum.DEFAULT_WRONG, null);
+        }
+    }
+
+    @RequestMapping(value = "/exit")
+    @ResponseBody
+    public RequestResult<?> exit(HttpServletRequest request){
+        try {
+            request.getSession().removeAttribute("user");
+        } catch (Exception e){
+            logger.warn("发生未知异常", e);
+        } finally {
+            return new RequestResult<Object>(StatEnum.USER_LOGIN_OUT, null);
+        }
+    }
+
     /**
      * 
      * @param request

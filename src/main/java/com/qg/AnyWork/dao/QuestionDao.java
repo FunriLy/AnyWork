@@ -13,7 +13,7 @@ import java.util.List;
  */
 @Mapper
 @Repository
-public interface QuuestionDao {
+public interface QuestionDao {
 
     /**
      * 插入题目
@@ -23,23 +23,16 @@ public interface QuuestionDao {
     int insertQuestion(@Param("question") Question question);
 
     /**
+     * 批量插入问题
+     * @param questlist
+     * @return
+     */
+    int insertAllQuestion(List<Question> questlist);
+
+    /**
      * 根据试卷id删除所有的题目
-     * @param textpaperId
+     * @param testpaperId
      * @return
      */
-    int deleteQuestion(@Param("textpaperId") int textpaperId);
-
-    /**
-     * 根据问题id查找题目
-     * @param questionId
-     * @return
-     */
-    Question selectOne(@Param("questionId") int questionId);
-
-    /**
-     * 根据试卷号获得一套试卷
-     * @param textpaperId
-     * @return
-     */
-    List<Question> selectAll(@Param("textpaperId") int textpaperId);
+    int deleteQuestion(@Param("testpaperId") int testpaperId);
 }

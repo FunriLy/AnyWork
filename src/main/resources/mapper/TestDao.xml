@@ -55,4 +55,14 @@
         INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre)
         VALUE (#{studentAnswerAnalysis.studentId},#{studentAnswerAnalysis.question.questionId},#{studentAnswerAnalysis.studentAnswer},#{studentAnswerAnalysis.isTrue},#{studentAnswerAnalysis.socre})
     </insert>
+
+    <insert id="addTestpaper" parameterType="Testpaper" useGeneratedKeys="true" keyProperty="testpaper.testpaperId">
+        INSERT INTO testpaper(testpaper_title, author_id, create_time, ending_time, testpaper_type, organization_id)
+        VALUES (#{testpaper.testpaperTitle}, #{testpaper.authorId}, #{testpaper.createTime}, #{testpaper.endingTime},
+        #{testpaper.testpaperType}, #{testpaper.organizationId})
+    </insert>
+
+    <update id="updateSocreOfTestpaper">
+        UPDATE testpaper SET testpaper_score = #{score} WHERE testpaper_id = #{testpaperId}
+    </update>
 </mapper>

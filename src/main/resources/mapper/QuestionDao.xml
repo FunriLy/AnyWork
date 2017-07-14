@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qg.AnyWork.dao.QuestionDao">
+    <!--目的：为Dao接口方法提供SQL语句-->
+
+    <insert id="insertQuestion" parameterType="Question" useGeneratedKeys="true" keyProperty="question.questionId">
+        INSERT INTO question(content, type, A, B, C, D, `key`, socre, testpaper_id, other)
+        VALUES (#{question.content}, #{question.type}, #{question.A}, #{question.B}, #{question.C}, #{question.D},
+                #{question.key}, #{question.socre}, #{question.testpaperId}, #{question.other})
+    </insert>
+
+    <insert id="insertAllQuestion" useGeneratedKeys="true" keyProperty="questionId" parameterType="java.util.ArrayList">
+        INSERT INTO
+        question(type, A, B, C, D, `key`, socre, testpaper_id, other)
+        VALUES
+        <foreach collection="questlist" item="question" index="index" separator=",">
+            (#{question.type}, #{question.A}, #{question.B}, #{question.C}, #{question.D},
+            #{question.key}, #{question.socre}, #{question.testpaperId}, #{question.other})
+        </foreach>
+    </insert>
+
+    <delete id="deleteQuestion">
+        DELETE FROM question WHERE testpaper_id = #{testpaperId}
+    </delete>
+</mapper>

@@ -69,13 +69,14 @@ public class TestController {
 
     /***
      * 获取问题集合
-     * @param testpaperId
+     * @param
      * @return
      */
-    @RequestMapping(value = "/{testpaperId}", method = RequestMethod.POST)
-    public RequestResult<List<Question>> getQuestion(@PathVariable("testpaperId") int testpaperId){
+    @RequestMapping(method = RequestMethod.POST)
+    public RequestResult<List<Question>> getQuestion(@RequestBody Map map){
         try {
-            return testService.getQuestion(testpaperId);
+            String testpaperId = (String) map.get("testpaperId");
+            return testService.getQuestion(Integer.parseInt(testpaperId));
         } catch (TestException e) {
             logger.warn(e.getMessage());
             return new RequestResult(0,e.getMessage());

@@ -3,10 +3,7 @@ package com.qg.AnyWork.service;
 import com.qg.AnyWork.dao.UserDao;
 import com.qg.AnyWork.dto.RequestResult;
 import com.qg.AnyWork.enums.StatEnum;
-import com.qg.AnyWork.exception.user.EmptyUserException;
-import com.qg.AnyWork.exception.user.FormatterFaultException;
-import com.qg.AnyWork.exception.user.UserLoginFailException;
-import com.qg.AnyWork.exception.user.UserNotExitException;
+import com.qg.AnyWork.exception.user.*;
 import com.qg.AnyWork.model.User;
 import com.qg.AnyWork.utils.Encryption;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +36,11 @@ public class UserService {
                 ) {
             throw new FormatterFaultException("注册信息格式错误");
         }else {
+
+            if (null != userDao.selectByEmail(user.getEmail())){
+                throw new  UserException("该用户已经存在");
+            }
+
             //格式正确，加密密码并存入数据库
             user.setPassword(Encryption.getMD5(user.getPassword()));
             userDao.insertUser(user);
@@ -111,5 +113,19 @@ public class UserService {
             r_user.setPassword("");
             return new RequestResult<User>(StatEnum.INFORMATION_CHANGE_SUCCESS, null);
         }
+    }
+
+    /**
+     * 获得用户个人信息
+     * @param userid
+     * @return
+     */
+    public RequestResult<User> findUserInfo(int userid){
+        User user = userDao.selectById(userid);
+        if (null == user){
+            throw new UserNotExitException("不存在的用户");
+        }
+        user.setPassword("");
+        return new RequestResult<User>(StatEnum.INFORMATION_GET_MYSELF, user);
     }
 }

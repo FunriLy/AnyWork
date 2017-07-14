@@ -23,13 +23,13 @@ public class OrganizationDaoTest {
 
     @Test
     public void getByKeyWords() throws Exception {
-        List<Organization> organizations = organizationDao.getByKeyWords("%软件%");
-        int i = organizations.size();
-//        while (i!=0){
-//            System.out.println(organizations.get(--i));
-//        }
-        System.out.println(i);
-        System.out.println(organizations.get(1));
+//        List<Organization> organizations = organizationDao.getByKeyWords("%软件%");
+//        int i = organizations.size();
+////        while (i!=0){
+////            System.out.println(organizations.get(--i));
+////        }
+//        System.out.println(i);
+//        System.out.println(organizations.get(1));
     }
 
     @Test

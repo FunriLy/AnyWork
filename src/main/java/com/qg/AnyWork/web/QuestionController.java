@@ -84,7 +84,7 @@ public class QuestionController {
         try {
             //没有权限处理
             if (user.getMark() != 1){
-                return new RequestResult<Integer>(null);
+                return new RequestResult<Integer>(StatEnum.NOT_HAVE_POWER, 0);
             }
 
             Testpaper testpaper = new Testpaper();

@@ -87,6 +87,17 @@ public class QuestionService {
         }
 
         return socre;
+    }
 
+    public int addTestpaper(int userId, int testpaperId, List<Question> list){
+        int socre = 0;
+        if (list != null && list.size() > 0){
+            for (int i=0; i<list.size(); i++){
+                list.get(i).setTestpaperId(testpaperId);    //更新试卷号
+                questionDao.insertQuestion(list.get(i));    //插入数据库
+                socre += list.get(i).getSocre();            //将总分加起来
+            }
+        }
+        return socre;
     }
 }

@@ -5,7 +5,7 @@ package com.qg.AnyWork.model;
  */
 public class StudentAnswerAnalysis {
 
-    private int studentAnswerAnalysisId;       //分析id
+    private int studentAnswerAnalysisId;       //分析id 暂无用处
     private int studentId;              //学生id
     private Question question;        //试题
     private String studentAnswer;   //学生答案

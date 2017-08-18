@@ -27,9 +27,17 @@
          AND u.user_id=o.teacher_id
     </select>
 
-    <select id="getById" resultType="Organization">
-        SELECT *
-        FROM organization WHERE organization_id = #{organizationId}
+    <select id="getMyOrganization" resultMap="organizationResultMap">
+        SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token
+        FROM organization o,user u
+        WHERE o.teacher_id = #{userId}
+        AND u.user_id=o.teacher_id
+    </select>
+
+    <select id="getById" resultMap="organizationResultMap">
+        SELECT o.organization_id,o.teacher_id, u.user_name ,o.organization_name,o.description,o.token
+        FROM organization o,user u WHERE u.user_id=o.teacher_id
+        AND organization_id = #{organizationId}
     </select>
 
     <insert id="joinOrganization">
@@ -42,4 +50,44 @@
         SELECT COUNT(*)
         FROM relation WHERE organization_id = #{organizationId} AND user_id = #{userId}
     </select>
+    
+    
+    <delete id="exitOrganization">
+      DELETE FROM relation WHERE organization_id = #{organizationId} AND user_id = #{userId}
+    </delete>
+
+    <select id="getOrganizationCount" parameterType="int" resultType="int">
+        SELECT COUNT(*) FROM relation WHERE organization_id = #{organizationId}
+    </select>
+    
+    <insert id="addOrganization" parameterType="Organization" useGeneratedKeys="true" keyProperty="organization.organizationId">
+      INSERT ignore INTO organization (teacher_id, organization_name, token, description)
+      VALUE (#{organization.teacherId},#{organization.organizationName},#{organization.token},#{organization.description})
+    </insert>
+    
+    <update id="updateOrganization" parameterType="Organization">
+        UPDATE organization
+        <set>
+            <if test="organization.organizationName != null and organization.organizationName != ''">
+                organization_name = #{organization.organizationName},
+            </if>
+            <if test="organization.description != null and organization.description != ''">
+                description = #{organization.description}
+            </if>
+        </set>
+        WHERE organization_id = #{organization.organizationId}
+    </update>
+
+    <delete id="deleteOrganization" parameterType="int">
+      DELETE FROM organization
+      WHERE organization_id = #{organizationId}
+    </delete>
+    
+    
+    <select id="getOrganizationPeople" parameterType="int" resultType="User">
+        SELECT u.user_id,u.user_name,u.email,u.phone,u.mark
+        FROM user u , relation r
+        WHERE r.organization_id = #{organizationId} AND u.user_id = r.user_id
+    </select>
+
 </mapper>

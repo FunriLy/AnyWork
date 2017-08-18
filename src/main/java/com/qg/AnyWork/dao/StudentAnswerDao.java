@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * Created by logan on 2017/7/10.
+ * 对学生提交的试题答案进行数据库操作
  */
 @Mapper
 @Repository
@@ -16,15 +17,18 @@ public interface StudentAnswerDao {
 
     /***
      * 根据试卷号获取试题集
-     * @param textpaperId
-     * @return
+     * @param textpaperId 试卷号id
+     * @return List<Question> 问题的列表
      */
     List<Question> getQuestionByTestId(@Param("textpaperId") int textpaperId);
 
     /***
      * 根据试题号获取试题
-     * @param questionId
-     * @return
+     * @param questionId 问题id
+     * @return 问题对象
      */
     Question getQuestionById(@Param("questionId") int questionId);
+
+
+
 }

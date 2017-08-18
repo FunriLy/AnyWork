@@ -11,4 +11,19 @@
         WHERE organization_id = #{organizationId}
     </select>
 
+    <insert id="addChapter" parameterType="Chapter" useGeneratedKeys="true" keyProperty="chapter.chapterId">
+      INSERT ignore INTO chapter (organization_id , chapter_name)
+      VALUE (#{chapter.organizationId}, #{chapter.chapterName})
+    </insert>
+
+    <delete id="deleteChapter" parameterType="int">
+        DELETE FROM chapter
+        WHERE chapter_id = #{chapterId}
+    </delete>
+
+    <update id="updateChapter" parameterType="Chapter">
+      UPDATE chapter SET chapter_name = #{chapter.chapterName}
+      WHERE chapter_id = #{chapter.chapterId}
+    </update>
+
 </mapper>

@@ -3,6 +3,46 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qg.AnyWork.dao.TestDao">
+
+
+    <resultMap type="com.qg.AnyWork.model.StudentAnswerAnalysis" id="studentAnswerAnalysis">
+        <id  property="studentAnswerAnalysisId"        column="student_answer_id" />
+        <result property="studentId"       column="student_id" />
+        <result property="studentAnswer"   column="student_answer"  />
+        <result property="isTrue"   column="is_true"  />
+        <result property="socre"  column="getsocre"  />
+
+        <association property="question" javaType="com.qg.AnyWork.model.Question">
+            <id property="questionId" column="question_id"/>
+            <result property="content" column="content"/>
+            <result property="type" column="type"/>
+            <result property="A" column="A"/>
+            <result property="B" column="B"/>
+            <result property="C" column="C"/>
+            <result property="D" column="D"/>
+            <result property="key" column="key"/>
+            <result property="socre" column="socre"/>
+            <result property="testpaperId" column="testpaper_id"/>
+            <result property="other" column="other"/>
+        </association>
+    </resultMap>
+
+    <resultMap type="com.qg.AnyWork.model.CheckResult" id="checkResult">
+        <result property="studentId"       column="student_id" />
+        <result property="studentName"   column="user_name"  />
+        <result property="ifCheck"   column="if_check"  />
+        <result property="object"  column="object"  />
+        <result property="subject"  column="subject"  />
+
+        <association property="testpaper" javaType="com.qg.AnyWork.model.Testpaper">
+            <id property="testpaperId" column="testpaper_id"/>
+            <result property="testpaperTitle" column="testpaper_title"/>
+            <result property="createTime" column="create_time"/>
+            <result property="endingTime" column="ending_time"/>
+            <result property="testpaperScore" column="testpaper_score"/>
+        </association>
+    </resultMap>
+
     <!--目的：为Dao接口方法提供SQL语句-->
     <select id="getTestByOrganizationId" resultType="Testpaper">
         SELECT *
@@ -28,6 +68,18 @@
         WHERE organization_id = #{organizationId} AND chapter_id = #{chapterId} AND testpaper_type = 0;
     </select>
 
+    <select id="getMyPractice" resultType="Testpaper">
+        SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id
+        FROM testpaper t, test_result r, chapter c
+        WHERE t.testpaper_id = r.test_paper_id AND r.student_id = #{userId} AND t.testpaper_type = 0 AND c.chapter_id = t.chapter_id;
+    </select>
+
+    <select id="getMyTest" resultType="Testpaper">
+        SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id
+        FROM testpaper t, test_result r,chapter c
+        WHERE t.testpaper_id = r.test_paper_id AND r.student_id = #{userId} AND t.testpaper_type = 1 AND c.chapter_id = t.chapter_id;
+    </select>
+
     <select id="getTestpaperByTestpaperId" resultType="Testpaper">
         SELECT *
         FROM testpaper
@@ -50,11 +102,37 @@
         INSERT ignore INTO test_result (student_id,test_paper_id,socre)
         VALUE (#{testResult.studentId},#{testResult.testpaperId},#{testResult.socre})
     </insert>
+    
+    <update id="updateTestResult" parameterType="StudentTestResult">
+        UPDATE test_result
+        <set>
+            <if test="testResult.socre != null">
+                socre = #{testResult.socre},
+            </if>
+        </set>
+        WHERE student_id = #{testResult.studentId} AND test_paper_id = #{testResult.testpaperId}
+    </update>
 
     <insert id="addStudentAnswer" parameterType="StudentAnswerAnalysis" keyProperty="studentAnswerAnalysisId">
         INSERT ignore INTO student_answer (student_id,question_id,student_answer,is_true,socre)
         VALUE (#{studentAnswerAnalysis.studentId},#{studentAnswerAnalysis.question.questionId},#{studentAnswerAnalysis.studentAnswer},#{studentAnswerAnalysis.isTrue},#{studentAnswerAnalysis.socre})
     </insert>
+    
+    <update id="updateStudentAnswer" parameterType="StudentAnswerAnalysis">
+        UPDATE student_answer
+        <set>
+            <if test="studentAnswerAnalysis.studentAnswer != null">
+                student_answer = #{studentAnswerAnalysis.studentAnswer},
+            </if>
+            <if test="studentAnswerAnalysis.isTrue != null ">
+                is_true = #{studentAnswerAnalysis.isTrue},
+            </if>
+            <if test="studentAnswerAnalysis.socre != null ">
+                socre = #{studentAnswerAnalysis.socre},
+            </if>
+        </set>
+        WHERE student_id = #{studentAnswerAnalysis.studentId} AND question_id = #{studentAnswerAnalysis.question.questionId}
+    </update>
 
     <insert id="addTestpaper" parameterType="Testpaper" useGeneratedKeys="true" keyProperty="testpaper.testpaperId">
         INSERT INTO testpaper(testpaper_title, author_id, create_time, ending_time, testpaper_type, organization_id)
@@ -65,4 +143,42 @@
     <update id="updateSocreOfTestpaper">
         UPDATE testpaper SET testpaper_score = #{score} WHERE testpaper_id = #{testpaperId}
     </update>
+
+    <select id="getTestResult" resultType="StudentTestResult">
+        SELECT *
+        FROM test_result
+        WHERE test_paper_id = #{testpaperId} AND student_id = #{userId}
+    </select>
+
+    <select id="getStudentAnswer" resultMap="studentAnswerAnalysis">
+        SELECT s.student_id, s.student_answer, s.is_true, s.socre as getsocre , q.*
+        FROM student_answer s, question q
+        WHERE s.student_id = #{userId} AND s.question_id in (SELECT q.question_id FROM question WHERE q.testpaper_id = #{testpaperId})
+    </select>
+
+    <insert id="addCheckResult" parameterType="CheckResult">
+        INSERT into check_result(if_check, object, subject, testpaper_id, student_id)
+        VALUES (#{checkResult.ifCheck}, #{checkResult.object}, #{checkResult.subject}, #{checkResult.testpaper.testpaperId}, #{checkResult.studentId})
+    </insert>
+
+    <select id="getCheckResultByUser" resultMap="checkResult">
+        SELECT c.student_id, u.user_name,  c.if_check, c.object, c.subject, t.testpaper_id, t.testpaper_title, t.create_time, t.ending_time, t.testpaper_score
+        FROM check_result c , user u, testpaper t
+        WHERE c.student_id = #{userId} AND c.student_id = u.user_id  AND t.organization_id = #{organizationId} AND c.testpaper_id = t.testpaper_id
+    </select>
+    
+    <select id="getCheckResultByTestpaperId" resultMap="checkResult">
+        SELECT c.student_id, u.user_name,  c.if_check, c.object, c.subject, t.testpaper_id, t.testpaper_title, t.create_time, t.ending_time, t.testpaper_score
+        FROM check_result c , user u, testpaper t
+        WHERE c.testpaper_id = #{testpaperId} AND c.student_id = u.user_id  AND t.organization_id = #{organizationId} AND c.testpaper_id = t.testpaper_id
+    </select>
+    
+    <update id="updateStudentAnswerSocre">
+        UPDATE student_answer SET socre = #{socre} WHERE student_id = #{studentId} AND question_id = #{questionId}
+    </update>
+
+    <update id="updateCheckResult">
+        UPDATE check_result SET subject = #{subject}, object = #{object}, if_check = 1 WHERE student_id = #{studentId} AND testpaper_id = #{testpaperId}
+    </update>
+
 </mapper>

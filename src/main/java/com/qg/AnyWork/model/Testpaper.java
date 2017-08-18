@@ -16,7 +16,7 @@ public class Testpaper {
     private int organizationId;             //组织ID        
     private Date createTime;                //开始时间
     private Date endingTime;                //结束时间
-    private int chapterId;                    //章节id，为练习卷添加章节
+    private int chapterId;                    //章节id，为练习卷添加章节  -1 没做过 0 做过
     private String chapterName;               //章节名称，为练习卷添加章节
     private int testpaperScore;             //试卷分数
     private int testpaperType;              //试卷类型，0为练习、1为考试，若将来扩展可在这个字段上实现

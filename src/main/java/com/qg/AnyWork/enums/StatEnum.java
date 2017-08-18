@@ -57,6 +57,9 @@ public enum StatEnum {
     TEST_RELEASE_SUCESS(1, "发布试卷/练习成功"),
     TEST_RELEASE_FAIL(0, "发布试卷/练习失败"),
     NOT_HAVE_POWER(0, "没有相应的权限"),
+    DELETE_TEST_SUCCESS(1, "删除试卷/练习成功"),
+    DELETE_TEST_FAIL(0, "删除试卷/练习失败"),
+    TEST_IS_NOT_EXIT(0, "试卷/练习不存在"),
 
     /**
      * 组织板块

@@ -4,11 +4,15 @@ import com.qg.AnyWork.dto.RequestResult;
 import com.qg.AnyWork.enums.StatEnum;
 import com.qg.AnyWork.exception.question.ExcelReadException;
 import com.qg.AnyWork.exception.question.RedisNotExitException;
+import com.qg.AnyWork.exception.testpaper.NotPowerException;
+import com.qg.AnyWork.exception.testpaper.TestpaperIsNoExit;
 import com.qg.AnyWork.model.Question;
 import com.qg.AnyWork.model.Testpaper;
 import com.qg.AnyWork.model.User;
 import com.qg.AnyWork.service.QuestionService;
 import com.qg.AnyWork.service.TestService;
+import com.qg.AnyWork.utils.DateUtil;
+import com.sun.tools.javac.util.Warner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -88,6 +93,7 @@ public class QuestionController {
     @ResponseBody
     public RequestResult<Integer> releaseTestpaper(HttpServletRequest request, @RequestBody Map map, @PathVariable int organizationId){
         User user = (User) request.getSession().getAttribute("user");
+        int testpaperId = 0;
         try {
             //没有权限处理
             // TODO: 2017/7/17 可以检查一下权限
@@ -100,12 +106,12 @@ public class QuestionController {
             testpaper.setOrganizationId(organizationId);
             testpaper.setTestpaperTitle((String) map.get("testpaperTitle"));
             testpaper.setChapterId((int) map.get("chapterId"));
-            testpaper.setCreateTime((Date) map.get("createTime"));
-            testpaper.setEndingTime((Date) map.get("endingTime"));
+            testpaper.setCreateTime(DateUtil.longToDate((Long) map.get("createTime")));
+            testpaper.setEndingTime(DateUtil.longToDate((Long) map.get("endingTime")));
             testpaper.setTestpaperType((int) map.get("testpaperType"));
             //将试卷插入数据库
             testService.addTestpaper(testpaper);
-            int testpaperId = testpaper.getTestpaperId();
+            testpaperId = testpaper.getTestpaperId();   //获得试卷ID
 
             int socre = questionService.addTestpaper(user.getUserId(), testpaperId);    //插入数据库并获得总分
             if (testService.updateTextpaper(testpaperId, socre)) {  //更新总分
@@ -120,6 +126,9 @@ public class QuestionController {
             return new RequestResult<Integer>(StatEnum.ERROR_PARAM, 0);
         } catch (Exception e){
             logger.warn("未知异常: ", e);
+            if (testpaperId != 0) {
+                questionService.deleteTestpaper(testpaperId);  //删除错误插入
+            }
             return new RequestResult<Integer>(StatEnum.DEFAULT_WRONG, 0);
         }
     }
@@ -136,15 +145,17 @@ public class QuestionController {
     public RequestResult<Integer> submitTestpaper(HttpServletRequest request,  @RequestBody Testpaper testpaper,
                                                   @PathVariable int organizationId){
         User user = (User) request.getSession().getAttribute("user");
+        int testpaperId = 0;
         try {
             if (user.getMark() != 1){
                 return new RequestResult<Integer>(StatEnum.NOT_HAVE_POWER, 0);
             }
 
             testpaper.setOrganizationId(organizationId);
+            testpaper.setAuthorId(user.getUserId());
             //将试卷插入数据库
             testService.addTestpaper(testpaper);
-            int testpaperId = testpaper.getTestpaperId();
+            testpaperId = testpaper.getTestpaperId();
 
             int socre = questionService.addTestpaper(user.getUserId(), testpaperId, testpaper.getQuestions());
             if (testService.updateTextpaper(testpaperId, socre)) {  //更新总分
@@ -156,8 +167,54 @@ public class QuestionController {
             return new RequestResult<Integer>(StatEnum.ERROR_PARAM, 0);
         } catch (Exception e){
             logger.warn("未知异常: ", e);
+            if (testpaperId != 0) {
+                questionService.deleteTestpaper(testpaperId);   //删除错误插入
+            }
             return new RequestResult<Integer>(StatEnum.DEFAULT_WRONG, 0);
         }
 
+    }
+
+    /**
+     * 老师删除试卷
+     * @param request
+     * @param testpaperId
+     * @return
+     */
+    @RequestMapping(value = "/{testpaperId}/delete", method = RequestMethod.GET, produces="application/json;charset=UTF-8")
+    @ResponseBody
+    public RequestResult<?> delete(HttpServletRequest request, @PathVariable("testpaperId") int testpaperId){
+        try {
+            User user = (User) request.getSession().getAttribute("user");
+            //用户未登录
+            if (user == null){
+                return new RequestResult<Object>(StatEnum.USER_NOT_LOGIN, null);
+            }
+            deleteTestpaper(testpaperId, user);
+            return new RequestResult<Object>(StatEnum.DELETE_TEST_SUCCESS);
+        } catch (TestpaperIsNoExit te) {
+            logger.warn("不存在的试卷/练习！");
+            return new RequestResult<Object>(StatEnum.TEST_IS_NOT_EXIT, null);
+        } catch (NotPowerException ne) {
+            //没有相应的权限
+            logger.warn("非法用户调用老师权限！");
+            return new RequestResult<Object>(StatEnum.NOT_HAVE_POWER, null);
+        } catch (Exception e) {
+            logger.warn("未知异常: ", e);
+            return new RequestResult<Object>(StatEnum.DEFAULT_WRONG, null);
+        }
+}
+
+    /**
+     * 当发生操作失败时，需要清除试卷和题目
+     * @param testpaperId 试卷Id
+     */
+    private void deleteTestpaper (int  testpaperId, User user) throws Exception{
+        Testpaper testpaper = questionService.findTestpaperById(testpaperId);
+        //权限验证
+        if (user.getMark() != 1 || user.getUserId() != testpaper.getAuthorId()){
+            throw new NotPowerException("没有相应的处理权限！");
+        }
+        questionService.deleteTestpaper(testpaperId);
     }
 }

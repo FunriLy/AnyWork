@@ -180,5 +180,9 @@
     <update id="updateCheckResult">
         UPDATE check_result SET subject = #{subject}, object = #{object}, if_check = 1 WHERE student_id = #{studentId} AND testpaper_id = #{testpaperId}
     </update>
+    
+    <delete id="deleteTestpaper" >
+        DELETE FROM testpaper WHERE testpaper_id = #{testpaperId}
+    </delete>
 
 </mapper>

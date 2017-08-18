@@ -2,11 +2,14 @@ package com.qg.AnyWork.service;
 
 import com.qg.AnyWork.dao.QuestionDao;
 import com.qg.AnyWork.dao.RedisDao;
+import com.qg.AnyWork.dao.TestDao;
 import com.qg.AnyWork.dto.RequestResult;
 import com.qg.AnyWork.enums.StatEnum;
 import com.qg.AnyWork.exception.question.ExcelReadException;
 import com.qg.AnyWork.exception.question.RedisNotExitException;
+import com.qg.AnyWork.exception.testpaper.TestpaperIsNoExit;
 import com.qg.AnyWork.model.Question;
+import com.qg.AnyWork.model.Testpaper;
 import com.qg.AnyWork.utils.ExcelUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,6 +30,9 @@ public class QuestionService {
 
     @Autowired
     private RedisDao redisDao;
+
+    @Autowired
+    private TestDao testDao;
 
 
     /**
@@ -99,5 +105,22 @@ public class QuestionService {
             }
         }
         return socre;
+    }
+
+    /**
+     * 删除试卷
+     * @param testpaperId 试卷ID
+     */
+    public void deleteTestpaper(int testpaperId){
+        testDao.deleteTestpaper(testpaperId);
+        questionDao.deleteQuestion(testpaperId);
+    }
+
+    public Testpaper findTestpaperById(int testpaperId) {
+        Testpaper testpaper = testDao.getTestpaperByTestpaperId(testpaperId);
+        if (testpaper == null){
+            throw new TestpaperIsNoExit("试卷并不存在！");
+        }
+        return testpaper;
     }
 }

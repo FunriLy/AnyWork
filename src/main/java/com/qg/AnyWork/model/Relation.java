@@ -7,7 +7,7 @@ package com.qg.AnyWork.model;
 public class Relation {
 
     private int relationId;     //ID
-    private int organizationId;        //组织ID
+    private int organizationId; //组织ID
     private int userId;         //用户ID
     private int role;           //角色，预留字段
 

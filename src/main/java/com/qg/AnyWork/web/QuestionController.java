@@ -77,12 +77,20 @@ public class QuestionController {
         }
     }
 
+    /**
+     * 用户发布已经上传的试卷
+     * @param request
+     * @param map
+     * @param organizationId
+     * @return
+     */
     @RequestMapping(value = "/{organizationId}/release", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
     @ResponseBody
     public RequestResult<Integer> releaseTestpaper(HttpServletRequest request, @RequestBody Map map, @PathVariable int organizationId){
         User user = (User) request.getSession().getAttribute("user");
         try {
             //没有权限处理
+            // TODO: 2017/7/17 可以检查一下权限
             if (user.getMark() != 1){
                 return new RequestResult<Integer>(StatEnum.NOT_HAVE_POWER, 0);
             }
@@ -114,5 +122,42 @@ public class QuestionController {
             logger.warn("未知异常: ", e);
             return new RequestResult<Integer>(StatEnum.DEFAULT_WRONG, 0);
         }
+    }
+
+    /**
+     * 在线发布试卷
+     * @param request
+     * @param testpaper
+     * @param organizationId
+     * @return
+     */
+    @RequestMapping(value = "/{organizationId}/submit", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
+    @ResponseBody
+    public RequestResult<Integer> submitTestpaper(HttpServletRequest request,  @RequestBody Testpaper testpaper,
+                                                  @PathVariable int organizationId){
+        User user = (User) request.getSession().getAttribute("user");
+        try {
+            if (user.getMark() != 1){
+                return new RequestResult<Integer>(StatEnum.NOT_HAVE_POWER, 0);
+            }
+
+            testpaper.setOrganizationId(organizationId);
+            //将试卷插入数据库
+            testService.addTestpaper(testpaper);
+            int testpaperId = testpaper.getTestpaperId();
+
+            int socre = questionService.addTestpaper(user.getUserId(), testpaperId, testpaper.getQuestions());
+            if (testService.updateTextpaper(testpaperId, socre)) {  //更新总分
+                return new RequestResult<Integer>(StatEnum.TEST_RELEASE_SUCESS, testpaperId);
+            }
+            return new RequestResult<Integer>(StatEnum.TEST_RELEASE_FAIL, 0);
+        } catch (NullPointerException e){
+            logger.warn("参数不正确");
+            return new RequestResult<Integer>(StatEnum.ERROR_PARAM, 0);
+        } catch (Exception e){
+            logger.warn("未知异常: ", e);
+            return new RequestResult<Integer>(StatEnum.DEFAULT_WRONG, 0);
+        }
+
     }
 }

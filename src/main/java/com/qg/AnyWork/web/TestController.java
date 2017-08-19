@@ -39,13 +39,13 @@ public class TestController {
      * @return
      */
     @RequestMapping(value = "/testList", method = RequestMethod.POST)
-    public RequestResult<List<Testpaper>> search(@RequestBody Map map){
+    public RequestResult<List<Testpaper>> search(@RequestBody Map map,HttpServletRequest request){
         String organizationId = (String) map.get("organizationId");
         if(organizationId==null||organizationId.equals("")) return new RequestResult(StatEnum.REQUEST_ERROR);
 
         try {
-            //        User user = (User) request.getSession().getAttribute("user");  // TODO: 2017/7/26
-            User user = new User(); user.setUserId(1);
+                    User user = (User) request.getSession().getAttribute("user");
+//            User user = new User(); user.setUserId(1);
             return testService.getTestList(Integer.parseInt(organizationId),user.getUserId());
         } catch (TestException e) {
             logger.warn(e.getMessage());
@@ -63,10 +63,10 @@ public class TestController {
      * @return
      */
     @RequestMapping(value = "/practiceListByChapter", method = RequestMethod.POST)
-    public RequestResult<List<Testpaper>> getPracticeByOCId(@RequestBody Map map){
+    public RequestResult<List<Testpaper>> getPracticeByOCId(@RequestBody Map map,HttpServletRequest request){
         try {
-            //        User user = (User) request.getSession().getAttribute("user");  // TODO: 2017/7/26
-            User user = new User(); user.setUserId(1);
+                    User user = (User) request.getSession().getAttribute("user");
+//            User user = new User(); user.setUserId(1);
             int organizationId = (int) map.get("organizationId");
             int chapterId = (int) map.get("chapterId");
             return testService.getPracticeByOCId(organizationId,chapterId,user.getUserId());
@@ -86,13 +86,13 @@ public class TestController {
      * @return
      */
     @RequestMapping(value = "/practiceList", method = RequestMethod.POST)
-    public RequestResult<List<Testpaper>> searchPractice(@RequestBody Map map){
+    public RequestResult<List<Testpaper>> searchPractice(@RequestBody Map map,HttpServletRequest request){
         String organizationId = (String) map.get("organizationId");
         if(organizationId==null||organizationId.equals("")) return new RequestResult(StatEnum.REQUEST_ERROR);
 
         try {
-            //        User user = (User) request.getSession().getAttribute("user");  // TODO: 2017/7/26
-            User user = new User(); user.setUserId(1);
+                    User user = (User) request.getSession().getAttribute("user");
+//            User user = new User(); user.setUserId(1);
             return testService.getPracticeList(Integer.parseInt(organizationId),user.getUserId());
         } catch (TestException e) {
             logger.warn(e.getMessage());
@@ -110,8 +110,8 @@ public class TestController {
      */
     @RequestMapping(value = "/getMyPractice", method = RequestMethod.POST)
     public RequestResult<List<Testpaper>> getMyPractice( HttpServletRequest request){
-//        User user = (User) request.getSession().getAttribute("user");  // TODO: 2017/7/26  
-        User user = new User(); user.setUserId(1);
+        User user = (User) request.getSession().getAttribute("user");
+//        User user = new User(); user.setUserId(1);
         return testService.getMyPracticeList(user.getUserId());
     }
 
@@ -122,8 +122,8 @@ public class TestController {
      */
     @RequestMapping(value = "/getMyTest", method = RequestMethod.POST)
     public RequestResult<List<Testpaper>> getMyTest( HttpServletRequest request){
-//        User user = (User) request.getSession().getAttribute("user"); // TODO: 2017/7/26  
-        User user = new User(); user.setUserId(1);
+        User user = (User) request.getSession().getAttribute("user");
+//        User user = new User(); user.setUserId(1);
         return testService.getMyTestList(user.getUserId());
     }
 
@@ -215,9 +215,9 @@ public class TestController {
      * @return
      */
     @RequestMapping(value = "/addChapter", method = RequestMethod.POST)
-    public RequestResult<Chapter> addChapter(@RequestBody Chapter chapter){
-        //        User user = (User)request.getSession().getAttribute("user");
-        User user = new User(); user.setUserId(0);  user.setMark(1);
+    public RequestResult<Chapter> addChapter(@RequestBody Chapter chapter,HttpServletRequest request){
+                User user = (User)request.getSession().getAttribute("user");
+//        User user = new User(); user.setUserId(0);  user.setMark(1);
         if (user.getMark()==0) return new RequestResult(0,"无此权限");
         try {
             return chapterService.addChapter(chapter);
@@ -236,10 +236,10 @@ public class TestController {
      * @return
      */
     @RequestMapping(value = "/deleteChapter", method = RequestMethod.POST)
-    public RequestResult<Chapter> deleteChapter(@RequestBody Map map){
+    public RequestResult<Chapter> deleteChapter(@RequestBody Map map,HttpServletRequest request){
         int chapterId = (int) map.get("chapterId");
-        //        User user = (User)request.getSession().getAttribute("user");
-        User user = new User(); user.setUserId(0);  user.setMark(1);
+        User user = (User)request.getSession().getAttribute("user");
+//        User user = new User(); user.setUserId(0);  user.setMark(1);
         if (user.getMark()==0) return new RequestResult(0,"无此权限");
         return chapterService.deleteChapter(chapterId);
     }

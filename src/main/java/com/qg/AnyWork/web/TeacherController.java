@@ -48,8 +48,8 @@ public class TeacherController {
      */
     @RequestMapping(value = "/judge", method = RequestMethod.POST)
     public RequestResult<StudentTestResult> submit(@RequestBody TeacherSubmit teacherSubmit, HttpServletRequest request){
-        //        User user = (User) request.getSession().getAttribute("user"); // TODO: 2017/7/26
-        //if(user.getMark==0) return new RequestResult(0,"权限不足");
+                User user = (User) request.getSession().getAttribute("user");
+        if(user.getMark()==0) return new RequestResult(0,"权限不足");
         try {
             testService.updateStudentTest(teacherSubmit);
             return testService.getDetail(teacherSubmit.getTestpaperId(),teacherSubmit.getStudentId());

@@ -299,7 +299,7 @@ public class TestService {
         if (studentTestResult==null) return  new RequestResult(0,"没有此记录");
         List<StudentAnswerAnalysis> studentAnswerAnalysises = testDao.getStudentAnswer(testpaperId,userId);
         studentTestResult.setStudentAnswerAnalysis(studentAnswerAnalysises);
-        return  new RequestResult<StudentTestResult>(1,"获取成功",studentTestResult);
+        return  new RequestResult<StudentTestResult>(1,"成功",studentTestResult);
     }
 
     /***

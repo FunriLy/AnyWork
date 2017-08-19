@@ -44,8 +44,8 @@ public class OrganizationController {
     @RequestMapping(value = "/search", method = RequestMethod.POST)
     public RequestResult<List<Organization>> search(HttpServletRequest request, @RequestBody Map map){
         try {
-//            User user = (User) request.getSession().getAttribute("user");
-            User user = new User(); user.setUserId(1);
+            User user = (User) request.getSession().getAttribute("user");
+//            User user = new User(); user.setUserId(1);
             String organizationName = (String) map.get("organizationName");
             return organizationService.search(organizationName,user.getUserId());
         } catch (OrganizationException e) {
@@ -66,8 +66,8 @@ public class OrganizationController {
     @RequestMapping(value = "/join", method = RequestMethod.POST)
     public RequestResult<?> join(HttpServletRequest request, @RequestBody Map map){
         try {
-//            User user = (User) request.getSession().getAttribute("user");
-            User user = new User(); user.setUserId(1);
+            User user = (User) request.getSession().getAttribute("user");
+//            User user = new User(); user.setUserId(1);
             String organizationId = (String) map.get("organizationId");
             String token = (String) map.get("token");
             return organizationService.join(Integer.parseInt(organizationId),Long.parseLong(token),user.getUserId());
@@ -87,9 +87,8 @@ public class OrganizationController {
      */
     @RequestMapping(value = "/me", method = RequestMethod.POST)
     public RequestResult<List<Organization>> myOrganization(HttpServletRequest request){
-//        User user = (User) request.getSession().getAttribute("user");
-
-        User user = new User(); user.setUserId(1);
+        User user = (User) request.getSession().getAttribute("user");
+//        User user = new User(); user.setUserId(1);
         if (user == null)  return new RequestResult(StatEnum.ORGAN_SEARCH_FAIL);
         return organizationService.searchByUserId(user.getUserId());
     }
@@ -102,9 +101,10 @@ public class OrganizationController {
      */
     @RequestMapping(value = "/leave", method = RequestMethod.POST)
     public RequestResult leave(HttpServletRequest request,@RequestBody Map map){
-//        User user = (User) request.getSession().getAttribute("user");
+
         try {
-            User user = new User(); user.setUserId(1);
+            User user = (User) request.getSession().getAttribute("user");
+//            User user = new User(); user.setUserId(1);
             if (user == null)  return new RequestResult(StatEnum.ORGAN_SEARCH_FAIL);
             int organizationId = (int) map.get("organizationId");
             return organizationService.exitOrganization(organizationId,user.getUserId());
@@ -133,10 +133,10 @@ public class OrganizationController {
                                                    HttpServletRequest request) throws IOException {
         if (description==null || description.equals("")) return new RequestResult(0,"描述为空");
         if (organizationName==null || organizationName.equals("")) return new RequestResult(0,"组织名为空");
-//        User user = (User)request.getSession().getAttribute("user");
-//        if (user.getMark()==0)return new RequestResult(0,"没有权限");
-        User user = new User(); user.setUserId(0); user.setMark(1);
-        if (user.getMark()==0) return new RequestResult(0,"无此权限");
+        User user = (User)request.getSession().getAttribute("user");
+        if (user.getMark()==0)return new RequestResult(0,"没有权限");
+//        User user = new User(); user.setUserId(0); user.setMark(1);
+//        if (user.getMark()==0) return new RequestResult(0,"无此权限");
 
         Organization o = new Organization();
         o.setTeacherName(user.getUserName());
@@ -174,10 +174,10 @@ public class OrganizationController {
                                                      @RequestParam(value = "organizationName", required = false) String organizationName,
                                                      @RequestParam(value = "description", required = false) String description,
                                                      HttpServletRequest request) throws IOException {
-//        User user = (User)request.getSession().getAttribute("user");
-//        if (user.getMark()==0)return new RequestResult(0,"没有权限");
-        User user = new User(); user.setUserId(0); user.setMark(1);
-        if (user.getMark()==0) return new RequestResult(0,"无此权限");
+        User user = (User)request.getSession().getAttribute("user");
+        if (user.getMark()==0)return new RequestResult(0,"没有权限");
+//        User user = new User(); user.setUserId(0); user.setMark(1);
+//        if (user.getMark()==0) return new RequestResult(0,"无此权限");
 
         Organization o = organizationService.getById(organizationId);
         if (o.getTeacherId()!=user.getUserId()) return new RequestResult(0,"您不是此组织的创建人");
@@ -213,8 +213,8 @@ public class OrganizationController {
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     public RequestResult delete(HttpServletRequest request,@RequestBody Map map){
         int organizationId = (int) map.get("organizationId");
-//        User user = (User)request.getSession().getAttribute("user");
-        User user = new User(); user.setUserId(0); user.setMark(1);
+        User user = (User)request.getSession().getAttribute("user");
+//        User user = new User(); user.setUserId(0); user.setMark(1);
         if (user.getMark()==0) return new RequestResult(0,"无此权限");
         try {
             return organizationService.deleteOrganization(organizationId, user.getUserId());
@@ -234,8 +234,8 @@ public class OrganizationController {
      */
     @RequestMapping(value = "/myOrganization", method = RequestMethod.POST)
     public RequestResult<List<Organization>> Organization(HttpServletRequest request){
-        //        User user = (User)request.getSession().getAttribute("user");
-        User user = new User(); user.setUserId(0);  user.setMark(1);
+                User user = (User)request.getSession().getAttribute("user");
+//        User user = new User(); user.setUserId(0);  user.setMark(1);
         if (user.getMark()==0) return new RequestResult(0,"无此权限");
         return organizationService.getMyOrganization(user.getUserId());
     }

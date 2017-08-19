@@ -21,7 +21,8 @@ public class Testpaper {
     private int testpaperScore;             //试卷分数
     private int testpaperType;              //试卷类型，0为练习、1为考试，若将来扩展可在这个字段上实现
 
-    private List<Question> questions;
+    // TODO 为了让老师上传试卷时可以获得题目
+    private List<Question> questions;       //试卷下的所有题目
 
     public Testpaper(){}
 

@@ -4,6 +4,7 @@ import com.qg.AnyWork.model.*;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
@@ -105,6 +106,13 @@ public interface TestDao {
      * @return 1为添加成功 0为添加失败
      */
     int addTestpaper(@Param("testpaper") Testpaper testpaper);
+
+    /**
+     * 删除一张试卷
+     * @param testpaperId
+     * @return
+     */
+    int deleteTestpaper(@Param("testpaperId") int testpaperId);
 
     /**
      * 更新一张试卷/练习的分数

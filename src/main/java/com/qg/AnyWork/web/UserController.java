@@ -249,7 +249,6 @@ public class UserController {
      * @return
      */
     private boolean verify(HttpServletRequest request, String valcode){
-        // TODO: 2017/7/10 预留验证码
         boolean flag = false;
         if(valcode.equals("0")) return true;
         String code = (String) request.getSession().getAttribute("valcode");

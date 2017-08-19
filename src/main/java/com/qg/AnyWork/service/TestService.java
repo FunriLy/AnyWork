@@ -385,7 +385,7 @@ public class TestService {
         double object = 0;
         for (TeacherJudge t : teacherJudges){
             int type =testDao.getQuestionById(t.getQuestionId()).getType();
-            if (type==3 || type==4 || type==5) subject+=t.getSocre();
+            if (type==4 || type==6 || type==5) subject+=t.getSocre();
             else object+=t.getSocre();
             //更新studentAnswer
             testDao.updateStudentAnswerSocre(t.getSocre(),teacherSubmit.getStudentId(),t.getQuestionId());

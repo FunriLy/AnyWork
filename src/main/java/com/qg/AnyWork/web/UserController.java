@@ -213,9 +213,9 @@ public class UserController {
     @ResponseBody
     public RequestResult<?> uploadPicture(HttpServletRequest request, @RequestParam("file") MultipartFile file){
         try {
-            User user = new User();
-            user.setUserId(1);
-//            User user = (User) request.getSession().getAttribute("user");
+//            User user = new User();
+//            user.setUserId(1);
+            User user = (User) request.getSession().getAttribute("user");
             //上传图片
             if (null != file && !file.isEmpty()){
                 String filename = file.getOriginalFilename();

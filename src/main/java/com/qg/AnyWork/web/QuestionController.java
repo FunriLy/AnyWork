@@ -12,7 +12,6 @@ import com.qg.AnyWork.model.User;
 import com.qg.AnyWork.service.QuestionService;
 import com.qg.AnyWork.service.TestService;
 import com.qg.AnyWork.utils.DateUtil;
-import com.sun.tools.javac.util.Warner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

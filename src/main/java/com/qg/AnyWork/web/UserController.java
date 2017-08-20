@@ -95,12 +95,18 @@ public class UserController {
         } catch (Exception e){
             user.setMark(0);
         }
+        String valcode = map.get("valcode");
         //注册用户
         try {
+            //验证验证码
+            verify(request, valcode);
             RequestResult<Integer> result = userService.register(user);
 //            FileUtils.copyInputStreamToFile(new FileInputStream(new File("classpath:/resources/static/picture/picture.jpg")),
 //                    new File(request.getServletContext().getRealPath("/picture"), result.getData() +".jpg"));
             return result;
+        } catch (ValcodeWrongException e){
+            logger.warn("用户验证码错误");
+            return new RequestResult<Integer>(StatEnum.VALCODE_WRONG, 0);
         } catch (UserException e){
             logger.warn("该用户已经存在");
             return new RequestResult<Integer>(StatEnum.REGISTER_ALREADY_EXIST, 0);

@@ -1,7 +1,19 @@
 package com.qg.AnyWork.web;
 
+import com.qg.AnyWork.dto.RequestResult;
+import com.qg.AnyWork.enums.StatEnum;
+import com.qg.AnyWork.exception.MailSendException;
+import com.qg.AnyWork.exception.user.UserNotExitException;
+import com.qg.AnyWork.service.MailService;
+import com.qg.AnyWork.utils.Encryption;
+import com.qg.AnyWork.utils.MailUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.imageio.ImageIO;
@@ -11,15 +23,62 @@ import javax.servlet.http.HttpSession;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Map;
 import java.util.Random;
 
 /**
+ * 工具类访问接口
  * Created by FunriLy on 2017/8/18.
  * From small beginnings comes great things.
  */
 @Controller
 @RequestMapping("/utils")
 public class UtilController {
+    private static final Logger logger = LoggerFactory.getLogger(UtilController.class);
+
+    @Autowired
+    private MailService mailService;
+
+    @RequestMapping(value = "/forget", method = RequestMethod.GET, produces="application/json;charset=UTF-8")
+    @ResponseBody
+    public RequestResult<?> sendMail(String email){
+        try {
+            RequestResult<?> result = mailService.sendMail(email);
+            return result;
+        } catch (UserNotExitException e){
+            logger.warn("不存在的用户！", e);
+            return new RequestResult<Object>(StatEnum.LOGIN_NOT_EXIT_USER);
+        } catch (MailSendException e){
+            logger.warn("发送邮件失败！", e);
+            return new RequestResult<Object>(StatEnum.MAIL_SEND_FAIL);
+        } catch (Exception e) {
+            logger.warn("未知异常: ", e);
+            return new RequestResult<Object>(StatEnum.DEFAULT_WRONG);
+        }
+    }
+
+    @RequestMapping(value = "/reset", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
+    @ResponseBody
+    public RequestResult<String> resetPassword(@RequestBody Map<String, String> map) {
+        try {
+            String email = map.get("email");
+            String ciphertext = map.get("ciphertext");
+            if (email == null || email.equals("") || ciphertext == null || ciphertext.equals("")) {
+                return new RequestResult<String>(StatEnum.ERROR_PARAM);
+            }
+            if (ciphertext.equals(Encryption.getMD5(email))) {
+                String password = mailService.resetPassword(email);
+                return new RequestResult<String>(StatEnum.PASSWORD_RESET, password);
+            }
+            return new RequestResult<String>(StatEnum.ERROR_PARAM);
+        } catch (UserNotExitException e){
+            logger.warn("不存在的用户！", e);
+            return new RequestResult<String>(StatEnum.LOGIN_NOT_EXIT_USER);
+        }catch (Exception e) {
+            logger.warn("未知异常: ", e);
+            return new RequestResult<String>(StatEnum.DEFAULT_WRONG);
+        }
+    }
 
     /**
      * 生成图片验证码

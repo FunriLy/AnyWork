@@ -78,6 +78,13 @@ public enum StatEnum {
     GET_TEST_FAIL(0, "获取失败" ),
     SUBMIT_TEST_SUCCESS(1, "提交成功" ),
     SUBMIT_TEST_FAIL(0, "提交失败" ),
+
+    /**
+     * 邮件模块
+     */
+    MAIL_SEND_SUCCESS(1, "邮件发送成功"),
+    MAIL_SEND_FAIL(0, "邮件发送失败"),
+    PASSWORD_RESET(1, "重置密码成功"),
     ;
 
     private  int state;

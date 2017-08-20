@@ -5,6 +5,7 @@ import com.qg.AnyWork.dto.RequestResult;
 import com.qg.AnyWork.enums.StatEnum;
 import com.qg.AnyWork.exception.user.UserNotExitException;
 import com.qg.AnyWork.model.User;
+import com.qg.AnyWork.utils.Encryption;
 import com.qg.AnyWork.utils.MailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,7 +45,8 @@ public class MailService {
         if (user == null){
             throw new UserNotExitException("不存在的用户！");
         }
-        user.setPassword(password);
+        //密码加密并存入数据库
+        user.setPassword(Encryption.getMD5(password));
         userDao.updateUser(user);
         return password;
     }

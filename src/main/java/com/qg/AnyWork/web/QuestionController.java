@@ -185,10 +185,10 @@ public class QuestionController {
      * @param testpaperId
      * @return
      */
-    @RequestMapping(value = "/{organizationId}/export/{testpaperId}", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
+    @RequestMapping(value = "/{organizationId}/export/{testpaperId}", method = RequestMethod.GET, produces="application/json;charset=UTF-8")
     @ResponseBody
     public RequestResult<Integer> exportExcel(HttpServletRequest request, HttpServletResponse response,
-                                              @PathVariable("organizationId") int organizationId, @PathVariable int testpaperId){
+                                              @PathVariable("organizationId") int organizationId, @PathVariable("testpaperId") int testpaperId){
         try {
             User user =  (User) request.getSession().getAttribute("user");
             if (user == null){

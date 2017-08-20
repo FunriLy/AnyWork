@@ -39,11 +39,16 @@ public class UtilController {
     @Autowired
     private MailService mailService;
 
-    @RequestMapping(value = "/forget", method = RequestMethod.GET, produces="application/json;charset=UTF-8")
+    /**
+     * 忘了密码邮箱找回
+     * @param map
+     * @return
+     */
+    @RequestMapping(value = "/forget", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
     @ResponseBody
-    public RequestResult<?> sendMail(String email){
+    public RequestResult<?> sendMail(@RequestBody Map<String, String> map){
         try {
-            RequestResult<?> result = mailService.sendMail(email);
+            RequestResult<?> result = mailService.sendMail(map.get("email"));
             return result;
         } catch (UserNotExitException e){
             logger.warn("不存在的用户！", e);
@@ -57,6 +62,11 @@ public class UtilController {
         }
     }
 
+    /**
+     * 验证邮箱秘钥
+     * @param map
+     * @return
+     */
     @RequestMapping(value = "/reset", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
     @ResponseBody
     public RequestResult<String> resetPassword(@RequestBody Map<String, String> map) {

@@ -10,3 +10,27 @@
 [DEBUG] 2017-08-20 21:42:51,825 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
 [INFO ] 2017-08-20 21:42:51,826 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
 [INFO ] 2017-08-20 21:43:05,028 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 14.161 seconds (JVM running for 17.556)
+[INFO ] 2017-08-21 00:23:31,725 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-U9OSLH3 with PID 3608 (started by zggdczfr in F:\Git workspace\AnyWork)
+[DEBUG] 2017-08-21 00:23:31,784 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-08-21 00:23:31,785 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-08-21 00:23:50,052 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 20.021 seconds (JVM running for 27.014)
+[INFO ] 2017-08-21 00:26:41,916 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-U9OSLH3 with PID 3608 (started by zggdczfr in F:\Git workspace\AnyWork)
+[DEBUG] 2017-08-21 00:26:41,926 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-08-21 00:26:41,926 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-08-21 00:26:49,224 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 7.627 seconds (JVM running for 206.186)
+[INFO ] 2017-08-21 00:26:57,214 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-U9OSLH3 with PID 3608 (started by zggdczfr in F:\Git workspace\AnyWork)
+[DEBUG] 2017-08-21 00:26:57,215 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-08-21 00:26:57,215 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-08-21 00:27:03,050 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 6.093 seconds (JVM running for 220.011)
+[INFO ] 2017-08-21 00:28:47,862 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-U9OSLH3 with PID 3608 (started by zggdczfr in F:\Git workspace\AnyWork)
+[DEBUG] 2017-08-21 00:28:47,862 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-08-21 00:28:47,863 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-08-21 00:28:53,340 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 5.694 seconds (JVM running for 330.302)
+[INFO ] 2017-08-21 00:29:20,454 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-U9OSLH3 with PID 3608 (started by zggdczfr in F:\Git workspace\AnyWork)
+[DEBUG] 2017-08-21 00:29:20,454 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-08-21 00:29:20,454 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-08-21 00:29:25,014 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 4.885 seconds (JVM running for 361.976)
+[INFO ] 2017-08-21 00:29:33,499 com.qg.AnyWork.AnyWorkApplication - Starting AnyWorkApplication on DESKTOP-U9OSLH3 with PID 3608 (started by zggdczfr in F:\Git workspace\AnyWork)
+[DEBUG] 2017-08-21 00:29:33,500 com.qg.AnyWork.AnyWorkApplication - Running with Spring Boot v1.5.4.RELEASE, Spring v4.3.9.RELEASE
+[INFO ] 2017-08-21 00:29:33,500 com.qg.AnyWork.AnyWorkApplication - No active profile set, falling back to default profiles: default
+[INFO ] 2017-08-21 00:29:37,660 com.qg.AnyWork.AnyWorkApplication - Started AnyWorkApplication in 4.355 seconds (JVM running for 374.622)

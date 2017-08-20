@@ -49,6 +49,8 @@ public enum StatEnum {
     FILE_READ_SUCCESS(1, "文件读取成功"),
     FILE_READ_FAIL(0, "文件读取失败"),
     FILE_NOT_EXIT(0, "文件不存在"),
+    FILE_EXPORT_SUCCESS(1, "Excel文件导出成功"),
+    FILE_EXPORT_FAIL(0, "Excel文件导出失败"),
 
 
     /**

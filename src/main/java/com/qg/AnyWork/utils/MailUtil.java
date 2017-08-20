@@ -34,7 +34,7 @@ public class MailUtil {
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
             helper.setFrom(Sender);
             helper.setTo(Sender);
-            helper.setSubject("主题：HTML邮件");
+            helper.setSubject("主题：忘了密码");
 
             StringBuffer sb = new StringBuffer();
             helper.setText(htmlText(email, userName), true);

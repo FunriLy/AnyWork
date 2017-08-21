@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 /**
+ *
  * Created by logan on 2017/8/18.
  */
 @RestController
@@ -27,7 +28,7 @@ public class SuggestionController {
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public RequestResult addSuggestion(@RequestBody Map map, HttpServletRequest request){
-            User user = (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute("user");
 //        User user = new User(); user.setUserId(1);
         String suggestion = (String) map.get("suggestion");
         return suggestionService.addSuggestion(user.getUserId(),suggestion);

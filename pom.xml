@@ -40,7 +40,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<!--<scope>test</scope>-->
 		</dependency>
 
 		<!--Web-->
@@ -56,7 +56,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
+		<!--Mail-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+			<version>1.4.1.RELEASE</version>
+		</dependency>
 
 
 		<dependency>

@@ -9,12 +9,12 @@ public class Question {
 
     private int questionId;     //问题id
     private int type;           //题目类型  1-选择题 2-判断题 3-填空题 4-问答题 5-编程题 6-综合题
+    private String content;     //题目内容
     private String A;
     private String B;
     private String C;
     private String D;
     private String key;         //答案
-    private String content;     //题目内容
     private double socre;          //分数
     private int testpaperId;    //试卷id
     private int other;          //填空题个数

@@ -20,7 +20,10 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
@@ -55,7 +58,7 @@ public class QuestionController {
         try {
             if (null != file && !file.isEmpty()){
                 String filename = file.getOriginalFilename();
-                if (filename.endsWith(".xlsx")){
+                if (filename.endsWith(".xlsx") || filename.endsWith(".xls")){
 //                    //文件上传
 //                    FileUtils.copyInputStreamToFile(file.getInputStream(),
 //                            new File(request.getServletContext().getRealPath("/excel"), user.getUserId() +".xlsx"));
@@ -173,6 +176,46 @@ public class QuestionController {
         }
 
     }
+
+    /**
+     * 教师导出Excel
+     * @param request
+     * @param response
+     * @param organizationId
+     * @param testpaperId
+     * @return
+     */
+    @RequestMapping(value = "/{organizationId}/export/{testpaperId}", method = RequestMethod.GET, produces="application/json;charset=UTF-8")
+    @ResponseBody
+    public RequestResult<Integer> exportExcel(HttpServletRequest request, HttpServletResponse response,
+                                              @PathVariable("organizationId") int organizationId, @PathVariable("testpaperId") int testpaperId){
+        try {
+            User user =  (User) request.getSession().getAttribute("user");
+            if (user == null){
+                return new RequestResult<Integer>(StatEnum.USER_NOT_LOGIN, 0);
+            }
+            Testpaper testpaper = questionService.findTestpaperById(testpaperId);
+            //权限验证
+            if (user.getMark() != 1 || user.getUserId() != testpaper.getAuthorId()){
+                throw new NotPowerException("没有相应的处理权限！");
+            }
+            OutputStream out = new FileOutputStream(request.getServletContext().getRealPath("/excel")+"/"+user.getUserId()+".xls");
+            questionService.exportExcel(testpaperId, user.getUserId(), out);
+            return new RequestResult<Integer>(StatEnum.FILE_EXPORT_SUCCESS, testpaperId);
+        } catch (NotPowerException e){
+            //没有相应的权限
+            logger.warn("非法用户调用老师权限！");
+            return new RequestResult<Integer>(StatEnum.NOT_HAVE_POWER, 0);
+        } catch (ExcelReadException e) {
+            //Excel 导出失败
+            logger.warn("Excel 导出失败！");
+            return new RequestResult<Integer>(StatEnum.FILE_EXPORT_FAIL, 0);
+        } catch (Exception e) {
+            logger.warn("未知异常: ", e);
+            return new RequestResult<Integer>(StatEnum.DEFAULT_WRONG, 0);
+        }
+    }
+
 
     /**
      * 老师删除试卷

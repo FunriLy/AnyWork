@@ -49,6 +49,8 @@ public enum StatEnum {
     FILE_READ_SUCCESS(1, "文件读取成功"),
     FILE_READ_FAIL(0, "文件读取失败"),
     FILE_NOT_EXIT(0, "文件不存在"),
+    FILE_EXPORT_SUCCESS(1, "Excel文件导出成功"),
+    FILE_EXPORT_FAIL(0, "Excel文件导出失败"),
 
 
     /**
@@ -76,6 +78,13 @@ public enum StatEnum {
     GET_TEST_FAIL(0, "获取失败" ),
     SUBMIT_TEST_SUCCESS(1, "提交成功" ),
     SUBMIT_TEST_FAIL(0, "提交失败" ),
+
+    /**
+     * 邮件模块
+     */
+    MAIL_SEND_SUCCESS(1, "邮件发送成功"),
+    MAIL_SEND_FAIL(0, "邮件发送失败"),
+    PASSWORD_RESET(1, "重置密码成功"),
     ;
 
     private  int state;

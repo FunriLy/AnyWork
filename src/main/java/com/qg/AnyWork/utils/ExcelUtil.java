@@ -1,22 +1,29 @@
 package com.qg.AnyWork.utils;
 
+import com.qg.AnyWork.exception.question.ExcelReadException;
 import com.qg.AnyWork.model.Question;
 import com.qg.AnyWork.model.Testpaper;
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.hssf.usermodel.*;
+import org.apache.poi.hssf.util.HSSFColor;
+import org.apache.poi.ss.formula.functions.Count;
+import org.apache.poi.ss.formula.functions.T;
+import org.apache.poi.ss.formula.ptg.EqualPtg;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.usermodel.DateUtil;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.omg.CORBA.StringHolder;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * 操作Excel表格的工具类
@@ -27,12 +34,7 @@ public class ExcelUtil {
 
     public static final ExcelUtil util = new ExcelUtil();
 
-    // TODO: 2017/7/12 不用添加关于试卷简介的内容
-//    public static Textpaper getTextpaper(InputStream input) throws Exception {
-//        Map<Integer, String> map = new HashMap<>();
-//
-//        return util.readText(input, map);
-//    }
+    private static final Logger logger = LoggerFactory.getLogger(ExcelUtil.class);
 
     /**
      * 读取解析Excel文件流
@@ -59,14 +61,10 @@ public class ExcelUtil {
         Map<Integer, String> map3 = new HashMap<>();
         map3.put(1, "content");
         map3.put(2, "key");
-        map3.put(3, "other");
-        map3.put(4, "socre");
+        map3.put(3, "socre");
+        map3.put(4, "other");
 
         return new ExcelUtil().readQuest(input, Question.class, map1, map2, map3, map2, map2, map2);
-    }
-
-    private <T> Testpaper readText(InputStream input, Map<Integer, String> map) throws Exception {
-        return null;
     }
 
     /**
@@ -172,6 +170,7 @@ public class ExcelUtil {
                     question.setType(2);
                 } else if (status.startsWith("C")){
                     question.setType(3);
+                    question.setKey(question.getKey().replaceAll("#", "∏"));    //替換答案中非法字符
                 } else if (status.startsWith("D")){
                     question.setType(4);
                 } else if (status.startsWith("E")){
@@ -241,4 +240,241 @@ public class ExcelUtil {
 
         return t;
     }
+
+    /**
+     * 输出Excel
+     */
+
+
+    /**
+     *
+     * @param title 标题
+     * @param dataSet 数据列表
+     * @param out 输出流
+     * @param pattern 时间格式参数
+     */
+    public static  <T> void  export(String title, List<T> dataSet, OutputStream out, String pattern) {
+
+        if(dataSet == null || dataSet.isEmpty()) {
+            //空数据
+            return;
+        }
+        //声明一个表格
+        HSSFWorkbook workbook = new HSSFWorkbook();
+        //生成一个表格
+        HSSFSheet sheet = workbook.createSheet(title);
+        // 设置表格默认列宽度为15个字节
+        sheet.setDefaultColumnWidth((short) 15);
+        // 生成一个样式
+        HSSFCellStyle style = workbook.createCellStyle();
+        // 生成一个字体
+        HSSFFont font = workbook.createFont();
+        font.setColor(HSSFColor.BLACK.index);
+        font.setFontHeightInPoints((short) 12);
+        // 把字体应用到当前的样式
+        style.setFont(font);
+
+        // 声明一个画图的顶级管理器
+        HSSFPatriarch patriarch = sheet.createDrawingPatriarch();
+
+        //表格头
+        HSSFRow row = sheet.createRow(0);
+        ListIterator<T> it = dataSet.listIterator();
+        //将游标定位到列表结尾
+        while (it.hasNext()){
+            it.next();
+        }
+
+        int index = 0;
+
+        //确定六种题型的数字
+        int A_num = 1, B_num =1, C_num = 1, D_num =1, E_num = 1, F_num =1;
+
+        while (it.hasPrevious()){
+            index++;
+            T t = it.previous();
+
+            /**
+             * 插入标题
+             */
+            if (A_num == 1){
+                index++;
+                row = sheet.createRow(index);
+                String[] headers = {"选择题", "题目内容", "选项A", "选项B", "选项C", "选项D", "正确答案", "分数"};
+                util.addCell(headers, row, style);
+                index++;
+            } else if(B_num == 1){
+                index++;
+                row = sheet.createRow(index);
+                String[] headers = {"判断题", "题目内容", "正确答案",  "分数"};
+                util.addCell(headers, row, style);
+                index++;
+            } else if(C_num == 1){
+                index++;
+                row = sheet.createRow(index);
+                String[] headers = {"填空题", "题目内容", "正确答案",  "分数", "个数"};
+                util.addCell(headers, row, style);
+                index++;
+            } else if(D_num == 1){
+                index++;
+                row = sheet.createRow(index);
+                String[] headers = {"问答题", "题目内容", "正确答案",  "分数"};
+                util.addCell(headers, row, style);
+                index++;
+            } else if(E_num == 1){
+                index++;
+                row = sheet.createRow(index);
+                String[] headers = {"编程题", "题目内容", "正确答案",  "分数"};
+                util.addCell(headers, row, style);
+                index++;
+            } else if(F_num == 1){
+                index++;
+                row = sheet.createRow(index);
+                String[] headers = {"综合题", "题目内容", "正确答案",  "分数"};
+                util.addCell(headers, row, style);
+                index++;
+            }
+
+            //跳到新的一行
+            row = sheet.createRow(index);
+
+            //利用反射
+            Field[] fields = t.getClass().getDeclaredFields();
+            int j = 0;
+            for (int i=1; i<fields.length; i++){
+                HSSFCell cell = row.createCell(j);
+                Field field = fields[i];
+                String fieldName = field.getName();
+                if (fieldName.equals("testpaperId")){
+                    continue;
+                }
+                String getMethodName = "get"
+                        + fieldName.substring(0, 1).toUpperCase()
+                        + fieldName.substring(1);
+                try {
+                    Class clazz = t.getClass();
+                    Method getMethod = clazz.getMethod(getMethodName, new Class[]{});
+                    Object value = getMethod.invoke(t, new Object[]{});
+                    // 判断值的类型后进行强制类型转换
+                    Object textValue = null;
+                    //对属性进行判断
+                    if (value == null){
+                        continue;
+                    }
+                    j++;
+
+                    //将类型转化为带数字的字母类型
+                    if(fieldName.equals("type")){
+                        switch (String.valueOf((int)value)) {
+                            case "1":
+                                value = "A" + (A_num++);
+                                break;
+                            case "2":
+                                value = "B" + (B_num++);
+                                break;
+                            case "3":
+                                value = "C" + (C_num++);
+                                break;
+                            case "4":
+                                value = "D" + (D_num++);
+                                break;
+                            case "5":
+                                value = "E" + (E_num++);
+                                break;
+                            case "6":
+                                value = "F" + (F_num++);
+                                break;
+                        }
+                    }
+
+                    if (value instanceof Boolean) {
+                        boolean bValue = (Boolean) value;
+                        textValue = 1;
+                        if (!bValue) {
+                            textValue = 2;
+                        }
+                    } else if (value instanceof Date) {
+                        Date date = (Date) value;
+                        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+                        textValue = sdf.format(date);
+                    } else if (value instanceof byte[]) {
+                        // 有图片时，设置行高为60px;
+                        row.setHeightInPoints(60);
+                        // 设置图片所在列宽度为80px,注意这里单位的一个换算
+                        sheet.setColumnWidth(i, (short) (35.7 * 80));
+                        // sheet.autoSizeColumn(i);
+                        byte[] bsValue = (byte[]) value;
+                        HSSFClientAnchor anchor = new HSSFClientAnchor(0, 0,
+                                1023, 255, (short) 6, index, (short) 6, index);
+                        anchor.setAnchorType(ClientAnchor.DONT_MOVE_AND_RESIZE);
+                        patriarch.createPicture(anchor, workbook.addPicture(
+                                bsValue, HSSFWorkbook.PICTURE_TYPE_JPEG));
+                    } else {
+                        // 其它数据类型都当作字符串简单处理
+                        textValue = value;
+                    }
+
+                    // 如果不是图片数据，就利用正则表达式判断textValue是否全部由数字组成
+                    if (textValue != null) {
+                        Pattern p = Pattern.compile("^//d+(//.//d+)?$");
+                        Matcher matcher = null;
+                        if (textValue instanceof String){
+                            matcher = p.matcher((String)textValue);
+                        } else {
+                            matcher = p.matcher(String.valueOf(textValue));
+                        }
+                        if (matcher.matches()) {
+                            // 是数字当作double处理
+                            cell.setCellValue(Double.parseDouble((String) textValue));
+                        } else {
+                            if (textValue instanceof String) {
+                                HSSFRichTextString richString = new HSSFRichTextString(
+                                        (String) textValue);
+                                HSSFFont font3 = workbook.createFont();
+                                font3.setColor(HSSFColor.BLACK.index);
+                                richString.applyFont(font3);
+                                cell.setCellValue(richString);
+                            } else {
+                                cell.setCellValue(Double.valueOf(textValue.toString()));
+                            }
+                        }
+                    }
+
+                } catch (SecurityException | NoSuchMethodException | IllegalArgumentException | IllegalAccessException | InvocationTargetException e) {
+                    e.printStackTrace();
+                    throw new ExcelReadException("Excel导出失败！" + e.getMessage());
+                }
+            }
+        }
+
+        try {
+            workbook.write(out);
+        } catch (IOException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                workbook.close();
+                out.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * 输出每种题目的标题
+     * @param headers
+     * @param row
+     * @param style
+     */
+    private void addCell(String[] headers, HSSFRow row, HSSFCellStyle style) {
+        for(int i=0; i<headers.length; i++){
+            HSSFCell cell = row.createCell(i);
+            cell.setCellStyle(style);
+            HSSFRichTextString text = new HSSFRichTextString(headers[i]);
+            cell.setCellValue(text);
+        }
+    }
+
+
 }

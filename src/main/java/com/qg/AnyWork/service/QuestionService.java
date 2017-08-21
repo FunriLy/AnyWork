@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -122,5 +123,13 @@ public class QuestionService {
             throw new TestpaperIsNoExit("试卷并不存在！");
         }
         return testpaper;
+    }
+
+    public void exportExcel(int testpaperId, int userid, OutputStream out) throws ExcelReadException {
+        List<Question> questionList = testDao.getQuestionByTestpaperId(testpaperId);
+        if (questionList==null || questionList.isEmpty()) {
+            throw new ExcelReadException("数据列表为空");
+        }
+        ExcelUtil.export(userid+"", questionList, out,  "yyyy-MM-dd HH:mm:ss");
     }
 }

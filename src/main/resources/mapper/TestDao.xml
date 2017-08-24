@@ -135,9 +135,9 @@
     </update>
 
     <insert id="addTestpaper" parameterType="Testpaper" useGeneratedKeys="true" keyProperty="testpaper.testpaperId">
-        INSERT INTO testpaper(testpaper_title, author_id, create_time, ending_time, testpaper_type, organization_id)
+        INSERT INTO testpaper(testpaper_title, author_id, create_time, ending_time, testpaper_type, organization_id, chapter_id)
         VALUES (#{testpaper.testpaperTitle}, #{testpaper.authorId}, #{testpaper.createTime}, #{testpaper.endingTime},
-        #{testpaper.testpaperType}, #{testpaper.organizationId})
+        #{testpaper.testpaperType}, #{testpaper.organizationId}, #{testpaper.chapterId})
     </insert>
 
     <update id="updateSocreOfTestpaper">

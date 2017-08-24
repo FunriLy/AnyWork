@@ -98,7 +98,7 @@ public class ExcelUtil {
             Class tempClazz = Question.class;
 
             //从第二行开始读取
-            for (int i=2; i<sheet.getLastRowNum(); i++){
+            for (int i=2; i<=sheet.getLastRowNum(); i++){
                 Row row = sheet.getRow(i);
                 if (null == row){
                     //空行不处理

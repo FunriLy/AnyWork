@@ -281,62 +281,63 @@ public class ExcelUtil {
         HSSFRow row = sheet.createRow(0);
         ListIterator<T> it = dataSet.listIterator();
         //将游标定位到列表结尾
-        while (it.hasNext()){
-            it.next();
-        }
+//        while (it.hasNext()){
+//            it.next();
+//        }
 
-        int index = 0;
+        int index = 1;
 
         //确定六种题型的数字
         int A_num = 1, B_num =1, C_num = 1, D_num =1, E_num = 1, F_num =1;
 
-        while (it.hasPrevious()){
+        while (it.hasNext()){
             index++;
-            T t = it.previous();
+            T t = it.next();
 
             /**
              * 插入标题
              */
-            if (A_num == 1){
-                index++;
-                row = sheet.createRow(index);
-                String[] headers = {"选择题", "题目内容", "选项A", "选项B", "选项C", "选项D", "正确答案", "分数"};
-                util.addCell(headers, row, style);
-                index++;
-            } else if(B_num == 1){
-                index++;
-                row = sheet.createRow(index);
-                String[] headers = {"判断题", "题目内容", "正确答案",  "分数"};
-                util.addCell(headers, row, style);
-                index++;
-            } else if(C_num == 1){
-                index++;
-                row = sheet.createRow(index);
-                String[] headers = {"填空题", "题目内容", "正确答案",  "分数", "个数"};
-                util.addCell(headers, row, style);
-                index++;
-            } else if(D_num == 1){
-                index++;
-                row = sheet.createRow(index);
-                String[] headers = {"问答题", "题目内容", "正确答案",  "分数"};
-                util.addCell(headers, row, style);
-                index++;
-            } else if(E_num == 1){
-                index++;
-                row = sheet.createRow(index);
-                String[] headers = {"编程题", "题目内容", "正确答案",  "分数"};
-                util.addCell(headers, row, style);
-                index++;
-            } else if(F_num == 1){
-                index++;
-                row = sheet.createRow(index);
-                String[] headers = {"综合题", "题目内容", "正确答案",  "分数"};
-                util.addCell(headers, row, style);
-                index++;
-            }
+//            if (A_num == 1){
+//                index++;
+//                row = sheet.createRow(index);
+//                String[] headers = {"选择题", "题目内容", "选项A", "选项B", "选项C", "选项D", "正确答案", "分数"};
+//                util.addCell(headers, row, style);
+//                index++;
+//            } else if(B_num == 1){
+//                index++;
+//                row = sheet.createRow(index);
+//                String[] headers = {"判断题", "题目内容", "正确答案",  "分数"};
+//                util.addCell(headers, row, style);
+//                index++;
+//            } else if(C_num == 1){
+//                index++;
+//                row = sheet.createRow(index);
+//                String[] headers = {"填空题", "题目内容", "正确答案",  "分数", "个数"};
+//                util.addCell(headers, row, style);
+//                index++;
+//            } else if(D_num == 1){
+//                index++;
+//                row = sheet.createRow(index);
+//                String[] headers = {"问答题", "题目内容", "正确答案",  "分数"};
+//                util.addCell(headers, row, style);
+//                index++;
+//            } else if(E_num == 1){
+//                index++;
+//                row = sheet.createRow(index);
+//                String[] headers = {"编程题", "题目内容", "正确答案",  "分数"};
+//                util.addCell(headers, row, style);
+//                index++;
+//            } else if(F_num == 1){
+//                index++;
+//                row = sheet.createRow(index);
+//                String[] headers = {"综合题", "题目内容", "正确答案",  "分数"};
+//                util.addCell(headers, row, style);
+//                index++;
+//            }
 
             //跳到新的一行
             row = sheet.createRow(index);
+            HSSFRow pre_row = sheet.createRow(index-1);
 
             //利用反射
             Field[] fields = t.getClass().getDeclaredFields();
@@ -368,21 +369,39 @@ public class ExcelUtil {
                         switch (String.valueOf((int)value)) {
                             case "1":
                                 value = "A" + (A_num++);
+                                String[] headers1 = {"选择题", "题目内容", "选项A", "选项B", "选项C", "选项D", "正确答案", "分数"};
+                                util.addCell(headers1, pre_row, style);
+                                index+=2;
                                 break;
                             case "2":
                                 value = "B" + (B_num++);
+                                String[] headers2 = {"判断题", "题目内容", "正确答案",  "分数"};
+                                util.addCell(headers2, pre_row, style);
+                                index+=2;
                                 break;
                             case "3":
                                 value = "C" + (C_num++);
+                                String[] headers3 = {"填空题", "题目内容", "正确答案",  "分数", "个数"};
+                                util.addCell(headers3, pre_row, style);
+                                index+=2;
                                 break;
                             case "4":
                                 value = "D" + (D_num++);
+                                String[] headers4 = {"问答题", "题目内容", "正确答案",  "分数"};
+                                util.addCell(headers4, pre_row, style);
+                                index+=2;
                                 break;
                             case "5":
                                 value = "E" + (E_num++);
+                                String[] headers5 = {"编程题", "题目内容", "正确答案",  "分数"};
+                                util.addCell(headers5, pre_row, style);
+                                index+=2;
                                 break;
                             case "6":
                                 value = "F" + (F_num++);
+                                String[] headers6 = {"综合题", "题目内容", "正确答案",  "分数"};
+                                util.addCell(headers6, pre_row, style);
+                                index+=2;
                                 break;
                         }
                     }

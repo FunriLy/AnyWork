@@ -247,7 +247,7 @@ public class ExcelUtil {
 
 
     /**
-     *
+     * 将数据导出为Excel
      * @param title 标题
      * @param dataSet 数据列表
      * @param out 输出流
@@ -447,8 +447,12 @@ public class ExcelUtil {
                             cell.setCellValue(Double.parseDouble((String) textValue));
                         } else {
                             if (textValue instanceof String) {
-                                HSSFRichTextString richString = new HSSFRichTextString(
-                                        (String) textValue);
+
+                                String textString = (String) textValue;
+                                if(textString.contains("∏")){
+                                    textString = textString.replaceAll("∏", "#");   // 替换# 方便输出
+                                }
+                                HSSFRichTextString richString = new HSSFRichTextString(textString);
                                 HSSFFont font3 = workbook.createFont();
                                 font3.setColor(HSSFColor.BLACK.index);
                                 richString.applyFont(font3);

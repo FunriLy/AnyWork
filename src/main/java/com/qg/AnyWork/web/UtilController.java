@@ -4,9 +4,12 @@ import com.qg.AnyWork.dto.RequestResult;
 import com.qg.AnyWork.enums.StatEnum;
 import com.qg.AnyWork.exception.MailSendException;
 import com.qg.AnyWork.exception.user.UserNotExitException;
+import com.qg.AnyWork.model.User;
 import com.qg.AnyWork.service.MailService;
+import com.qg.AnyWork.service.UserService;
 import com.qg.AnyWork.utils.Encryption;
 import com.qg.AnyWork.utils.MailUtil;
+import org.apache.poi.ss.formula.functions.Today;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +42,9 @@ public class UtilController {
     @Autowired
     private MailService mailService;
 
+    @Autowired
+    private UserService userService;
+
     /**
      * 忘了密码邮箱找回
      * @param map
@@ -48,7 +54,7 @@ public class UtilController {
     @ResponseBody
     public RequestResult<?> sendMail(@RequestBody Map<String, String> map){
         try {
-            RequestResult<?> result = mailService.sendMail(map.get("email"));
+            RequestResult<?> result = mailService.sendPsaawordMail(map.get("email"));
             return result;
         } catch (UserNotExitException e){
             logger.warn("不存在的用户！", e);
@@ -62,8 +68,34 @@ public class UtilController {
         }
     }
 
+    // TODO 各种重定向页面
     /**
-     * 验证邮箱秘钥
+     * 验证邮箱秘钥，注册用户
+     * @param map
+     * @return
+     */
+    @RequestMapping(value = "/check", method = RequestMethod.POST)
+    public String checkRegister(@RequestBody Map<String, String> map){
+        String email = map.get("email");
+        String ciphertext = map.get("ciphertext");
+        if (email == null || email.equals("") || ciphertext == null || ciphertext.equals("")) {
+            return "redirect:/index.html";  // 跳转到错误页面 参数为空
+        }
+        if (ciphertext.equals(Encryption.getMD5(email))) {
+            // 验证正确
+            try {
+                userService.register(email);
+            } catch (Exception e){
+                return "redirect:/index.html" + "?error=" + e.getMessage();  // 跳转到错误页面
+            }
+            return "redirect:/index.html";  // 跳转到登录页面
+        } else {
+            return "redirect:/index.html";  // 跳转到错误页面 验证失败
+        }
+    }
+
+    /**
+     * 验证邮箱秘钥,修改密码
      * @param map
      * @return
      */

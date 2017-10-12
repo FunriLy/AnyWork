@@ -18,7 +18,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
  * Created by FunriLy on 2017/10/4.
  * From small beginnings comes great things.
  */
-@ServerEndpoint(value = "/websocket", configurator = GetHttpSessionConfigurator.class)
+//@ServerEndpoint(value = "/websocket", configurator = GetHttpSessionConfigurator.class)
 public class WebSocket {
 
     private static final Logger logger = LoggerFactory.getLogger(WebSocket.class);

@@ -2,9 +2,11 @@ package com.qg.AnyWork.web;
 
 import com.qg.AnyWork.dto.RequestResult;
 import com.qg.AnyWork.enums.StatEnum;
+import com.qg.AnyWork.exception.MailSendException;
 import com.qg.AnyWork.exception.ValcodeWrongException;
 import com.qg.AnyWork.exception.user.*;
 import com.qg.AnyWork.model.User;
+import com.qg.AnyWork.service.MailService;
 import com.qg.AnyWork.service.UserService;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
@@ -35,6 +37,8 @@ public class UserController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
     @Autowired
     private UserService userService;
+    @Autowired
+    private MailService mailService;
 
     @RequestMapping(value = "/myinfo")
     @ResponseBody
@@ -100,9 +104,9 @@ public class UserController {
         try {
             //验证验证码
             verify(request, valcode);
-            RequestResult<Integer> result = userService.register(user);
-//            FileUtils.copyInputStreamToFile(new FileInputStream(new File("classpath:/resources/static/picture/picture.jpg")),
-//                    new File(request.getServletContext().getRealPath("/picture"), result.getData() +".jpg"));
+//            RequestResult<Integer> result = userService.register(user);
+            userService.userMessageCheck(user); // 检查用户是否合格
+            RequestResult<Integer> result = mailService.sendRegisterMail(user);
             return result;
         } catch (ValcodeWrongException e){
             logger.warn("用户验证码错误");
@@ -116,6 +120,9 @@ public class UserController {
         } catch (EmptyUserException e){
             logger.warn(e.getMessage(), e);
             return new RequestResult<Integer>(StatEnum.REGISTER_EMPTY_USER, 0);
+        } catch (MailSendException e){
+            logger.warn("发送邮件失败", e);
+            return new RequestResult<Integer>(StatEnum.MAIL_SEND_FAIL, 0);
         } catch (Exception e){
             logger.warn("未知异常：", e);
             return new RequestResult<Integer>(StatEnum.DEFAULT_WRONG, 0);
@@ -163,6 +170,12 @@ public class UserController {
         }
     }
 
+    /**
+     * 用户修改密码
+     * @param request
+     * @param map
+     * @return
+     */
     @RequestMapping(value = "/change", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
     @ResponseBody
     public RequestResult<User> passwordChange(HttpServletRequest request, @RequestBody Map<String, String> map){
@@ -187,6 +200,12 @@ public class UserController {
 
     }
 
+    /**
+     * 用户更新资料
+     * @param request
+     * @param map
+     * @return
+     */
     @RequestMapping(value = "/update", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
     @ResponseBody
     public RequestResult<User> updateUser(HttpServletRequest request, @RequestBody Map<String, String> map){
@@ -215,6 +234,12 @@ public class UserController {
         }
     }
 
+    /**
+     * 用户上传头像
+     * @param request
+     * @param file
+     * @return
+     */
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseBody
     public RequestResult<?> uploadPicture(HttpServletRequest request, @RequestParam("file") MultipartFile file){

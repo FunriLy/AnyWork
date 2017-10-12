@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @SpringBootApplication
-@EnableWebSocket
+//@EnableWebSocket
 public class AnyWorkApplication extends WebMvcConfigurerAdapter {
 
 	public static void main(String[] args) {

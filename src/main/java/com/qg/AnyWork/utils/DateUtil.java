@@ -15,4 +15,13 @@ public class DateUtil {
     public static Date longToDate(long longTime) {
         return new Date(longTime);
     }
+
+    /**
+     * 将Date类型转化为String类型
+     * @param date
+     * @return
+     */
+    public static String dateToString(Date date){
+        return FORMAT.format(date);
+    }
 }

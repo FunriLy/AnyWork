@@ -23,8 +23,8 @@ public class AnyWorkApplicationTests {
 	@Test
 	public void contextLoads() {
 
-//		int userid = 12;
-//		List<Question> list = testDao.getQuestionByTestpaperId(8);
+//		int userid = 1;
+//		List<Question> list = testDao.getQuestionByTestpaperId(21);
 //		try {
 //			OutputStream outputStream = new FileOutputStream(userid + "export2003_a.xls");
 //			ExcelUtil.export(""+userid, list, outputStream, "yyyy-MM-dd HH:mm:ss");

@@ -85,6 +85,11 @@ public enum StatEnum {
     MAIL_SEND_SUCCESS(1, "邮件发送成功"),
     MAIL_SEND_FAIL(0, "邮件发送失败"),
     PASSWORD_RESET(1, "重置密码成功"),
+
+    /**
+     * 消息模块
+     */
+    MESSAGE_LIST(1, "获取用户消息列表"),
     ;
 
     private  int state;

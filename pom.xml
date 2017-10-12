@@ -56,6 +56,19 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
+		<!--websocket-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
 		<!--Mail-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

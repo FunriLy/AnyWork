@@ -60,7 +60,7 @@ public class OrganizationService {
      * @param userId
      * @return
      */
-    public RequestResult<Organization> join(int organizationId,long token,int userId){
+    public synchronized RequestResult<Organization> join(int organizationId,long token,int userId){
         if (organizationDao.isJoin(organizationId,userId) > 0) throw new OrganizationException("用户已加入该组织");
         Organization organization =organizationDao.getById(organizationId);
         if (organization==null) throw new OrganizationException("组织不存在");

@@ -284,4 +284,18 @@ public class OrganizationController {
         int organizationId = (int) map.get("organizationId");
         return testService.getCheckResultByUser(organizationId,userId);
     }
+
+    /***
+     * 获取组织下某学生的考试列表
+     * @param map
+     * @return
+     */
+    @RequestMapping(value = "/studentPracetice", method = RequestMethod.POST)
+    public RequestResult<List<CheckResult>> studentPracetice(@RequestBody Map map){
+        int userId = (int) map.get("userId");
+        int organizationId = (int) map.get("organizationId");
+        return testService.getPraceticeByOrganizationId(userId,organizationId);
+    }
+
+
 }

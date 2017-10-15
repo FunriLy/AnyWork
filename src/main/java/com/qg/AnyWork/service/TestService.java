@@ -107,6 +107,43 @@ public class TestService {
     }
 
     /***
+     * 获取某学生组织下做过的练习卷集合
+     * @return
+     */
+    public RequestResult<List<CheckResult>> getPraceticeByOrganizationId(int userId, int organizationId){
+
+        List<CheckResult> practice = testDao.getUserPracticeByOrganizationId(userId,organizationId);
+
+        List<CheckResult> checkResults = new ArrayList<CheckResult>();
+        List<Testpaper> testpapers = testDao.getPracticeByOrganizationId(organizationId);
+        for (Testpaper t : testpapers){
+            int flag = 0;
+            for (CheckResult c : practice){
+                if (t.getTestpaperId() == c.getTestpaper().getTestpaperId()) {
+                    c.setIfAttend(1);
+                    checkResults.add(c);
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0 ){
+                CheckResult checkResult = new CheckResult();
+                checkResult.setIfAttend(0);
+                checkResult.setObject(0);
+                checkResult.setSubject(0);
+                checkResult.setStudentId(userId);
+                checkResult.setStudentName(userDao.selectById(userId).getUserName());
+                checkResult.setIfCheck(0);
+                checkResult.setTestpaper(t);
+                checkResults.add(checkResult);
+            }
+        }
+
+        return  new RequestResult<List<CheckResult>>(1,"获取成功",checkResults);
+
+    }
+
+    /***
      * 获取我做过的考试卷集合
      * @return
      */

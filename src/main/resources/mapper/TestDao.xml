@@ -43,12 +43,36 @@
         </association>
     </resultMap>
 
+    <resultMap type="com.qg.AnyWork.model.CheckResult" id="PracticeCheckResult">
+        <result property="studentId"       column="student_id" />
+        <result property="studentName"   column="user_name"  />
+        <result property="ifCheck"   column="if_check"  />
+        <result property="object"  column="socre"  />
+        <result property="subject"  column="subject"  />
+
+        <association property="testpaper" javaType="com.qg.AnyWork.model.Testpaper">
+            <id property="testpaperId" column="testpaper_id"/>
+            <result property="testpaperTitle" column="testpaper_title"/>
+            <result property="createTime" column="create_time"/>
+            <result property="endingTime" column="ending_time"/>
+            <result property="testpaperScore" column="testpaper_score"/>
+        </association>
+    </resultMap>
+
     <!--目的：为Dao接口方法提供SQL语句-->
     <select id="getTestByOrganizationId" resultType="Testpaper">
         SELECT *
         FROM testpaper
         WHERE organization_id = #{organizationId} AND testpaper_type = 1
     </select>
+
+    <select id="getUserPracticeByOrganizationId" resultMap="PracticeCheckResult">
+        SELECT c.student_id, u.user_name, 0, c.socre, 0, t.testpaper_id, t.testpaper_title, t.create_time, t.ending_time, t.testpaper_score
+        FROM test_result c , user u, testpaper t
+        WHERE c.student_id = #{userId} AND c.student_id = u.user_id  AND t.organization_id = #{organizationId} AND c.test_paper_id = t.testpaper_id And t.testpaper_type = 0
+    </select>
+
+
 
     <select id="getPracticeByOrganizationId" resultType="Testpaper">
         SELECT t.testpaper_id,t.testpaper_title,t.author_id,t.create_time,t.ending_time,t.chapter_id,c.chapter_name,t.testpaper_score,t.testpaper_type,t.organization_id

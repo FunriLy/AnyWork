@@ -39,6 +39,8 @@ public interface TestDao {
      */
     List<Testpaper> getPracticeByOCId(@Param("organizationId") int organizationId,@Param("chapterId") int chapterId);
 
+    List<CheckResult> getUserPracticeByOrganizationId(@Param("userId") int userId,@Param("organizationId") int organizaitonId);
+
     List<Testpaper> getMyPractice(@Param("userId") int userId);
     List<Testpaper> getMyTest(@Param("userId") int userId);
 

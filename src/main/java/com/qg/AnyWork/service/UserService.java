@@ -1,5 +1,6 @@
 package com.qg.AnyWork.service;
 
+import com.qg.AnyWork.dao.RedisDao;
 import com.qg.AnyWork.dao.UserDao;
 import com.qg.AnyWork.dto.RequestResult;
 import com.qg.AnyWork.enums.StatEnum;
@@ -18,14 +19,37 @@ public class UserService {
 
     @Autowired
     private UserDao userDao;
+    @Autowired
+    private RedisDao redisDao;
 
+    /**
+     *
+     * @param user
+     */
+    public void userMessageCheck(User user) {
+        if (null == user){  // 检查是否为空对象
+            throw new EmptyUserException("空用户对象");
+        }
+        else if(    // 检查账号密码是否匹配
+                !user.getEmail().matches("\\w+@\\w+(\\.\\w{2,3})*\\.\\w{2,3}") ||
+                        !user.getUserName().matches("[a-z0-9A-Z\\u4e00-\\u9fa5]{1,15}") ||
+                        !user.getPassword().matches("\\w{6,15}")
+                ) {
+            throw new FormatterFaultException("注册信息格式错误");
+        }else {     // 检查用户是否存在
+            if (null != userDao.selectByEmail(user.getEmail())){
+                throw new  UserException("该用户已经存在");
+            }
+        }
+    }
 
     /**
      * 用户注册
-     * @param user
      * @return
      */
-    public RequestResult<Integer> register(User user){
+    public void register(String email) {
+        User user = null;
+        user = redisDao.getUserMessage(email);
         if (null == user){
             throw new EmptyUserException("空用户对象");
         }
@@ -45,7 +69,8 @@ public class UserService {
             user.setPassword(Encryption.getMD5(user.getPassword()));
             userDao.insertUser(user);
             int userid = user.getUserId();
-            return new RequestResult<Integer>(StatEnum.REGISTER_SUCESS, userid);
+            if (userid <= 0 )
+                throw new UserException("未知错误");
         }
     }
 

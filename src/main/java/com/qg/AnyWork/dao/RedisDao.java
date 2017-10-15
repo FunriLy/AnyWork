@@ -1,6 +1,7 @@
 package com.qg.AnyWork.dao;
 
 import com.qg.AnyWork.model.Question;
+import com.qg.AnyWork.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
@@ -15,8 +16,6 @@ import java.util.List;
  */
 @Repository
 public class RedisDao {
-
-    // TODO: 2017/7/12 Redis操作，还未试验！！！
 
     @Autowired
     private RedisTemplate redisTemplate;
@@ -43,5 +42,32 @@ public class RedisDao {
 
     public List getQuestionList(int userId){
         return redisTemplate.opsForList().range(String.valueOf(userId), 0, -1);
+    }
+
+    public void  addUserMessage(String email, User user) {
+        synchronized (user) {
+            removeUserMessage(email);   // 清除已经有的缓存信息
+            redisTemplate.opsForList().leftPush(email, user);
+        }
+    }
+
+    private void removeUserMessage (String email) {
+        while (redisTemplate.opsForList().size(email) > 0) {
+            redisTemplate.opsForList().rightPop(email);
+        }
+    }
+
+    public User getUserMessage(String email) {
+        User user = null;
+        try {
+            user = (User) redisTemplate.opsForList().rightPop(email);
+        }catch (Exception e){
+            System.out.println("Redis 获取用户信息缓存失败，" + email);
+            e.printStackTrace();
+        }
+        if (user != null){
+            removeUserMessage(email);   // 清除
+        }
+        return user;
     }
 }

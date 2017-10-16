@@ -96,10 +96,10 @@ public class MailUtil {
                         "\t\t\t\t\t\t\t\t\t\t\t\t<p style=\"text-indent:2em\">\n" +
                         "请点击下面的链接完成用户注册(5分钟内有效)：<br />"+
                         "<h1>用户注册</h1><br/>"+
-                        "<a href='http://192.168.199.35:8080/"+"newPassword.html?email=" +email+"&ciphertext="+ciphertext+"'>点击完成注册</a></p>\n" +
+                        "<a href='http://10.21.48.11:8080/"+"anywork/utils/check?email=" +email+"&ciphertext="+ciphertext+"'>点击完成注册</a></p>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"margin-bottom:40px;\"><a href=\"https://www.baidu.com\" style=\"display:inline-block;width:139px;height:38px;line-height:38px;color:#fff;font-size:14px;vertical-align:middle;background:url(http://7xi9bi.com1.z0.glb.clouddn.com/35069/2015/07/20/0edb116f982044ba85ecd313f20e881c.jpg);text-decoration:none\">AnyWork</a></div>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"margin-bottom:40px;\"><a href=\"http://10.21.48.11:8080/anywork/html/login.html\" style=\"display:inline-block;width:139px;height:38px;line-height:38px;color:#fff;font-size:14px;vertical-align:middle;background:url(http://7xi9bi.com1.z0.glb.clouddn.com/35069/2015/07/20/0edb116f982044ba85ecd313f20e881c.jpg);text-decoration:none\">AnyWork</a></div>\n" +
                         "\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"border-top:1px dashed #ccc;margin:20px\">&nbsp;</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t</td>\n" +
@@ -163,10 +163,10 @@ public class MailUtil {
                         "\t\t\t\t\t\t\t\t\t\t\t\t<p style=\"text-indent:2em\">\n" +
                         "请点击下面的链接修改用户密码：<br />"+
                         "<h1>忘了密码</h1><br/>"+
-                        "<a href='http://192.168.199.35:8080/"+"html/newPassword.html?email=" +email+"&ciphertext="+ciphertext+"'>点击修改密码</a></p>\n" +
+                        "<a href='http://10.21.48.11:8080/"+"anywork/html/newPassword.html?email=" +email+"&ciphertext="+ciphertext+"'>点击修改密码</a></p>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"margin-bottom:40px;\"><a href=\"https://www.baidu.com\" style=\"display:inline-block;width:139px;height:38px;line-height:38px;color:#fff;font-size:14px;vertical-align:middle;background:url(http://7xi9bi.com1.z0.glb.clouddn.com/35069/2015/07/20/0edb116f982044ba85ecd313f20e881c.jpg);text-decoration:none\">AnyWork</a></div>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"margin-bottom:40px;\"><a href=\"http://10.21.48.11:8080/anywork/html/login.html\" style=\"display:inline-block;width:139px;height:38px;line-height:38px;color:#fff;font-size:14px;vertical-align:middle;background:url(http://7xi9bi.com1.z0.glb.clouddn.com/35069/2015/07/20/0edb116f982044ba85ecd313f20e881c.jpg);text-decoration:none\">AnyWork</a></div>\n" +
                         "\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"border-top:1px dashed #ccc;margin:20px\">&nbsp;</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t</td>\n" +

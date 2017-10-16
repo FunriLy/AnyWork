@@ -80,18 +80,18 @@ public class UtilController {
 //        String email = map.get("email");
 //        String ciphertext = map.get("ciphertext");
         if (email == null || email.equals("") || ciphertext == null || ciphertext.equals("")) {
-            return "redirect:./index.html";  // 跳转到错误页面 参数为空
+            return "redirect:../html/failure.html";  // 跳转到错误页面 参数为空
         }
         if (ciphertext.equals(Encryption.getMD5(email))) {
             // 验证正确
             try {
                 userService.register(email);
             } catch (Exception e){
-                return "redirect:./index.html" + "?error=" + e.getMessage();  // 跳转到错误页面
+                return "redirect:../html/failure.html";  // 跳转到错误页面
             }
-            return "redirect:./index.html";  // 跳转到登录页面
+            return "redirect:../html/success.html";  // 跳转到登录页面
         } else {
-            return "redirect:./index.html";  // 跳转到错误页面 验证失败
+            return "redirect:../html/failure.html";  // 跳转到错误页面 验证失败
         }
     }
 

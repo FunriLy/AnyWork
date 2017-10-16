@@ -46,10 +46,10 @@ public class MailUtil {
             helper.setTo(email);
             if (index == 1){
                 helper.setSubject("主题：用户注册验证");
-                helper.setText(registerHtmlText(email, userName));
+                helper.setText(registerHtmlText(email, userName), true);
             } else if (index == 2) {
                 helper.setSubject("主题：用户忘记密码");
-                helper.setText(PasswordhtmlText(email, userName));
+                helper.setText(PasswordhtmlText(email, userName), true);
             } else {
                 throw new Exception("未知参数");
             }
@@ -57,6 +57,7 @@ public class MailUtil {
             e.printStackTrace();
             throw new MailSendException("发送邮件失败");
         }
+        javaMailSender.send(message);
     }
 
     private static String registerHtmlText(String email, String userName) {
@@ -81,7 +82,7 @@ public class MailUtil {
                         "\t\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"margin-top:120px;background: url(http://7xi9bi.com1.z0.glb.clouddn.com/35069/2015/07/20/5891eacba5ba41f389168121f08be02f.jpg) no-repeat;\" width=\"538px\">\n" +
                         "\t\t\t\t\t\t\t<tbody>\n" +
                         "\t\t\t\t\t\t\t\t<tr>\n" +
-                        "\t\t\t\t\t\t\t\t\t<td height=\"70px\" valign=\"middle\" width=\"100%\"><img alt=\"logo\" src=\"http://7xi9bi.com1.z0.glb.clouddn.com/35069/2015/07/20/1686ccdd7919429a8beeb4f3f15d5eb1.png\" style=\"margin-left:50px;\" /></td>\n" +
+                        "\t\t\t\t\t\t\t\t\t<td height=\"70px\" valign=\"middle\" width=\"100%\"><img alt=\"logo\" src=\"https://www.tuchuang001.com/images/2017/10/15/1686ccdd7919429a8beeb4f3f15d5eb1.png\" style=\"margin-left:50px;\" /></td>\n" +
                         "\t\t\t\t\t\t\t\t</tr>\n" +
                         "\t\t\t\t\t\t\t\t<tr>\n" +
                         "\t\t\t\t\t\t\t\t\t<td align=\"center\" valign=\"top\">\n" +
@@ -94,11 +95,11 @@ public class MailUtil {
                         "\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t<p style=\"text-indent:2em\">\n" +
                         "请点击下面的链接完成用户注册(5分钟内有效)：<br />"+
-                        "<h1>这是一个测试页面</h1><br/>"+
-                        "<a href='http://127.0.0.1:8085/"+"forget.html?email=" +email+"&ciphertext="+ciphertext+"'>点击完成注册</a></p>\n" +
+                        "<h1>用户注册</h1><br/>"+
+                        "<a href='http://192.168.199.35:8080/"+"newPassword.html?email=" +email+"&ciphertext="+ciphertext+"'>点击完成注册</a></p>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"margin-bottom:40px;\"><a href=\"https://www.baidu.com\" style=\"display:inline-block;width:139px;height:38px;line-height:38px;color:#fff;font-size:14px;vertical-align:middle;background:url(http://7xi9bi.com1.z0.glb.clouddn.com/35069/2015/07/20/0edb116f982044ba85ecd313f20e881c.jpg);text-decoration:none\">修改密码</a></div>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"margin-bottom:40px;\"><a href=\"https://www.baidu.com\" style=\"display:inline-block;width:139px;height:38px;line-height:38px;color:#fff;font-size:14px;vertical-align:middle;background:url(http://7xi9bi.com1.z0.glb.clouddn.com/35069/2015/07/20/0edb116f982044ba85ecd313f20e881c.jpg);text-decoration:none\">AnyWork</a></div>\n" +
                         "\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"border-top:1px dashed #ccc;margin:20px\">&nbsp;</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t</td>\n" +
@@ -148,7 +149,7 @@ public class MailUtil {
                         "\t\t\t\t\t\t<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"margin-top:120px;background: url(http://7xi9bi.com1.z0.glb.clouddn.com/35069/2015/07/20/5891eacba5ba41f389168121f08be02f.jpg) no-repeat;\" width=\"538px\">\n" +
                         "\t\t\t\t\t\t\t<tbody>\n" +
                         "\t\t\t\t\t\t\t\t<tr>\n" +
-                        "\t\t\t\t\t\t\t\t\t<td height=\"70px\" valign=\"middle\" width=\"100%\"><img alt=\"logo\" src=\"http://7xi9bi.com1.z0.glb.clouddn.com/35069/2015/07/20/1686ccdd7919429a8beeb4f3f15d5eb1.png\" style=\"margin-left:50px;\" /></td>\n" +
+                        "\t\t\t\t\t\t\t\t\t<td height=\"70px\" valign=\"middle\" width=\"100%\"><img alt=\"logo\" src=\"https://www.tuchuang001.com/images/2017/10/15/1686ccdd7919429a8beeb4f3f15d5eb1.png\" style=\"margin-left:50px;\" /></td>\n" +
                         "\t\t\t\t\t\t\t\t</tr>\n" +
                         "\t\t\t\t\t\t\t\t<tr>\n" +
                         "\t\t\t\t\t\t\t\t\t<td align=\"center\" valign=\"top\">\n" +
@@ -161,11 +162,11 @@ public class MailUtil {
                         "\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t<p style=\"text-indent:2em\">\n" +
                         "请点击下面的链接修改用户密码：<br />"+
-                        "<h1>这是一个测试页面</h1><br/>"+
-                        "<a href='http://127.0.0.1:8085/"+"forget.html?email=" +email+"&ciphertext="+ciphertext+"'>点击修改密码</a></p>\n" +
+                        "<h1>忘了密码</h1><br/>"+
+                        "<a href='http://192.168.199.35:8080/"+"html/newPassword.html?email=" +email+"&ciphertext="+ciphertext+"'>点击修改密码</a></p>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t</div>\n" +
                         "\n" +
-                        "\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"margin-bottom:40px;\"><a href=\"https://www.baidu.com\" style=\"display:inline-block;width:139px;height:38px;line-height:38px;color:#fff;font-size:14px;vertical-align:middle;background:url(http://7xi9bi.com1.z0.glb.clouddn.com/35069/2015/07/20/0edb116f982044ba85ecd313f20e881c.jpg);text-decoration:none\">修改密码</a></div>\n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"margin-bottom:40px;\"><a href=\"https://www.baidu.com\" style=\"display:inline-block;width:139px;height:38px;line-height:38px;color:#fff;font-size:14px;vertical-align:middle;background:url(http://7xi9bi.com1.z0.glb.clouddn.com/35069/2015/07/20/0edb116f982044ba85ecd313f20e881c.jpg);text-decoration:none\">AnyWork</a></div>\n" +
                         "\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t<div style=\"border-top:1px dashed #ccc;margin:20px\">&nbsp;</div>\n" +
                         "\t\t\t\t\t\t\t\t\t\t\t\t</td>\n" +

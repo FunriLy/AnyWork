@@ -71,26 +71,27 @@ public class UtilController {
     // TODO 各种重定向页面
     /**
      * 验证邮箱秘钥，注册用户
-     * @param map
      * @return
      */
-    @RequestMapping(value = "/check", method = RequestMethod.POST)
-    public String checkRegister(@RequestBody Map<String, String> map){
-        String email = map.get("email");
-        String ciphertext = map.get("ciphertext");
+    @RequestMapping(value = "/check", method = RequestMethod.GET)
+    public String checkRegister(HttpServletRequest request){
+        String email = request.getParameter("email");
+        String ciphertext = request.getParameter("ciphertext");
+//        String email = map.get("email");
+//        String ciphertext = map.get("ciphertext");
         if (email == null || email.equals("") || ciphertext == null || ciphertext.equals("")) {
-            return "redirect:/index.html";  // 跳转到错误页面 参数为空
+            return "redirect:./index.html";  // 跳转到错误页面 参数为空
         }
         if (ciphertext.equals(Encryption.getMD5(email))) {
             // 验证正确
             try {
                 userService.register(email);
             } catch (Exception e){
-                return "redirect:/index.html" + "?error=" + e.getMessage();  // 跳转到错误页面
+                return "redirect:./index.html" + "?error=" + e.getMessage();  // 跳转到错误页面
             }
-            return "redirect:/index.html";  // 跳转到登录页面
+            return "redirect:./index.html";  // 跳转到登录页面
         } else {
-            return "redirect:/index.html";  // 跳转到错误页面 验证失败
+            return "redirect:./index.html";  // 跳转到错误页面 验证失败
         }
     }
 
